@@ -25,24 +25,57 @@ function switchModesLight(e){
 
 
 
-// HIDE PURPLE TEXT ON NAVBAR ON CLICK OF THE MENU BUTTON
+// HIDE PURPLE TEXT ON NAVBAR/SIDE-MENU ON CLICK OF THE MENU BUTTON
 const topRow = document.querySelector('#top-row')
 const firstColumn = document.querySelector('#first-column')
 const secondColumn = document.querySelector('#second-column')
 const menuIcon = document.querySelector('#menu-icon')
+const mainRow = document.querySelector('#main-row')
+const sideMenu = document.querySelector('#side-menu')
+const sideMenuSmall = document.querySelector('#side-menu-small')
+const purpleText = document.querySelector('.purple')
+const mainBody = document.querySelector('#main-body')
+const icon = document.querySelector('#icon')
+
 
 menuIcon.addEventListener('click', hideFirstColumn)
 const newIcon = document.createElement('div')
 
+
 function hideFirstColumn(e){
-    if (firstColumn.classList != 'col-md-2 ps-5 d-flex align-items-center purple-column d-none') {
-        firstColumn.classList.add('d-none')
-        newIcon.classList = 'col-md-2 m-0 d-flex align-items-center purple-column'
-        newIcon.id = 'new-icon'
-        newIcon.innerHTML = '<i class="fa-solid fa-layer-group" style="color: #ba75ff;"></i>'
-        topRow.insertBefore(newIcon, secondColumn)
+    if (purpleText.className === 'purple') {
+        purpleText.classList.add('d-none')
+        icon.classList.add('p-1')
+
+        sideMenu.classList.add('d-none')
+        sideMenuSmall.classList.remove('d-none')
+        mainBody.classList.remove('col-md-9')
+        mainBody.classList.add('col-md-11')
     }else{
-        firstColumn.classList.remove('d-none')
-        newIcon.remove()
+        purpleText.classList.remove('d-none')
+        sideMenu.classList.remove('d-none')
+        sideMenuSmall.classList.add('d-none')
+        mainBody.classList.remove('col-md-11')
+        mainBody.classList.add('col-md-9')
     }
+}
+
+
+
+// TO CHOOSE BETWEEN TO-DO AND CHATS IN OFFCANVAS
+const chats = document.querySelector('.chats')
+const todoList = document.querySelector('.todo')
+const offcanvasChat = document.querySelector('#chats')
+const offcanvasTodo = document.querySelector('#todo-list')
+
+chats.addEventListener('click', showChats)
+function showChats(e){
+    offcanvasChat.classList.remove('d-none')
+    offcanvasTodo.classList.add('d-none')
+}
+
+todoList.addEventListener('click', showTodo)
+function showTodo(e){
+    offcanvasChat.classList.add('d-none')
+    offcanvasTodo.classList.remove('d-none')
 }

@@ -17,59 +17,433 @@
 </head>
 <body>
     
-    <div class="container-fluid sticky-top">
-        <div class="row p-3" id="top-row">
-
-            <div class="col-md-2 ps-5 d-flex align-items-center purple-column" id="first-column">
-                <i class="fa-solid fa-layer-group" style="color: #ba75ff;"></i>
-                <span class="purple ps-2">Purple</span>                
-            </div>
-            <div class="col-md-3" id="second-column">
-                <div class="d-flex ps-3 align-items-center justify-content-between pt-2">
-                    <i class="fa-solid fa-bars" id="menu-icon"></i>
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="search" name="" id="search" placeholder="Search projects">
-                </div>
-            </div>
-            
-            <div class="col-md-2"></div>
-            
-            <div class="col-md-5">
-                <div class="d-flex align-items-center justify-content-between" id="top-icons">
-                    <div class="d-flex align-items-center" id="name-drop">
-                        <img src="/assets/img/headshot.png" class="img-thumbnail" alt="">
-                        <span class="p-1">Robenta Ahimie </span>
-                        <i class="fa-solid fa-angle-down pt-1"></i>
+    <header>
+        <div class="container-fluid sticky-top">
+            <div class="row py-2 px-4">
+                <div class="col-md-12">
+                    <div class="row" id="top-row">
+                        <div class="col-md-3 d-flex align-items-center" id="first-column">
+                           <div class="purple-column g-3">
+                               <i class="fa-solid fa-layer-group" id="icon"></i>
+                               <span class="purple">Purple</span>                
+                           </div>
+                        </div>
+                        <div class="col-md-5" id="second-column">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="j">
+                                        <i class="fa-solid fa-bars" id="menu-icon"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex gap-3 align-items-center">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                        <input type="search" name="checkboxes" id="search" placeholder="Search projects">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="d-flex align-items-center justify-content-between" id="top-icons">
+                                <div class="d-flex align-items-center" id="name-drop">
+                                    <img src="/assets/img/headshot.png" class="img-thumbnail" alt="">
+                                    <span class="p-1">Robenta Ahimie </span>
+                                    <i class="fa-solid fa-angle-down pt-1"></i>
+                                </div>
+                                <i class="fa-solid fa-power-off"></i>
+                                <i class="fa-regular fa-envelope"></i>                       
+                                <i class="fa-regular fa-bell"></i>                        
+                                <i class="fa-solid fa-list-check" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i> 
+                                <i class="fa-solid fa-moon" id="dark-mode" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Dark mode"></i>
+                            </div>
+                        </div>
                     </div>
-                    <i class="fa-solid fa-power-off"></i>
-                    <i class="fa-regular fa-envelope"></i>                       
-                    <i class="fa-regular fa-bell"></i>                        
-                    <i class="fa-solid fa-list-check"></i> 
-                    <i class="fa-solid fa-moon" id="dark-mode" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Dark mode"></i>
-                    <!-- <span id="img-cont" class="mb-1"><img src="/assets/img/brightness-and-contrast-dark-mode.png" class="dark-mode" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Dark mode"></span> -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- off-canvas -->
+    <div class="container-fluid" id="offcanvas">
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="container">
+                <div class="row py-3 offcanvas-header" id="offcanvashead">
+                    <div class="col-md-10">
+                        <div class="d-flex justify-content-center gap-5" id="offcanvasRightLabel">
+                            <h6 class="todo">TO-DO LIST</h6>
+                            <h6 class="chats">CHATS</h6>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="xmark float-end">
+                            <i class="fa-solid fa-xmark" data-bs-dismiss="offcanvas" aria-label="Close"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="offcanvas-body" id="todo-list">
+                    <h5>Todo List</h5>
+                    <div class="d-flex gap-2">
+                        <input type="text" class="form-control" placeholder="What do you need to do?">
+                        <button type="button" class="btn btn-primary">Submit</button>
+                    </div>
+
+                    <ul class="list-group list-group-flush my-4">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-1 p-0">
+                                    <input type="checkbox" name="checkboxes" class="checkbox">
+                                </div>
+                                <div class="col-md-10">
+                                    <label for="checkboxes" class="checkbox-label">
+                                        Pick up kids from school
+                                    </label>
+                                </div>
+                                <div class="col-md-1">
+                                    <i class="fa-regular fa-circle-xmark"></i>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-1 p-0">
+                                    <input type="checkbox" name="checkboxes" id="">
+                                </div>
+                                <div class="col-md-10">
+                                    <label for="checkboxes" class="checkbox-label">
+                                        Print statements
+                                    </label>
+                                </div>
+                                <div class="col-md-1">
+                                    <i class="fa-regular fa-circle-xmark"></i>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-1 p-0">
+                                    <input type="checkbox" name="checkboxes" id="">
+                                </div>
+                                <div class="col-md-10">
+                                    <label for="checkboxes" class="checkbox-label">
+                                        Create invoice
+                                    </label>
+                                </div>
+                                <div class="col-md-1">
+                                    <i class="fa-regular fa-circle-xmark"></i>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-1 p-0">
+                                    <input type="checkbox" name="checkboxes" id="">
+                                </div>
+                                <div class="col-md-10">
+                                    <label for="checkboxes" class="checkbox-label">
+                                        Call John
+                                    </label>
+                                </div>
+                                <div class="col-md-1">
+                                    <i class="fa-regular fa-circle-xmark"></i>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-1 p-0">
+                                    <input type="checkbox" name="checkboxes" id="">
+                                </div>
+                                <div class="col-md-10">
+                                    <label for="checkboxes" class="checkbox-label">
+                                        Meeting with Alisa
+                                    </label>
+                                </div>
+                                <div class="col-md-1">
+                                    <i class="fa-regular fa-circle-xmark"></i>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex gap-3 px-1 align-items-center" id="circle-i">
+                        <i class="fa-regular fa-circle"></i>
+                        Feb 11 2018
+                    </div>
+                    <div class="my-2 mx-2">
+                        <p>
+                            Creating component page build a js based app
+                        </p>
+                    </div>
+                    <hr>
+                    <div class="d-flex gap-3 px-1 align-items-center" id="circle-i">
+                        <i class="fa-regular fa-circle"></i>
+                        Feb 7 2018 
+                    </div>
+                    <div class="my-2 mx-2">
+                        <p>
+                            Meeting with Alisa
+                            Call Sarah Graves
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="offcanvas-body d-none" id="chats">
+
                 </div>
             </div>
         </div>
     </div>
 
-    
-    <div class="row">
-        <div class="col-md-2 bg-white ps-5" id="side-menu">
-            <div class="d-flex" id="name-drop">
-                <img src="/assets/img/headshot.png" class="img-thumbnail" alt="">
-                <span class="p-1">Robenta Ahimie </span>
-                <i class="fa-solid fa-bookmark"></i>            
+    <div class="container-fluid">
+        <div class="row" id="main-row">    
+            <div class="col-md-3" id="side-menu">
+                <div class="row gy-5 px-4">
+                    <!-- one -->
+                    <div class="col-md-12">
+                        <div class="row align-items-center" id="bookmark-column">
+                            <div class="col-md-3">
+                                <div class="overflow-hidden rounded-circle">
+                                    <img src="/assets/img/headshot.png" class="img-thumbnail img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="float-end">
+                                    <span class="small-text">Robenta Ahimie</span>
+                                    <p class="grey-text">Project Manager</p> 
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="text-end">
+                                    <i class="fa-solid fa-bookmark"></i>            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- two -->
+                    <div class="col-md-12">
+                        <div class="row align-items-center justify-content-between" id="double-icons">
+                            <div class="col-md-6">
+                                <div class="">
+                                    <h6>Dashboard</h6>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="text-end">
+                                    <i class="fa-solid fa-house"></i>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- three -->
+                    <div class="col-md-12">
+                        <div class="row align-items-center justify-content-between" id="double-icons">
+                            <div class="col-md-7">
+                                <div class="">
+                                    <h6>Basic UI Elements</h6>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="d-flex float-end gap-2">
+                                    <i class="fa-solid fa-angle-left"></i>
+                                    <i class="fa-solid fa-crosshairs"></i>                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- four -->
+                    <div class="col-md-12">
+                        <div class="row align-items-center justify-content-between" id="double-icons">
+                            <div class="col-md-7">
+                                <div class="">
+                                    <h6>Form Elements</h6>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="d-flex float-end gap-2">
+                                    <i class="fa-solid fa-angle-left"></i>
+                                    <i class="fa-solid fa-list"></i>                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- five -->
+                    <div class="col-md-12">
+                        <div class="row align-items-center justify-content-between" id="double-icons">
+                            <div class="col-md-7">
+                                <div class="">
+                                    <h6>Tables</h6>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="d-flex float-end gap-2">
+                                    <i class="fa-solid fa-angle-left"></i>
+                                    <i class="fa-solid fa-table-cells"></i>                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- six -->
+                    <div class="col-md-12">
+                        <div class="row align-items-center justify-content-between" id="double-icons">
+                            <div class="col-md-7">
+                                <div class="">
+                                    <h6>Icons</h6>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="d-flex float-end gap-2">
+                                    <i class="fa-solid fa-angle-left"></i>
+                                    <i class="fa-solid fa-id-card-clip"></i>                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- seven -->
+                    <div class="col-md-12">
+                        <div class="row align-items-center justify-content-between" id="double-icons">
+                            <div class="col-md-7">
+                                <div class="">
+                                    <h6>Charts</h6>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="d-flex float-end gap-2">
+                                    <i class="fa-solid fa-angle-left"></i>
+                                    <i class="fa-solid fa-chart-column"></i>                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- eight -->
+                    <div class="col-md-12">
+                        <div class="row align-items-center justify-content-between" id="double-icons">
+                            <div class="col-md-7">
+                                <div class="">
+                                    <h6>User Pages</h6>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="d-flex float-end gap-2">
+                                    <i class="fa-solid fa-angle-left"></i>
+                                    <i class="fa-solid fa-lock"></i>                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- nine -->
+                    <div class="col-md-12">
+                        <div class="row align-items-center justify-content-between" id="double-icons">
+                            <div class="col-md-7">
+                                <div class="">
+                                    <h6>Error Pages</h6>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="d-flex float-end gap-2">
+                                    <i class="fa-solid fa-angle-left"></i>
+                                    <i class="fa-solid fa-shield-halved"></i>                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ten -->
+                    <div class="col-md-12">
+                        <div class="row align-items-center justify-content-between" id="double-icons">
+                            <div class="col-md-7">
+                                <div class="">
+                                    <h6>Documentation</h6>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="d-flex float-end gap-2">
+                                    <i class="fa-solid fa-angle-left"></i>
+                                    <i class="fa-solid fa-briefcase-medical"></i>                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- eleven -->
+                    <div class="col-md-12">
+                        <div class="row align-items-center justify-content-between" id="double-icons">
+                            <div class="col-md-7">
+                                <div class="">
+                                    <h6>Form Elements</h6>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="d-flex float-end gap-2">
+                                    <i class="fa-solid fa-angle-left"></i>
+                                    <i class="fa-solid fa-rectangle-list"></i>                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1 d-none" id="side-menu-small">
+                <div class="d-grid justify-content-center gap-5 py-4" id="single-icons">
+                    <div class="">
+                        <i class="fa-solid fa-house"></i>
+                    </div>
+                    <div class="">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <div class="">
+                        <i class="fa-solid fa-crosshairs"></i>                                
+                    </div>
+                    <div class="">
+                        <i class="fa-solid fa-list"></i>    
+                    </div>
+                    <div class="">
+                        <i class="fa-solid fa-table-cells"></i>      
+                    </div>
+                    <div class="">
+                        <i class="fa-solid fa-id-card-clip"></i>  
+                    </div>
+                    <div class="">
+                        <i class="fa-solid fa-chart-column"></i>                                
+                    </div>
+                    <div class="">
+                        <i class="fa-solid fa-lock"></i>                                
+                    </div>
+                    <div class="">
+                        <i class="fa-solid fa-shield-halved"></i>                    
+                    </div>
+                    <div class="">
+                        <i class="fa-solid fa-briefcase-medical"></i>                           
+                    </div>
+                    <div class="">
+                        <i class="fa-solid fa-rectangle-list"></i>                                
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-9" id="main-body">
+                <div class="">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis, rerum harum dolor ut amet ipsam sunt ullam 
+                    delectus, laborum sed itaque, dolores nobis libero. 
+                    Dolores, quae? Omnis laudantium culpa suscipit error
+                    earum vitae incidunt amet unde aliquam. Quo inventore
+                    asperiores facere, illo aliquam doloremque iste dicta
+                    consequuntur, nihil magni dignissimos sequi eveniet 
+                    ipsa perferendis atque molestiae debitis quidem sint.
+                    Corporis necessitatibus iste maxime ut molestiae 
+                    placeat delectus libero corrupti eum? Officia 
+                    voluptatibus blanditiis amet porro,
+                    eveniet animi ipsam reprehenderit voluptas, maiores
+                    sapiente sint eius tempore nobis ut optio? Ad modi 
+                    tempora quisquam quasi recusandae quae iure nulla
+                    molestias dolores adipisci.
+                </div>
             </div>
         </div>
-        <div class="col-md-8">
-            <p class="text-center">
-                ahflajfla Lorem ipsum, dolor sit amet consectet
-                ur adipisicing elit. Fugit quo consequatur sim
-                ilique pariatur impedit, voluptates qui quidem o
-                dit rem culpa minus est deleniti ducimus facilis
-            </p>
-        </div>
     </div>
+
 
 
 
