@@ -1,60 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- custom css -->
     <link rel="stylesheet" href="/assets/style.css">
 
     <!-- bootstrap css -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
     <!-- bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
     <title>ADMIN DASHBOARD</title>
 </head>
+
 <body>
-    
-    <header>
-        <div class="container-fluid sticky-top">
-            <div class="row py-2 px-4">
+
+    <header class="sticky-top">
+        <div class="container-fluid">
+            <div class="row">
                 <div class="col-md-12">
-                    <div class="row" id="top-row">
-                        <div class="col-md-3 d-flex align-items-center" id="first-column">
-                           <div class="purple-column g-3">
-                               <i class="fa-solid fa-layer-group" id="icon"></i>
-                               <span class="purple">Purple</span>                
-                           </div>
+                    <div class="row gy-5 px-4" id="top-row">
+                        <div class="col-md-3" id="first-column">
+                            <div class="purple-column g-3 p-2 align-items-center">
+                                <i class="fa-solid fa-layer-group" id="icon"></i>
+                                <span class="purple">Purple</span>
+                            </div>
                         </div>
                         <div class="col-md-5" id="second-column">
-                            <div class="row">
+                            <div class="row p-2">
                                 <div class="col-md-6">
-                                    <div class="j">
+                                    <div class="">
                                         <i class="fa-solid fa-bars" id="menu-icon"></i>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="d-flex gap-3 align-items-center">
                                         <i class="fa-solid fa-magnifying-glass"></i>
-                                        <input type="search" name="checkboxes" id="search" placeholder="Search projects">
+                                        <input type="search" name="checkboxes" id="search"
+                                            placeholder="Search projects">
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="d-flex align-items-center justify-content-between" id="top-icons">
-                                <div class="d-flex align-items-center" id="name-drop">
-                                    <img src="/assets/img/headshot.png" class="img-thumbnail" alt="">
-                                    <span class="p-1">Robenta Ahimie </span>
+                        <div class="col-md-4" id="third-column">
+                            <div class="d-flex align-items-center p-2 justify-content-between">
+                                <div class="d-flex align-items-center gap-2" id="name-drop">
+                                    <div class="overflow-hidden">
+                                        <img src="/assets/img/headshot.png" class="img-thumbnail" alt="">
+                                    </div>
+                                    <span class="name">Robenta Ahimie </span>
                                     <i class="fa-solid fa-angle-down pt-1"></i>
                                 </div>
-                                <i class="fa-solid fa-power-off"></i>
-                                <i class="fa-regular fa-envelope"></i>                       
-                                <i class="fa-regular fa-bell"></i>                        
-                                <i class="fa-solid fa-list-check" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i> 
-                                <i class="fa-solid fa-moon" id="dark-mode" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Dark mode"></i>
+                                <!-- <i class="fa-solid fa-power-off"></i> -->
+                                <i class="fa-regular fa-envelope"></i>
+                                <i class="fa-regular fa-bell"></i>
+                                <i class="fa-solid fa-list-check" type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
+                                    id="offcanvasToggle"></i>
+                                <i class="fa-solid fa-moon" id="modes" data-bs-toggle="tooltip"
+                                    data-bs-placement="bottom" title="Dark mode">
+                                </i>
                             </div>
                         </div>
                     </div>
@@ -64,397 +74,485 @@
     </header>
 
     <!-- off-canvas -->
-    <div class="container-fluid" id="offcanvas">
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-            <div class="container">
-                <div class="row py-3 offcanvas-header" id="offcanvashead">
-                    <div class="col-md-10">
-                        <div class="d-flex justify-content-center gap-5" id="offcanvasRightLabel">
-                            <h6 class="todo">TO-DO LIST</h6>
-                            <h6 class="chats">CHATS</h6>
+    <div class="container-fluid p-0">
+        <div class="container-fluid">
+            <div class="row" id="main-row">
+                <div class="col-md-3" id="side-menu">
+                    <div class="row gy-5 px-4">
+                        <!-- one -->
+                        <div class="col-md-12">
+                            <div class="row align-items-center py-3" id="bookmark-column">
+                                <div class="col-md-3">
+                                    <div class="overflow-hidden">
+                                        <img src="/assets/img/headshot.png" class="img-thumbnail img-fluid" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="">
+                                        <span class="small-text name">Robenta Ahimie</span>
+                                        <span class="grey-text">Project Manager</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="text-end">
+                                        <i class="fa-solid fa-bookmark"></i>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-2">
-                        <div class="xmark float-end">
-                            <i class="fa-solid fa-xmark" data-bs-dismiss="offcanvas" aria-label="Close"></i>
+                        <!-- two -->
+                        <div class="col-md-12">
+                            <div class="row align-items-center justify-content-between" id="double-icons">
+                                <div class="col-md-6">
+                                    <div class="">
+                                        <h6>Dashboard</h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="text-end">
+                                        <i class="fa-solid fa-house"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- three -->
+                        <div class="col-md-12">
+                            <div class="row align-items-center justify-content-between" id="double-icons">
+                                <div class="col-md-7">
+                                    <div class="">
+                                        <h6>Basic UI Elements</h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="d-flex float-end gap-2">
+                                        <i class="fa-solid fa-angle-left"></i>
+                                        <i class="fa-solid fa-crosshairs"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- four -->
+                        <div class="col-md-12">
+                            <div class="row align-items-center justify-content-between" id="double-icons">
+                                <div class="col-md-7">
+                                    <div class="">
+                                        <h6>Form Elements</h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="d-flex float-end gap-2">
+                                        <i class="fa-solid fa-angle-left"></i>
+                                        <i class="fa-solid fa-list"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- five -->
+                        <div class="col-md-12">
+                            <div class="row align-items-center justify-content-between" id="double-icons">
+                                <div class="col-md-7">
+                                    <div class="">
+                                        <h6>Tables</h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="d-flex float-end gap-2">
+                                        <i class="fa-solid fa-angle-left"></i>
+                                        <i class="fa-solid fa-table-cells"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- six -->
+                        <div class="col-md-12">
+                            <div class="row align-items-center justify-content-between" id="double-icons">
+                                <div class="col-md-7">
+                                    <div class="">
+                                        <h6>Icons</h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="d-flex float-end gap-2">
+                                        <i class="fa-solid fa-angle-left"></i>
+                                        <i class="fa-solid fa-id-card-clip"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- seven -->
+                        <div class="col-md-12">
+                            <div class="row align-items-center justify-content-between" id="double-icons">
+                                <div class="col-md-7">
+                                    <div class="">
+                                        <h6>Charts</h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="d-flex float-end gap-2">
+                                        <i class="fa-solid fa-angle-left"></i>
+                                        <i class="fa-solid fa-chart-column"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- eight -->
+                        <div class="col-md-12">
+                            <div class="row align-items-center justify-content-between" id="double-icons">
+                                <div class="col-md-7">
+                                    <div class="">
+                                        <h6>User Pages</h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="d-flex float-end gap-2">
+                                        <i class="fa-solid fa-angle-left"></i>
+                                        <i class="fa-solid fa-lock"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- nine -->
+                        <div class="col-md-12">
+                            <div class="row align-items-center justify-content-between" id="double-icons">
+                                <div class="col-md-7">
+                                    <div class="">
+                                        <h6>Error Pages</h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="d-flex float-end gap-2">
+                                        <i class="fa-solid fa-angle-left"></i>
+                                        <i class="fa-solid fa-shield-halved"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ten -->
+                        <div class="col-md-12">
+                            <div class="row align-items-center justify-content-between" id="double-icons">
+                                <div class="col-md-7">
+                                    <div class="">
+                                        <h6>Documentation</h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="d-flex float-end gap-2">
+                                        <i class="fa-solid fa-angle-left"></i>
+                                        <i class="fa-solid fa-briefcase-medical"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- eleven -->
+                        <div class="col-md-12">
+                            <div class="row align-items-center justify-content-between" id="double-icons">
+                                <div class="col-md-7">
+                                    <div class="">
+                                        <h6>Form Elements</h6>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="d-flex float-end gap-2">
+                                        <i class="fa-solid fa-angle-left"></i>
+                                        <i class="fa-solid fa-rectangle-list"></i>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="col-md-1 d-none" id="side-menu-small">
+                    <div class="d-grid justify-content-center gap-5 py-4" id="single-icons">
+                        <div class="">
+                            <i class="fa-solid fa-house"></i>
+                        </div>
+                        <div class="">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <div class="">
+                            <i class="fa-solid fa-crosshairs"></i>
+                        </div>
+                        <div class="">
+                            <i class="fa-solid fa-list"></i>
+                        </div>
+                        <div class="">
+                            <i class="fa-solid fa-table-cells"></i>
+                        </div>
+                        <div class="">
+                            <i class="fa-solid fa-id-card-clip"></i>
+                        </div>
+                        <div class="">
+                            <i class="fa-solid fa-chart-column"></i>
+                        </div>
+                        <div class="">
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                        <div class="">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div class="">
+                            <i class="fa-solid fa-briefcase-medical"></i>
+                        </div>
+                        <div class="">
+                            <i class="fa-solid fa-rectangle-list"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9" id="main-body">
+                    <div class="py-3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Reiciendis, rerum harum dolor ut amet ipsam sunt ullam
+                        delectus, laborum sed itaque, dolores nobis libero.
+                        Dolores, quae? Omnis laudantium culpa suscipit error
+                        earum vitae incidunt amet unde aliquam. Quo inventore
+                        asperiores facere, illo aliquam doloremque iste dicta
+                        consequuntur, nihil magni dignissimos sequi eveniet
+                        ipsa perferendis atque molestiae debitis quidem sint.
+                        Corporis necessitatibus iste maxime ut molestiae
+                        placeat delectus libero corrupti eum? Officia
+                        voluptatibus blanditiis amet porro,
+                        eveniet animi ipsam reprehenderit voluptas, maiores
+                        sapiente sint eius tempore nobis ut optio? Ad modi
+                        tempora quisquam quasi recusandae quae iure nulla
+                        molestias dolores adipisci.
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                <div class="offcanvas-body" id="todo-list">
-                    <h5>Todo List</h5>
-                    <div class="d-flex gap-2">
-                        <input type="text" class="form-control" placeholder="What do you need to do?">
-                        <button type="button" class="btn btn-primary">Submit</button>
-                    </div>
 
-                    <ul class="list-group list-group-flush my-4">
-                        <li class="list-group-item">
-                            <div class="row">
-                                <div class="col-md-1 p-0">
-                                    <input type="checkbox" name="checkboxes" class="checkbox">
-                                </div>
-                                <div class="col-md-10">
-                                    <label for="checkboxes" class="checkbox-label">
-                                        Pick up kids from school
-                                    </label>
-                                </div>
-                                <div class="col-md-1">
-                                    <i class="fa-regular fa-circle-xmark"></i>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="row">
-                                <div class="col-md-1 p-0">
-                                    <input type="checkbox" name="checkboxes" id="">
-                                </div>
-                                <div class="col-md-10">
-                                    <label for="checkboxes" class="checkbox-label">
-                                        Print statements
-                                    </label>
-                                </div>
-                                <div class="col-md-1">
-                                    <i class="fa-regular fa-circle-xmark"></i>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="row">
-                                <div class="col-md-1 p-0">
-                                    <input type="checkbox" name="checkboxes" id="">
-                                </div>
-                                <div class="col-md-10">
-                                    <label for="checkboxes" class="checkbox-label">
-                                        Create invoice
-                                    </label>
-                                </div>
-                                <div class="col-md-1">
-                                    <i class="fa-regular fa-circle-xmark"></i>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="row">
-                                <div class="col-md-1 p-0">
-                                    <input type="checkbox" name="checkboxes" id="">
-                                </div>
-                                <div class="col-md-10">
-                                    <label for="checkboxes" class="checkbox-label">
-                                        Call John
-                                    </label>
-                                </div>
-                                <div class="col-md-1">
-                                    <i class="fa-regular fa-circle-xmark"></i>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="row">
-                                <div class="col-md-1 p-0">
-                                    <input type="checkbox" name="checkboxes" id="">
-                                </div>
-                                <div class="col-md-10">
-                                    <label for="checkboxes" class="checkbox-label">
-                                        Meeting with Alisa
-                                    </label>
-                                </div>
-                                <div class="col-md-1">
-                                    <i class="fa-regular fa-circle-xmark"></i>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
 
-                    <div class="d-flex gap-3 px-1 align-items-center" id="circle-i">
-                        <i class="fa-regular fa-circle"></i>
-                        Feb 11 2018
-                    </div>
-                    <div class="my-2 mx-2">
-                        <p>
-                            Creating component page build a js based app
-                        </p>
-                    </div>
-                    <hr>
-                    <div class="d-flex gap-3 px-1 align-items-center" id="circle-i">
-                        <i class="fa-regular fa-circle"></i>
-                        Feb 7 2018 
-                    </div>
-                    <div class="my-2 mx-2">
-                        <p>
-                            Meeting with Alisa
-                            Call Sarah Graves
-                        </p>
-                    </div>
+        <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header" id="offcanvashead">
+                <div class="d-flex justify-content-center gap-5 w-75" id="offcanvasRightLabel">
+                    <h6 class="todo">TO-DO LIST</h6>
+                    <h6 class="chats">CHATS</h6>
+                </div>
+                <div class="xmark float-end">
+                    <i class="fa-solid fa-xmark" data-bs-dismiss="offcanvas" aria-label="Close"></i>
+                </div>
+            </div>
 
+            <div class="offcanvas-body" id="todo-list">
+                <h5>Todo List</h5>
+                <div class="d-flex gap-2" id="inputDiv">
+                    <input type="text" class="form-control" placeholder="What do you need to do?" id="todoInput">
+                    <button type="submit" class="btn btn-primary" id="addTask">Add</button>
                 </div>
 
-                <div class="offcanvas-body d-none" id="chats">
+                <ul class="list-group list-group-flush my-4">
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-1 p-0">
+                                <input type="checkbox" name="checkboxes" class="checkbox">
+                            </div>
+                            <div class="col-md-10">
+                                <span class="itemText">Pick up kids from school</span>
+                            </div>
+                            <div class="col-md-1">
+                                <i class="fa-regular fa-circle-xmark clearTask"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-1 p-0">
+                                <input type="checkbox" name="checkboxes" class="checkbox">
+                            </div>
+                            <div class="col-md-10">
+                                <span class="itemText">Print statements</span>
+                            </div>
+                            <div class="col-md-1">
+                                <i class="fa-regular fa-circle-xmark clearTask"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-1 p-0">
+                                <input type="checkbox" name="checkboxes" class="checkbox">
+                            </div>
+                            <div class="col-md-10">
+                                <span class="itemText">Create invoice</span>
+                            </div>
+                            <div class="col-md-1">
+                                <i class="fa-regular fa-circle-xmark clearTask"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-1 p-0">
+                                <input type="checkbox" name="checkboxes" class="checkbox">
+                            </div>
+                            <div class="col-md-10">
+                                <span class="itemText">Call John</span>
+                            </div>
+                            <div class="col-md-1">
+                                <i class="fa-regular fa-circle-xmark clearTask"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-md-1 p-0">
+                                <input type="checkbox" name="checkboxes" class="checkbox">
+                            </div>
+                            <div class="col-md-10">
+                                <span class="itemText"> Meeting with Alisa</span>
+                            </div>
+                            <div class="col-md-1">
+                                <i class="fa-regular fa-circle-xmark clearTask"></i>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
 
+                <div class="d-flex gap-3 px-1 align-items-center circle-i">
+                    <i class="fa-regular fa-circle"></i>
+                    Feb 11 2018
+                </div>
+                <div class="my-2 mx-2">
+                    <p>
+                        Creating component page build a js based app
+                    </p>
+                </div>
+
+                <hr>
+                
+                <div class="d-flex gap-3 px-1 align-items-center circle-i">
+                    <i class="fa-regular fa-circle"></i>
+                    Feb 7 2018
+                </div>
+                <div class="my-2 mx-2">
+                    <p>
+                        Meeting with Alisa <br>
+                        Call Sarah Graves
+                    </p>
+                </div>
+            </div>
+            <div class="offcanvas-body d-none" id="chats">
+                <div class="d-flex justify-content-between">
+                    <h6>FRIENDS</h6>
+                    <p>See All</p>
+                </div>
+                <div class="chatlist">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="overflow-hidden">
+                                        <img src="/assets/img/face.jpg" class="img-thumbnail" alt="">                           
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="text-start">
+                                        <h6 class="itemText">Thomas Douglas</h6> <br>
+                                        <span class="fw-lighter">Available</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 text-end">
+                                    <div class="text-end">
+                                        <small class="fw-light">19 min</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="overflow-hidden">
+                                        <img src="/assets/img/catherine.jpg" class="img-thumbnail" alt="">                           
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="text-start">
+                                        <h6 class="itemText">Catherine</h6> <br>
+                                        <span class="fw-lighter">Away</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 text-end">
+                                    <div class="text-end">
+                                        <small class="fw-light">19 min</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="overflow-hidden">
+                                        <img src="/assets/img/danielrussell.jpg" class="img-thumbnail" alt="">                           
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="text-start">
+                                        <h6 class="itemText">Daniel Russell</h6> <br>
+                                        <span class="fw-lighter">Available</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 text-end">
+                                    <div class="text-end">
+                                        <small class="fw-light">19 min</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="overflow-hidden">
+                                        <img src="/assets/img/madelinekennedy.jpg" class="img-thumbnail" alt="">                           
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="text-start">
+                                        <h6 class="itemText">Madeline Kennedy</h6> <br>
+                                        <span class="fw-lighter">Away</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 text-end">
+                                    <div class="text-end">
+                                        <small class="fw-light">19 min</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="overflow-hidden">
+                                        <img src="/assets/img/jamesrichardson.jpg" class="img-thumbnail" alt="">                           
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="text-start">
+                                        <h6 class="itemText">James Richardson</h6> <br>
+                                        <span class="fw-lighter">Available</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 text-end">
+                                    <div class="text-end">
+                                        <small class="fw-light">19 min</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="container-fluid">
-        <div class="row" id="main-row">    
-            <div class="col-md-3" id="side-menu">
-                <div class="row gy-5 px-4">
-                    <!-- one -->
-                    <div class="col-md-12">
-                        <div class="row align-items-center" id="bookmark-column">
-                            <div class="col-md-3">
-                                <div class="overflow-hidden rounded-circle">
-                                    <img src="/assets/img/headshot.png" class="img-thumbnail img-fluid" alt="">
-                                </div>
-                            </div>
-                            <div class="col-md-7">
-                                <div class="float-end">
-                                    <span class="small-text">Robenta Ahimie</span>
-                                    <p class="grey-text">Project Manager</p> 
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="text-end">
-                                    <i class="fa-solid fa-bookmark"></i>            
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- two -->
-                    <div class="col-md-12">
-                        <div class="row align-items-center justify-content-between" id="double-icons">
-                            <div class="col-md-6">
-                                <div class="">
-                                    <h6>Dashboard</h6>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="text-end">
-                                    <i class="fa-solid fa-house"></i>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <!-- three -->
-                    <div class="col-md-12">
-                        <div class="row align-items-center justify-content-between" id="double-icons">
-                            <div class="col-md-7">
-                                <div class="">
-                                    <h6>Basic UI Elements</h6>
-                                </div>
-                            </div>
-                            <div class="col-md-5">
-                                <div class="d-flex float-end gap-2">
-                                    <i class="fa-solid fa-angle-left"></i>
-                                    <i class="fa-solid fa-crosshairs"></i>                                
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- four -->
-                    <div class="col-md-12">
-                        <div class="row align-items-center justify-content-between" id="double-icons">
-                            <div class="col-md-7">
-                                <div class="">
-                                    <h6>Form Elements</h6>
-                                </div>
-                            </div>
-                            <div class="col-md-5">
-                                <div class="d-flex float-end gap-2">
-                                    <i class="fa-solid fa-angle-left"></i>
-                                    <i class="fa-solid fa-list"></i>                                
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- five -->
-                    <div class="col-md-12">
-                        <div class="row align-items-center justify-content-between" id="double-icons">
-                            <div class="col-md-7">
-                                <div class="">
-                                    <h6>Tables</h6>
-                                </div>
-                            </div>
-                            <div class="col-md-5">
-                                <div class="d-flex float-end gap-2">
-                                    <i class="fa-solid fa-angle-left"></i>
-                                    <i class="fa-solid fa-table-cells"></i>                                
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- six -->
-                    <div class="col-md-12">
-                        <div class="row align-items-center justify-content-between" id="double-icons">
-                            <div class="col-md-7">
-                                <div class="">
-                                    <h6>Icons</h6>
-                                </div>
-                            </div>
-                            <div class="col-md-5">
-                                <div class="d-flex float-end gap-2">
-                                    <i class="fa-solid fa-angle-left"></i>
-                                    <i class="fa-solid fa-id-card-clip"></i>                                
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- seven -->
-                    <div class="col-md-12">
-                        <div class="row align-items-center justify-content-between" id="double-icons">
-                            <div class="col-md-7">
-                                <div class="">
-                                    <h6>Charts</h6>
-                                </div>
-                            </div>
-                            <div class="col-md-5">
-                                <div class="d-flex float-end gap-2">
-                                    <i class="fa-solid fa-angle-left"></i>
-                                    <i class="fa-solid fa-chart-column"></i>                                
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- eight -->
-                    <div class="col-md-12">
-                        <div class="row align-items-center justify-content-between" id="double-icons">
-                            <div class="col-md-7">
-                                <div class="">
-                                    <h6>User Pages</h6>
-                                </div>
-                            </div>
-                            <div class="col-md-5">
-                                <div class="d-flex float-end gap-2">
-                                    <i class="fa-solid fa-angle-left"></i>
-                                    <i class="fa-solid fa-lock"></i>                                
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- nine -->
-                    <div class="col-md-12">
-                        <div class="row align-items-center justify-content-between" id="double-icons">
-                            <div class="col-md-7">
-                                <div class="">
-                                    <h6>Error Pages</h6>
-                                </div>
-                            </div>
-                            <div class="col-md-5">
-                                <div class="d-flex float-end gap-2">
-                                    <i class="fa-solid fa-angle-left"></i>
-                                    <i class="fa-solid fa-shield-halved"></i>                                
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- ten -->
-                    <div class="col-md-12">
-                        <div class="row align-items-center justify-content-between" id="double-icons">
-                            <div class="col-md-7">
-                                <div class="">
-                                    <h6>Documentation</h6>
-                                </div>
-                            </div>
-                            <div class="col-md-5">
-                                <div class="d-flex float-end gap-2">
-                                    <i class="fa-solid fa-angle-left"></i>
-                                    <i class="fa-solid fa-briefcase-medical"></i>                                
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- eleven -->
-                    <div class="col-md-12">
-                        <div class="row align-items-center justify-content-between" id="double-icons">
-                            <div class="col-md-7">
-                                <div class="">
-                                    <h6>Form Elements</h6>
-                                </div>
-                            </div>
-                            <div class="col-md-5">
-                                <div class="d-flex float-end gap-2">
-                                    <i class="fa-solid fa-angle-left"></i>
-                                    <i class="fa-solid fa-rectangle-list"></i>                                
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-1 d-none" id="side-menu-small">
-                <div class="d-grid justify-content-center gap-5 py-4" id="single-icons">
-                    <div class="">
-                        <i class="fa-solid fa-house"></i>
-                    </div>
-                    <div class="">
-                        <i class="fa-solid fa-layer-group"></i>
-                    </div>
-                    <div class="">
-                        <i class="fa-solid fa-crosshairs"></i>                                
-                    </div>
-                    <div class="">
-                        <i class="fa-solid fa-list"></i>    
-                    </div>
-                    <div class="">
-                        <i class="fa-solid fa-table-cells"></i>      
-                    </div>
-                    <div class="">
-                        <i class="fa-solid fa-id-card-clip"></i>  
-                    </div>
-                    <div class="">
-                        <i class="fa-solid fa-chart-column"></i>                                
-                    </div>
-                    <div class="">
-                        <i class="fa-solid fa-lock"></i>                                
-                    </div>
-                    <div class="">
-                        <i class="fa-solid fa-shield-halved"></i>                    
-                    </div>
-                    <div class="">
-                        <i class="fa-solid fa-briefcase-medical"></i>                           
-                    </div>
-                    <div class="">
-                        <i class="fa-solid fa-rectangle-list"></i>                                
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-md-9" id="main-body">
-                <div class="">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Reiciendis, rerum harum dolor ut amet ipsam sunt ullam 
-                    delectus, laborum sed itaque, dolores nobis libero. 
-                    Dolores, quae? Omnis laudantium culpa suscipit error
-                    earum vitae incidunt amet unde aliquam. Quo inventore
-                    asperiores facere, illo aliquam doloremque iste dicta
-                    consequuntur, nihil magni dignissimos sequi eveniet 
-                    ipsa perferendis atque molestiae debitis quidem sint.
-                    Corporis necessitatibus iste maxime ut molestiae 
-                    placeat delectus libero corrupti eum? Officia 
-                    voluptatibus blanditiis amet porro,
-                    eveniet animi ipsam reprehenderit voluptas, maiores
-                    sapiente sint eius tempore nobis ut optio? Ad modi 
-                    tempora quisquam quasi recusandae quae iure nulla
-                    molestias dolores adipisci.
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
 
     <!-- font-awesome js -->
     <script src="https://kit.fontawesome.com/e3cd6f4614.js" crossorigin="anonymous"></script>
 
     <!-- bootstrap js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 
     <!-- custom js -->
     <script src="/assets/script.js"></script>
 </body>
+
 </html>

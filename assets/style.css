@@ -9,6 +9,7 @@
     --white: #fff;
     --green: #1bcfb4;
     --grey-purple: #beabc1;
+    --red: #f75f5f;
 }
 
 *{
@@ -21,6 +22,9 @@ html{
 }
 #body{
     background-color: var(--body-color);
+}
+header{
+    background: var(--white);
 }
 .purple{
     color: var(--purple);
@@ -40,10 +44,12 @@ html{
     font-size: 14px;
     letter-spacing: 0.5px;
 }
-#top-row i{
-    font-size: 15px;
+i{
     color: var(--grey);
-    border-color: 3px solid var(--grey);
+    font-size: 15px;
+}
+.name span{
+    font-weight: 300;
 }
 #name-drop img{
     border: none;
@@ -55,9 +61,6 @@ html{
     color: var(--purple);
     font-size: 12px;
 }
-#fa-sun-regular{
-    color: var(--white) !important;
-}
 #img-cont:hover{
     cursor: pointer !important;
 }
@@ -68,12 +71,13 @@ html{
 .light-mode{
     color: var(--white) !important;
 }
-#side-menu #bookmark-column img{
+#side-menu #bookmark-column img, #offcanvasRight .chatlist img{
     border: none;
     border-radius: 50%;
     width: 50px;
     height: 50px;
 }
+
 #side-menu #bookmark-column .small-text{
     font-size: 14px;
     font-weight: 500;
@@ -83,12 +87,6 @@ html{
     font-size: 12px;
     font-weight: 300;
 }
-#side-menu #bookmark-column i{
-    color: var(--green);
-}
-#side-menu #double-icons, #single-icons i{
-    color: var(--grey-purple);
-}
 #side-menu #double-icons h6{
     font-weight: 300;
     font-size: 14px;
@@ -96,7 +94,7 @@ html{
 
 
 /* off-canvas */
-#offcanvas #offcanvashead{
+#offcanvasRight #offcanvashead{
     background: hsla(280, 100%, 77%, 1);
 
     background: linear-gradient(45deg, hsla(280, 100%, 77%, 1) 32%, hsla(266, 100%, 68%, 1) 100%);
@@ -107,19 +105,19 @@ html{
     
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#D88AFF", endColorstr="#A55EFF", GradientType=1 );
 }
-#offcanvas #offcanvasRightLabel h6{
+#offcanvasRight #offcanvasRightLabel h6{
     color: var(--white);
     font-weight: 300;
 }
-#offcanvas .checkbox-label, p{
+#offcanvasRight .itemText, p{
     font-weight: 300;
     font-size: 15px;
 }
-#offcanvas .xmark i{
+#offcanvasRight .xmark i{
     color: var(--white);
     font-size: 20px;
 }
-#offcanvas .btn{
+#offcanvasRight .btn{
     background: hsla(280, 100%, 77%, 1);
 
     background: linear-gradient(45deg, hsla(280, 100%, 77%, 1) 32%, hsla(266, 100%, 68%, 1) 100%);
@@ -132,16 +130,26 @@ html{
     
     border: none;
 }
-#offcanvas #todo-list input[type="checkbox"]:checked {
+#offcanvasRight #todo-list input[type="checkbox"]:checked {
     accent-color: var(--purple);
 }
-#offcanvas #todo-list i{
+.itemText {
+    display: inline-block;
+    transition: text-decoration 0.3s;
+}
+.itemText.checked {
+    text-decoration: line-through;
+}
+.checked-color {
+    color: var(--purple) !important;
+}
+#offcanvasRight #todo-list i{
     color: var(--grey-purple);
 }
-#offcanvas #todo-list #circle-i i{
+#offcanvasRight #todo-list .circle-i i{
     color: var(--purple);
 }
-#offcanvas #todo-list, #side-menu-small, #side-menu {
+#offcanvasRight #todo-list, #chats, #side-menu-small, #side-menu{
     animation: transitionIn 0.75s;
 }
 @keyframes transitionIn{
@@ -153,4 +161,33 @@ html{
         opacity: 1;
         transform: rotateX(0);
     }
+}
+#offcanvasRight .alert-danger{
+    color: var(--red);
+}
+#offcanvasRight .alert-purple{
+    color: var(--white);
+
+    background: hsla(280, 100%, 77%, 1);
+
+    background: linear-gradient(45deg, hsla(280, 100%, 77%, 1) 32%, hsla(266, 100%, 68%, 1) 100%);
+    
+    background: -moz-linear-gradient(45deg, hsla(280, 100%, 77%, 1) 32%, hsla(266, 100%, 68%, 1) 100%);
+    
+    background: -webkit-linear-gradient(45deg, hsla(280, 100%, 77%, 1) 32%, hsla(266, 100%, 68%, 1) 100%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#D88AFF", endColorstr="#A55EFF", GradientType=1 );
+}
+#offcanvasRight .alert{
+    padding: 5px;
+    text-align: center;
+    border: none;
+}
+
+#offcanvasRight .chatlist small{
+    color: var(--grey);
+}
+#offcanvasRight .chatlist span{
+    color: var(--grey);
+    font-size: 14px;
 }
