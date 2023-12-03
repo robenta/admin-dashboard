@@ -35,18 +35,26 @@ header{
     font-size: 22px !important;
     color: var(--light-purple) !important;
 }
-#search{
-    border: none;
+.search{
+    border: 2px solid var(--grey);
+    padding: 7px;
+    /* background-color: var(--grey-purple); */
 }
 ::placeholder{
     color: var(--grey);
     font-weight: 100 !important;
     font-size: 14px;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
+}
+.navbar-toggler{
+    border: none !important;
+    font-size: 18px !important;
+    padding: 2px !important;
+    box-shadow: none !important;
 }
 i{
     color: var(--grey);
-    font-size: 15px;
+    font-size: 22vpx;
 }
 .name span{
     font-weight: 300;

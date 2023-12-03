@@ -6,12 +6,12 @@ const body = document.querySelector('body')
 const faIcons = document.querySelectorAll('.fa-solid')
 const faReg = document.querySelectorAll('.fa-regular')
 const modes = document.querySelector('#modes')
-const lightMode = document.createElement('i')
 const offcanvas = document.querySelector('#offcanvasRight')
+const ul = document.querySelector('#offcanvasRight')
+const navbarToggler = document.querySelector('.navbar-toggler')
+const search = document.querySelectorAll('.search')
 const allElements = document.querySelectorAll('div')
-const listItem = document.querySelectorAll('.list-group-item')
-
-
+// const listItem = document.querySelectorAll('.list-group-item')
 
 modes.addEventListener('click', switchModes)
 function switchModes(e){
@@ -20,10 +20,11 @@ function switchModes(e){
         header.style.backgroundColor = 'black'
         offcanvas.style.backgroundColor = 'black'
         offcanvas.style.borderLeftColor = '#d688ff'
+        navbarToggler.style.color = 'red'
+        navbarToggler.style.backgroundColor = '#d688ff'
         offcanvas.style.borderLeftStyle = "solid"; 
         offcanvas.style.borderLeftWidth = "0.5px";
         topRow.style.borderBottom = "2px solid #d688ff";
-        firstColumn.style.borderBottom = "none";
         faIcons.forEach((fa)=>{
             fa.style.color = '#beabc1'
         })
@@ -33,9 +34,15 @@ function switchModes(e){
         allElements.forEach((all)=>{
             all.style.color = '#beabc1'
         })
-        listItem.forEach((list)=>{
-            list.style.backgroundColor = 'black'
+        search.forEach((all)=>{
+            all.style.color = '#fff'
+            all.style.backgroundColor = '#beabc1'
+            all.style.border = '2px solid #d688ff'
+            all.style.border = 'none'        
         })
+        // listItem.forEach((list)=>{
+        //     list.style.backgroundColor = 'black'
+        // })
         modes.classList.remove('fa-moon')
         modes.classList.add('fa-sun')
     }else{
@@ -56,12 +63,17 @@ function switchModes(e){
         allElements.forEach((all)=>{
             all.style.color = '#000'
         })
-        listItem.forEach((list)=>{
-            list.style.backgroundColor = '#fff'
+        search.forEach((all)=>{
+            all.style.backgroundColor = '#beabc1'
+            all.style.border = '2px solid #d688ff'
+            all.style.border = 'none'        
         })
+        // listItem.forEach((list)=>{
+        //     list.style.backgroundColor = '#fff'
+        // })
 
         modes.classList.add('fa-moon')
-        modes.classList.remove('fa-sun')    
+        modes.classList.remove('fa-sun')  
     }
 
 }
@@ -70,37 +82,32 @@ function switchModes(e){
 
 // HIDE PURPLE TEXT ON NAVBAR/SIDE-MENU ON CLICK OF THE MENU BUTTON
 const topRow = document.querySelector('#top-row')
-const firstColumn = document.querySelector('#first-column')
 const menuIcon = document.querySelector('#menu-icon')
 const mainRow = document.querySelector('#main-row')
 const sideMenu = document.querySelector('#side-menu')
 const sideMenuSmall = document.querySelector('#side-menu-small')
-const purpleText = document.querySelector('.purple')
 const mainBody = document.querySelector('#main-body')
-const icon = document.querySelector('#icon')
 
 
 menuIcon.addEventListener('click', hideFirstColumn)
-const newIcon = document.createElement('div')
-
 
 function hideFirstColumn(e){
-    if (purpleText.className === 'purple') {
-        purpleText.classList.add('d-none')
-        icon.classList.add('p-0')
-
-        firstColumn.classList.replace('col-md-3', 'col-md-1')
-        secondColumn.classList.replace('col-md-5', 'col-md-7')
+    if (e.target.classList.contains('open')) {
+        menuIcon.classList.remove('open')
         sideMenu.classList.add('d-none')
-        sideMenuSmall.classList.remove('d-none')
+        sideMenuSmall.classList.add('d-xxl-block')
+        sideMenuSmall.classList.add('d-xl-block')
+        sideMenuSmall.classList.add('d-md-block')
+        sideMenuSmall.classList.add('d-lg-block')
         mainBody.classList.remove('col-md-9')
         mainBody.classList.add('col-md-11')
     }else{
-        firstColumn.classList.replace('col-md-1', 'col-md-3')
-        secondColumn.classList.replace('col-md-7', 'col-md-5')
-        purpleText.classList.remove('d-none')
+        menuIcon.classList.add('open')
         sideMenu.classList.remove('d-none')
-        sideMenuSmall.classList.add('d-none')
+        sideMenuSmall.classList.remove('d-xxl-block')
+        sideMenuSmall.classList.remove('d-xl-block')
+        sideMenuSmall.classList.remove('d-md-block')
+        sideMenuSmall.classList.remove('d-lg-block')
         mainBody.classList.remove('col-md-11')
         mainBody.classList.add('col-md-9')
     }
@@ -115,8 +122,8 @@ const offcanvasChat = document.querySelector('#chats')
 const offcanvasTodo = document.querySelector('#todo-list')
 const offcanvasToggle = document.querySelector('#offcanvasToggle')
 
-offcanvasToggle.addEventListener('click', dimChatText)
-function dimChatText(){
+offcanvasToggle.addEventListener('click', dimHeaderTextColor)
+function dimHeaderTextColor(){
     if (offcanvasChat.classList.contains('d-none')) {
         chats.style.color = '#d5d3d3'
     }else{
@@ -130,7 +137,6 @@ function showChats(){
     todoList.style.color = '#d5d3d3'
     chats.style.color = 'white'
 }
-
 todoList.addEventListener('click', showTodo)
 function showTodo(){
     offcanvasChat.classList.add('d-none')
@@ -154,28 +160,29 @@ function addTask(e){
         showAlert('Please add a task', 'danger');
     }else{
         // create list
+        const p = document.createElement('p')
+        p.textContent = 'testing 12'
+        listGroup.append(p)
         const newListItem = document.createElement('li')
-        newListItem.className = 'list-group-item'
+        newListItem.className = 'list-group-item border'
 
         const litDiv = document.createElement('div')
-        litDiv.className = 'row'
+        litDiv.className = 'd-flex justify-content-between'
 
-        const col1 = document.createElement('div')
-        col1.classList = 'col-md-1 p-0'
-        col1.innerHTML = '<input type="checkbox" name="checkboxes" class="checkbox">'
-        litDiv.appendChild(col1)
-        const col2 = document.createElement('div')
-        col2.className = 'col-md-10'
-        const inputText = document.createElement('span')
-        inputText.className = 'itemText'
-        inputText.textContent = input.value
-        col2.appendChild(inputText)
-        litDiv.appendChild(col2)
-        const col3 = document.createElement('div')
-        col3.className = 'col-md-1'
-        col3.innerHTML = '<i class="fa-regular fa-circle-xmark clearTask"></i>'
-        litDiv.appendChild(col3)
-        
+        const litDiv1 = document.createElement('div')
+        litDiv1.classList = 'd-flex gap-3'
+        litDiv1.innerHTML = '<input type="checkbox" name="checkboxes" class="checkbox">'
+        const litDiv1Span = document.createElement('span')
+        litDiv1Span.className = 'itemText'
+        litDiv1Span.textContent = input.value
+        litDiv1.appendChild(litDiv1Span)
+        litDiv.appendChild(litDiv1)
+
+
+        const litDiv2 = document.createElement('div')
+        litDiv2.className = ' '
+        litDiv2.innerHTML = '<i class="fa-regular fa-circle-xmark clearTask"></i>'
+        litDiv.appendChild(litDiv2)        
 
         newListItem.append(litDiv)
 
@@ -198,20 +205,16 @@ function removeTask(e){
     }
 }
 
+
 checkboxes.forEach(function(checkbox) {
-    //   Add an event listener to each checkbox
-    checkbox.addEventListener('change', function() {
-        // Get the corresponding span element
-        const span = checkbox.parentElement.nextElementSibling.querySelector('.itemText');
-        // Toggle the 'checked' class based on the checkbox state
+    checkbox.addEventListener('change', changeCheckboxColor) 
+    function changeCheckboxColor() {
+        const span = checkbox.parentElement.querySelector('.itemText');
         span.classList.toggle('checked', checkbox.checked);
         
-        // Get the corresponding icon element
-        const icon = checkbox.parentElement.nextElementSibling.nextElementSibling.querySelector('.clearTask');
-        
-        // Toggle the 'checked' class based on the checkbox state
+        const icon = checkbox.parentElement.nextElementSibling.querySelector('.clearTask');
         icon.classList.toggle('checked-color', checkbox.checked);
-    });
+    };
 });
 
 function showAlert(message, className){
@@ -224,3 +227,16 @@ function showAlert(message, className){
 }
 
 
+// const navToggler = document.querySelector('#navbar-toggle')
+
+// navToggler.addEventListener('click', removeMenuBtn)
+// function removeMenuBtn(e){
+//     if (menuIcon.classList.contains('d-block')) {
+//         menuIcon.classList.remove('d-block')
+//         menuIcon.classList.add('d-none')
+//     }else{
+//         menuIcon.classList.remove('d-none')
+//         menuIcon.classList.add('d-block')
+//     }
+//     e.preventDefault
+// }
