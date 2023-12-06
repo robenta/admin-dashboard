@@ -21,7 +21,7 @@
 <body>
 
     <header class="sticky-top">
-        <nav class="navbar navbar-expand-xxl" id="top-row">
+        <nav class="navbar navbar-expand-lg" id="top-row">
             <div class="container-fluid">
                 <div class="navbar-brand purple-column mx-2 w-25" href="#" id="first-column">
                     <i class="fa-solid fa-layer-group" id="icon"></i>
@@ -33,23 +33,25 @@
                     <span class="navbar-toggler-icon open" id="menu-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <div class="d-flex align-items-center px-2 justify-content-between gap-5 w-100" id="second-column">
-                        <div class="d-flex align-items-center gap-2" id="name-drop">
-                            <img src="/assets/img/headshot.png" class="img-thumbnail" alt="">
-                            <span class="name">Robenta Ahimie <br>
-                                <span class="grey-text">Project Manager</span>
-                            </span>
+                    <div class="d-flex align-items-center px-2 justify-content-between gap-5 w-100">
+                        <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block open" id="menuLgScrn">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 nameDiv">
+                            <img src="/assets/img/headshot.png" class="img-fluid headerImage" alt="">
+                            <span class="name">Robenta Ahimie </span>
                             <form class="px-5 d-md-none d-none d-lg-block d-xl-block d-xxl-block" role="search">
                                 <input type="search" name="checkboxes" placeholder="Search..." class="search">
                             </form>
                         </div>
                         <div class="d-flex justify-content-between gap-5 align-items-center" id="third-column">
-                            <i class="fa-regular fa-envelope"></i>
-                            <i class="fa-regular fa-bell"></i>
+                            <i class="fa-regular fa-envelope d-none d-md-block d-lg-block d-xl-block d-xxl-block"></i>
+                            <i class="fa-regular fa-bell d-none d-md-block d-lg-block d-xl-block d-xxl-block"></i>
                             <i class="fa-solid fa-list-check" type="button" data-bs-toggle="offcanvas"
                                 data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
-                                id="offcanvasToggle"></i>
-                            <i class="fa-solid fa-moon" id="modes" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                id="offcanvasToggle">
+                            </i>
+                            <i class="fa-solid fa-moon" id="modes1" data-bs-toggle="tooltip" data-bs-placement="bottom"
                                 title="Dark mode">
                             </i>
                         </div>
@@ -67,33 +69,52 @@
         <div class="container-fluid">
             <div class="row" id="main-row">
                 <div class="col-md-3" id="side-menu">
-                    <div class="row gy-5 px-2 py-3">
+                    <div class="row gy-5 px-0 py-3">
                         <!-- one -->
-                        <!-- two -->
+                        <div class="col-md-12 d-block d-md-block d-lg-none d-xl-none d-xxl-none">
+                            <div class="row align-items-center justify-content-between nameDiv">
+                                <div class="col-md-10 col-10">
+                                    <div class="d-flex gap-1 align-items-center">
+                                        <div class="">
+                                            <img src="/assets/img/headshot.png" class="img-fluid headerImage" alt="">
+                                        </div>
+                                        <div class="">
+                                            <span class="name">Robenta Ahimie</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-2">
+                                    <div class="text-end">
+                                        <i class="fa-solid fa-moon" id="modes2" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                        title="Dark mode">
+                                        </i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-md-12">
                             <div class="row align-items-center justify-content-between" id="double-icons">
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-6">
                                     <div class="">
                                         <h6>Dashboard</h6>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-6">
                                     <div class="text-end">
                                         <i class="fa-solid fa-house"></i>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                         <!-- three -->
                         <div class="col-md-12">
                             <div class="row align-items-center justify-content-between" id="double-icons">
-                                <div class="col-md-7">
+                                <div class="col-md-6 col-6">
                                     <div class="">
                                         <h6>Basic UI Elements</h6>
                                     </div>
                                 </div>
-                                <div class="col-md-5">
+                                <div class="col-md-6 col-6">
                                     <div class="d-flex float-end gap-2">
                                         <i class="fa-solid fa-angle-left"></i>
                                         <i class="fa-solid fa-crosshairs"></i>
@@ -104,12 +125,12 @@
                         <!-- four -->
                         <div class="col-md-12">
                             <div class="row align-items-center justify-content-between" id="double-icons">
-                                <div class="col-md-7">
+                                <div class="col-md-6 col-6">
                                     <div class="">
                                         <h6>Form Elements</h6>
                                     </div>
                                 </div>
-                                <div class="col-md-5">
+                                <div class="col-md-6 col-6">
                                     <div class="d-flex float-end gap-2">
                                         <i class="fa-solid fa-angle-left"></i>
                                         <i class="fa-solid fa-list"></i>
@@ -120,12 +141,12 @@
                         <!-- five -->
                         <div class="col-md-12">
                             <div class="row align-items-center justify-content-between" id="double-icons">
-                                <div class="col-md-7">
+                                <div class="col-md-6 col-6">
                                     <div class="">
                                         <h6>Tables</h6>
                                     </div>
                                 </div>
-                                <div class="col-md-5">
+                                <div class="col-md-6 col-6">
                                     <div class="d-flex float-end gap-2">
                                         <i class="fa-solid fa-angle-left"></i>
                                         <i class="fa-solid fa-table-cells"></i>
@@ -136,12 +157,12 @@
                         <!-- six -->
                         <div class="col-md-12">
                             <div class="row align-items-center justify-content-between" id="double-icons">
-                                <div class="col-md-7">
+                                <div class="col-md-6 col-6">
                                     <div class="">
                                         <h6>Icons</h6>
                                     </div>
                                 </div>
-                                <div class="col-md-5">
+                                <div class="col-md-6 col-6">
                                     <div class="d-flex float-end gap-2">
                                         <i class="fa-solid fa-angle-left"></i>
                                         <i class="fa-solid fa-id-card-clip"></i>
@@ -152,12 +173,12 @@
                         <!-- seven -->
                         <div class="col-md-12">
                             <div class="row align-items-center justify-content-between" id="double-icons">
-                                <div class="col-md-7">
+                                <div class="col-md-6 col-6">
                                     <div class="">
                                         <h6>Charts</h6>
                                     </div>
                                 </div>
-                                <div class="col-md-5">
+                                <div class="col-md-6 col-6">
                                     <div class="d-flex float-end gap-2">
                                         <i class="fa-solid fa-angle-left"></i>
                                         <i class="fa-solid fa-chart-column"></i>
@@ -168,12 +189,12 @@
                         <!-- eight -->
                         <div class="col-md-12">
                             <div class="row align-items-center justify-content-between" id="double-icons">
-                                <div class="col-md-7">
+                                <div class="col-md-6 col-6">
                                     <div class="">
                                         <h6>User Pages</h6>
                                     </div>
                                 </div>
-                                <div class="col-md-5">
+                                <div class="col-md-6 col-6">
                                     <div class="d-flex float-end gap-2">
                                         <i class="fa-solid fa-angle-left"></i>
                                         <i class="fa-solid fa-lock"></i>
@@ -184,12 +205,12 @@
                         <!-- nine -->
                         <div class="col-md-12">
                             <div class="row align-items-center justify-content-between" id="double-icons">
-                                <div class="col-md-7">
+                                <div class="col-md-6 col-6">
                                     <div class="">
                                         <h6>Error Pages</h6>
                                     </div>
                                 </div>
-                                <div class="col-md-5">
+                                <div class="col-md-6 col-6">
                                     <div class="d-flex float-end gap-2">
                                         <i class="fa-solid fa-angle-left"></i>
                                         <i class="fa-solid fa-shield-halved"></i>
@@ -200,12 +221,12 @@
                         <!-- ten -->
                         <div class="col-md-12">
                             <div class="row align-items-center justify-content-between" id="double-icons">
-                                <div class="col-md-7">
+                                <div class="col-md-6 col-6">
                                     <div class="">
                                         <h6>Documentation</h6>
                                     </div>
                                 </div>
-                                <div class="col-md-5">
+                                <div class="col-md-6 col-6">
                                     <div class="d-flex float-end gap-2">
                                         <i class="fa-solid fa-angle-left"></i>
                                         <i class="fa-solid fa-briefcase-medical"></i>
@@ -216,12 +237,12 @@
                         <!-- eleven -->
                         <div class="col-md-12">
                             <div class="row align-items-center justify-content-between" id="double-icons">
-                                <div class="col-md-7">
+                                <div class="col-md-6 col-6">
                                     <div class="">
                                         <h6>Form Elements</h6>
                                     </div>
                                 </div>
-                                <div class="col-md-5">
+                                <div class="col-md-6 col-6">
                                     <div class="d-flex float-end gap-2">
                                         <i class="fa-solid fa-angle-left"></i>
                                         <i class="fa-solid fa-rectangle-list"></i>
@@ -231,45 +252,45 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-1 d-none" id="side-menu-small">
-                    <div class="d-grid justify-content-center gap-5 py-3" id="single-icons">
-                        <div class="">
+                <div class="col-md-1 d-none">
+                    <div class="d-grid text-start px-2 pb-4 sideMenuSmall" id="side-menu-small">
+                        <div class="py-3">
                             <i class="fa-solid fa-house"></i>
                         </div>
-                        <div class="">
+                        <div class="py-3">
                             <i class="fa-solid fa-layer-group"></i>
                         </div>
-                        <div class="">
+                        <div class="py-3">
                             <i class="fa-solid fa-crosshairs"></i>
                         </div>
-                        <div class="">
+                        <div class="py-3">
                             <i class="fa-solid fa-list"></i>
                         </div>
-                        <div class="">
+                        <div class="py-3">
                             <i class="fa-solid fa-table-cells"></i>
                         </div>
-                        <div class="">
+                        <div class="py-3">
                             <i class="fa-solid fa-id-card-clip"></i>
                         </div>
-                        <div class="">
+                        <div class="py-3">
                             <i class="fa-solid fa-chart-column"></i>
                         </div>
-                        <div class="">
+                        <div class="py-3">
                             <i class="fa-solid fa-lock"></i>
                         </div>
-                        <div class="">
+                        <div class="py-3">
                             <i class="fa-solid fa-shield-halved"></i>
                         </div>
-                        <div class="">
+                        <div class="py-3">
                             <i class="fa-solid fa-briefcase-medical"></i>
                         </div>
-                        <div class="">
+                        <div class="py-3">
                             <i class="fa-solid fa-rectangle-list"></i>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-9" id="main-body">
-                    <div class="py-2">
+                <div class="col-md-9">
+                    <div class="mx-2 py-2 d-md-block d-none d-lg-block d-xl-block d-xxl-block" id="main-body">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Reiciendis, rerum harum dolor ut amet ipsam sunt ullam
                         delectus, laborum sed itaque, dolores nobis libero.
@@ -311,90 +332,95 @@
                     <button type="submit" class="btn btn-primary" id="addTask">Add</button>
                 </div>
 
-                <ul class="list-group list-group-flush my-4">
-                    <li class="list-group-item border">
-                        <div class="d-flex justify-content-between">
-                            <div class="d-flex gap-3">
-                                <input type="checkbox" name="checkboxes" class="checkbox">
-                                <span class="itemText">Pick up kids from school</span>
-                            </div>
-                            <div class="">
-                                <i class="fa-regular fa-circle-xmark clearTask"></i>
-                            </div>
+                <div class="list my-3">
+                    <div class="d-flex my-3 pb-2 border-bottom justify-content-between">
+                        <div class="d-flex gap-3">
+                            <input type="checkbox" name="checkboxes" class="checkbox">
+                            <span class="itemText">Pick up kids from school</span>
                         </div>
-                    </li>
-                    <li class="list-group-item border">
-                        <div class="d-flex justify-content-between">
-                            <div class="d-flex gap-3">
-                                <input type="checkbox" name="checkboxes" class="checkbox">
-                                <span class="itemText">Print statements</span>
-                            </div>
-                            <div class="">
-                                <i class="fa-regular fa-circle-xmark clearTask"></i>
-                            </div>
+                        <div class="">
+                            <i class="fa-regular fa-circle-xmark clearTask"></i>
                         </div>
-                    </li>
-                    <li class="list-group-item border">
-                        <div class="d-flex justify-content-between">
-                            <div class="d-flex gap-3">
-                                <input type="checkbox" name="checkboxes" class="checkbox">
-                                <span class="itemText">Create invoice</span>
-                            </div>
-                            <div class="">
-                                <i class="fa-regular fa-circle-xmark clearTask"></i>
-                            </div>
+                    </div>
+                    <div class="d-flex my-3 pb-2 border-bottom justify-content-between">
+                        <div class="d-flex gap-3">
+                            <input type="checkbox" name="checkboxes" class="checkbox">
+                            <span class="itemText">Pick up kids from school</span>
                         </div>
-                    </li>
-                    <li class="list-group-item border">
-                        <div class="d-flex justify-content-between">
-                            <div class="d-flex gap-3">
-                                <input type="checkbox" name="checkboxes" class="checkbox">
-                                <span class="itemText">Call John</span>
-                            </div>
-                            <div class="">
-                                <i class="fa-regular fa-circle-xmark clearTask"></i>
-                            </div>
+                        <div class="">
+                            <i class="fa-regular fa-circle-xmark clearTask"></i>
                         </div>
-                    </li>
-                    <li class="list-group-item border">
-                        <div class="d-flex justify-content-between">
-                            <div class="d-flex gap-3">
-                                <input type="checkbox" name="checkboxes" class="checkbox">
-                                <span class="itemText">Meeting with Alisa</span>
-                            </div>
-                            <div class="">
-                                <i class="fa-regular fa-circle-xmark clearTask"></i>
-                            </div>
+                    </div>
+                    <div class="d-flex my-3 pb-2 border-bottom justify-content-between">
+                        <div class="d-flex gap-3">
+                            <input type="checkbox" name="checkboxes" class="checkbox">
+                            <span class="itemText">Print statements</span>
                         </div>
-                    </li>
-                </ul>
-
-                <div class="d-flex gap-3 px-1 align-items-center circle-i">
-                    <i class="fa-regular fa-circle"></i>
-                    Feb 11 2018
+                        <div class="">
+                            <i class="fa-regular fa-circle-xmark clearTask"></i>
+                        </div>
+                    </div>
+                    <div class="d-flex my-3 pb-2 border-bottom justify-content-between">
+                        <div class="d-flex gap-3">
+                            <input type="checkbox" name="checkboxes" class="checkbox">
+                            <span class="itemText">Create invoice</span>
+                        </div>
+                        <div class="">
+                            <i class="fa-regular fa-circle-xmark clearTask"></i>
+                        </div>
+                    </div>
+                    <div class="d-flex my-3 pb-2 border-bottom justify-content-between">
+                        <div class="d-flex gap-3">
+                            <input type="checkbox" name="checkboxes" class="checkbox">
+                            <span class="itemText">Call John</span>
+                        </div>
+                        <div class="">
+                            <i class="fa-regular fa-circle-xmark clearTask"></i>
+                        </div>
+                    </div>
+                    <div class="d-flex my-3 pb-2 border-bottom justify-content-between">
+                        <div class="d-flex gap-3">
+                            <input type="checkbox" name="checkboxes" class="checkbox">
+                            <span class="itemText">Meeting with Alisa</span>
+                        </div>
+                        <div class="">
+                            <i class="fa-regular fa-circle-xmark clearTask"></i>
+                        </div>
+                    </div>
                 </div>
-                <div class="my-2 mx-2">
-                    <p>
-                        Creating component page build a js based app
-                    </p>
+
+                <div class="">
+                    <div class="d-flex gap-3 px-1 align-items-center circle-i">
+                        <i class="fa-regular fa-circle"></i>
+                        Feb 11 2018
+                    </div>
+                    <div class="my-2 mx-2">
+                        <p class="pTexts">
+                            Creating component page build a js based app
+                        </p>
+                    </div>
                 </div>
                 <hr>
-                <div class="d-flex gap-3 px-1 align-items-center circle-i">
-                    <i class="fa-regular fa-circle"></i>
-                    Feb 7 2018
-                </div>
-                <div class="my-2 mx-2">
-                    <p>
-                        Meeting with Alisa <br>
-                        Call Sarah Graves
-                    </p>
+                <div class="">
+                    <div class="d-flex gap-3 px-1 align-items-center circle-i">
+                        <i class="fa-regular fa-circle"></i>
+                        Feb 7 2018
+                    </div>
+                    <div class="my-2 mx-2">
+                        <p class="pTexts">
+                            Call Sarah Graves
+                        </p>
+                        <p class="pTexts">
+                            Meeting with Alisa <br>
+                        </p>
+                    </div>
                 </div>
             </div>
 
             <div class="offcanvas-body d-none" id="chats">
                 <div class="d-flex justify-content-between">
                     <h6>FRIENDS</h6>
-                    <p>See All</p>
+                    <p class="pTexts fw-light">See All</p>
                 </div>
                 <div class="chatlist">
                     <div class="d-flex justify-content-between">
@@ -403,7 +429,7 @@
                                 <img src="/assets/img/face.jpg" class="img-thumbnail" alt="">
                             </div>
                             <div class="text-start">
-                                <h6 class="itemText">Thomas Douglas</h6> <br>
+                                <h6 class="chatText">Thomas Douglas</h6> <br>
                                 <span class="fw-lighter">Available</span>
                             </div>
                         </div>
@@ -420,7 +446,7 @@
                                 <img src="/assets/img/catherine.jpg" class="img-thumbnail" alt="">
                             </div>
                             <div class="text-start">
-                                <h6 class="itemText">Catherine</h6> <br>
+                                <h6 class="chatText">Catherine</h6> <br>
                                 <span class="fw-lighter">Away</span>
                             </div>
                         </div>
@@ -437,7 +463,7 @@
                                 <img src="/assets/img/danielrussell.jpg" class="img-thumbnail" alt="">
                             </div>
                             <div class="text-start">
-                                <h6 class="itemText">Daniel Russell</h6> <br>
+                                <h6 class="chatText">Daniel Russell</h6> <br>
                                 <span class="fw-lighter">Available</span>
                             </div>
                         </div>
@@ -454,7 +480,7 @@
                                 <img src="/assets/img/madelinekennedy.jpg" class="img-thumbnail" alt="">
                             </div>
                             <div class="text-start">
-                                <h6 class="itemText">Madeline Kennedy</h6> <br>
+                                <h6 class="chatText">Madeline Kennedy</h6> <br>
                                 <span class="fw-lighter">Away</span>
                             </div>
                         </div>
@@ -471,8 +497,8 @@
                                 <img src="/assets/img/jamesrichardson.jpg" class="img-thumbnail" alt="">
                             </div>
                             <div class="text-start">
-                                <h6 class="itemText">James Richardson</h6> <br>
-                                <span class="fw-lighter">Available</span>
+                                <h6 class="chatText">James Richardson</h6> <br>
+                                <span class="fw-light">Available</span>
                             </div>
                         </div>
                         <div class="">

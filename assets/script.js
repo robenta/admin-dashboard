@@ -5,22 +5,24 @@ const header = document.querySelector('header')
 const body = document.querySelector('body')
 const faIcons = document.querySelectorAll('.fa-solid')
 const faReg = document.querySelectorAll('.fa-regular')
-const modes = document.querySelector('#modes')
+const modes1 = document.querySelector('#modes1')
+const modes2 = document.querySelector('#modes2')
 const offcanvas = document.querySelector('#offcanvasRight')
+const spanName = document.querySelectorAll('.name')
 const ul = document.querySelector('#offcanvasRight')
 const navbarToggler = document.querySelector('.navbar-toggler')
 const search = document.querySelectorAll('.search')
 const allElements = document.querySelectorAll('div')
+const pTexts = document.querySelectorAll('.pTexts')
 // const listItem = document.querySelectorAll('.list-group-item')
 
-modes.addEventListener('click', switchModes)
-function switchModes(e){
+modes1.addEventListener('click', switchModes1)
+function switchModes1(e){
     if (e.target.classList.contains('fa-moon')) {
         body.style.backgroundColor = 'black'
         header.style.backgroundColor = 'black'
         offcanvas.style.backgroundColor = 'black'
         offcanvas.style.borderLeftColor = '#d688ff'
-        navbarToggler.style.color = 'red'
         navbarToggler.style.backgroundColor = '#d688ff'
         offcanvas.style.borderLeftStyle = "solid"; 
         offcanvas.style.borderLeftWidth = "0.5px";
@@ -35,59 +37,140 @@ function switchModes(e){
             all.style.color = '#beabc1'
         })
         search.forEach((all)=>{
-            all.style.color = '#fff'
-            all.style.backgroundColor = '#beabc1'
+            all.style.backgroundColor = '#f5f5f5'
             all.style.border = '2px solid #d688ff'
-            all.style.border = 'none'        
+            all.classList.add('dark-mode');
+        })
+        spanName.forEach((all)=>{
+            all.style.color = '#beabc1'
+        })
+        pTexts.forEach((all)=>{
+            all.style.color = '#beabc1'
         })
         // listItem.forEach((list)=>{
         //     list.style.backgroundColor = 'black'
         // })
-        modes.classList.remove('fa-moon')
-        modes.classList.add('fa-sun')
+        modes1.classList.remove('fa-moon')
+        modes1.classList.add('fa-sun')
     }else{
         body.style.backgroundColor = '#fff'
         header.style.backgroundColor = '#fff'
         offcanvas.style.backgroundColor = '#fff'
+        navbarToggler.style.backgroundColor = '#fff'
         offcanvas.style.borderLeftColor = 'none'
         offcanvas.style.borderLeftStyle = "none"; 
         offcanvas.style.borderLeftWidth = "none";
         topRow.style.borderBottom = "none";
 
         faIcons.forEach((fa)=>{
-            fa.style.color = 'grey'
+            fa.style.color = '#d688ff'
         })
         faReg.forEach((fag)=>{
-            fag.style.color = 'grey'
+            fag.style.color = '#d688ff'
         })
         allElements.forEach((all)=>{
-            all.style.color = '#000'
+            all.style.color = '#383838'
         })
         search.forEach((all)=>{
-            all.style.backgroundColor = '#beabc1'
+            all.style.backgroundColor = '#fff'
             all.style.border = '2px solid #d688ff'
-            all.style.border = 'none'        
+            all.classList.remove('dark-mode');
+        })
+        spanName.forEach((all)=>{
+            all.style.color = '#383838'
         })
         // listItem.forEach((list)=>{
         //     list.style.backgroundColor = '#fff'
         // })
 
-        modes.classList.add('fa-moon')
-        modes.classList.remove('fa-sun')  
+        modes1.classList.add('fa-moon')
+        modes1.classList.remove('fa-sun')  
+    }
+
+}
+
+modes2.addEventListener('click', switchModes2)
+function switchModes2(e){
+    if (e.target.classList.contains('fa-moon')) {
+        body.style.backgroundColor = 'black'
+        header.style.backgroundColor = 'black'
+        offcanvas.style.backgroundColor = 'black'
+        offcanvas.style.borderLeftColor = '#d688ff'
+        navbarToggler.style.backgroundColor = '#d688ff'
+        offcanvas.style.borderLeftStyle = "solid"; 
+        offcanvas.style.borderLeftWidth = "0.5px";
+        topRow.style.borderBottom = "2px solid #d688ff";
+        faIcons.forEach((fa)=>{
+            fa.style.color = '#beabc1'
+        })
+        faReg.forEach((fag)=>{
+            fag.style.color = '#beabc1'
+        })
+        allElements.forEach((all)=>{
+            all.style.color = '#beabc1'
+        })
+        search.forEach((all)=>{
+            all.style.backgroundColor = '#f5f5f5'
+            all.style.border = '2px solid #d688ff'
+            all.classList.add('dark-mode');
+        })
+        spanName.forEach((all)=>{
+            all.style.color = '#beabc1'
+        })
+        pTexts.forEach((all)=>{
+            all.style.color = '#beabc1'
+        })
+        // listItem.forEach((list)=>{
+        //     list.style.backgroundColor = 'black'
+        // })
+        modes2.classList.remove('fa-moon')
+        modes2.classList.add('fa-sun')
+    }else{
+        body.style.backgroundColor = '#fff'
+        header.style.backgroundColor = '#fff'
+        offcanvas.style.backgroundColor = '#fff'
+        navbarToggler.style.backgroundColor = '#fff'
+        offcanvas.style.borderLeftColor = 'none'
+        offcanvas.style.borderLeftStyle = "none"; 
+        offcanvas.style.borderLeftWidth = "none";
+        topRow.style.borderBottom = "none";
+
+        faIcons.forEach((fa)=>{
+            fa.style.color = '#d688ff'
+        })
+        faReg.forEach((fag)=>{
+            fag.style.color = '#d688ff'
+        })
+        allElements.forEach((all)=>{
+            all.style.color = '#383838'
+        })
+        search.forEach((all)=>{
+            all.style.backgroundColor = '#fff'
+            all.style.border = '2px solid #d688ff'
+            all.classList.remove('dark-mode');
+        })
+        spanName.forEach((all)=>{
+            all.style.color = '#383838'
+        })
+        // listItem.forEach((list)=>{
+        //     list.style.backgroundColor = '#fff'
+        // })
+
+        modes2.classList.add('fa-moon')
+        modes2.classList.remove('fa-sun')  
     }
 
 }
 
 
 
-// HIDE PURPLE TEXT ON NAVBAR/SIDE-MENU ON CLICK OF THE MENU BUTTON
+// HIDE SIDE-MENU ON CLICK OF THE MENU BUTTON
 const topRow = document.querySelector('#top-row')
 const menuIcon = document.querySelector('#menu-icon')
 const mainRow = document.querySelector('#main-row')
 const sideMenu = document.querySelector('#side-menu')
 const sideMenuSmall = document.querySelector('#side-menu-small')
 const mainBody = document.querySelector('#main-body')
-
 
 menuIcon.addEventListener('click', hideFirstColumn)
 
@@ -99,8 +182,9 @@ function hideFirstColumn(e){
         sideMenuSmall.classList.add('d-xl-block')
         sideMenuSmall.classList.add('d-md-block')
         sideMenuSmall.classList.add('d-lg-block')
-        mainBody.classList.remove('col-md-9')
-        mainBody.classList.add('col-md-11')
+        mainBody.parentElement.classList.remove('col-md-9')
+        mainBody.parentElement.classList.add('col-md-12')
+        mainBody.classList.remove('d-none')
     }else{
         menuIcon.classList.add('open')
         sideMenu.classList.remove('d-none')
@@ -108,8 +192,37 @@ function hideFirstColumn(e){
         sideMenuSmall.classList.remove('d-xl-block')
         sideMenuSmall.classList.remove('d-md-block')
         sideMenuSmall.classList.remove('d-lg-block')
-        mainBody.classList.remove('col-md-11')
-        mainBody.classList.add('col-md-9')
+        mainBody.classList.add('d-none')
+        mainBody.parentElement.classList.remove('col-md-12')
+        mainBody.parentElement.classList.add('col-md-9')
+    }
+}
+
+
+// HIDE SIDE-MENU ON CLICK OF THE MENU BUTTON ON LARGE SCREENS
+const menuLgScrn = document.querySelector('#menuLgScrn')
+
+
+menuLgScrn.addEventListener('click', hideForLgScrn)
+function hideForLgScrn(e){
+    if (e.target.parentElement.classList.contains('open')) {
+        e.target.parentElement.classList.remove('open')
+        sideMenu.classList.add('d-none')
+        sideMenuSmall.classList.add('d-xxl-block')
+        sideMenuSmall.classList.add('d-xl-block')
+        sideMenuSmall.classList.add('d-md-block')
+        sideMenuSmall.classList.add('d-lg-block')
+        mainBody.parentElement.classList.remove('col-md-9')
+        mainBody.parentElement.classList.add('col-md-11')
+    }else{
+        e.target.parentElement.classList.add('open')
+        sideMenu.classList.remove('d-none')
+        sideMenuSmall.classList.remove('d-xxl-block')
+        sideMenuSmall.classList.remove('d-xl-block')
+        sideMenuSmall.classList.remove('d-md-block')
+        sideMenuSmall.classList.remove('d-lg-block')
+        mainBody.parentElement.classList.remove('col-md-11')
+        mainBody.parentElement.classList.add('col-md-9')
     }
 }
 
@@ -153,6 +266,7 @@ const input = document.querySelector('#todoInput')
 const itemList = document.querySelectorAll('.itemText')
 const checkboxes = document.querySelectorAll('.checkbox')
 const clearTaskButtons = document.querySelectorAll('.clearTask')
+const list = document.querySelector('.list')
 
 submitBtn.addEventListener('click', addTask)
 function addTask(e){
@@ -161,7 +275,8 @@ function addTask(e){
     }else{
         // create list
         const p = document.createElement('p')
-        p.textContent = 'testing 12'
+        p.className = 'list-group-item'
+        p.textContent = input.value
         listGroup.append(p)
         const newListItem = document.createElement('li')
         newListItem.className = 'list-group-item border'
@@ -201,21 +316,50 @@ clearTaskButtons.forEach(button=>{
 })
 function removeTask(e){
     if (e.target.classList.id = 'clearTask') {
-        e.target.parentElement.parentElement.parentElement.remove()
+        e.target.parentElement.parentElement.remove()
     }
 }
 
 
-checkboxes.forEach(function(checkbox) {
-    checkbox.addEventListener('change', changeCheckboxColor) 
-    function changeCheckboxColor() {
-        const span = checkbox.parentElement.querySelector('.itemText');
-        span.classList.toggle('checked', checkbox.checked);
-        
-        const icon = checkbox.parentElement.nextElementSibling.querySelector('.clearTask');
-        icon.classList.toggle('checked-color', checkbox.checked);
-    };
+list.addEventListener('click', function(e) {
+    if (e.target && e.target.classList.contains('checkbox')) {
+        toggleItemText(e.target);
+    }
 });
+
+
+function toggleItemText(checkbox) {
+    var itemText = checkbox.nextElementSibling; // Get the next sibling, which is the span with class "itemText"
+    console.log(itemText);
+    var clearTask = checkbox.parentElement.nextElementSibling.querySelector('.clearTask'); // Get the clearTask icon
+
+    if (checkbox.checked) {
+        itemText.classList.add("completed");
+        itemText.classList.add("complete");
+        clearTask.style.color = 'green'; // Change to the desired color
+    } else {
+        itemText.classList.remove("complete");
+        itemText.classList.remove("completed");
+        clearTask.style.color = ''; // Reset to default color
+    }
+}
+
+// checkboxes.forEach(function(checkbox) {
+//     checkbox.addEventListener('change', changeCheckboxColor) 
+//     function changeCheckboxColor() {
+//         // const span = checkbox.parentElement.firstElementChild.querySelector('.itemText');
+//         // const span = checkbox.parentElement.firstElementChild.querySelector('.itemText');
+//         // span.classList.toggle('checked', checkbox.checked);
+
+//         const span = checkbox.parentElement.nextElementSibling.querySelector('.itemText');
+//         span.classList.toggle('checked', checkbox.checked);
+
+   
+        
+//         const icon = checkbox.parentElement.nextElementSibling.querySelector('.clearTask');
+//         icon.classList.toggle('checked-color', checkbox.checked);
+//     };
+// });
 
 function showAlert(message, className){
     const alertDiv = document.createElement('div')
