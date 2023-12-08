@@ -330,16 +330,17 @@ list.addEventListener('click', function(e) {
 
 function toggleItemText(checkbox) {
     var itemText = checkbox.nextElementSibling; // Get the next sibling, which is the span with class "itemText"
-    console.log(itemText);
     var clearTask = checkbox.parentElement.nextElementSibling.querySelector('.clearTask'); // Get the clearTask icon
+
+
 
     if (checkbox.checked) {
         itemText.classList.add("completed");
-        itemText.classList.add("complete");
-        clearTask.style.color = 'green'; // Change to the desired color
+        clearTask.classList.add('complete') // Change to the desired color
+        console.log(clearTask.classList);
     } else {
-        itemText.classList.remove("complete");
         itemText.classList.remove("completed");
+        clearTask.classList.remove("complete");
         clearTask.style.color = ''; // Reset to default color
     }
 }

@@ -42,6 +42,9 @@ header{
     font-size: 22px !important;
     color: var(--light-purple) !important;
 }
+#main-body-col{
+    background: var(--body-color);
+}
 .search{
     border: 2px solid var(--light-purple);
     padding: 7px;
@@ -158,7 +161,7 @@ i{
 .completed {
     text-decoration: line-through;
 }
-.checked-color {
+.complete {
     color: var(--purple) !important;
 }
 #offcanvasRight #todo-list i{
