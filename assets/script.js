@@ -1,8 +1,7 @@
 // SWITCH FROM LIGHT TO DARK MODE AND VICE-VERSA
-const secondColumn = document.querySelector('#second-column')
-const thirdColumn = document.querySelector('#third-column')
 const header = document.querySelector('header')
 const body = document.querySelector('body')
+const mBody = document.querySelector('#main-body-col')
 const faIcons = document.querySelectorAll('.fa-solid')
 const faReg = document.querySelectorAll('.fa-regular')
 const modes1 = document.querySelector('#modes1')
@@ -14,19 +13,20 @@ const navbarToggler = document.querySelector('.navbar-toggler')
 const search = document.querySelectorAll('.search')
 const allElements = document.querySelectorAll('div')
 const pTexts = document.querySelectorAll('.pTexts')
-// const listItem = document.querySelectorAll('.list-group-item')
+const itemTexts = document.querySelectorAll('.itemText')
 
 modes1.addEventListener('click', switchModes1)
 function switchModes1(e){
     if (e.target.classList.contains('fa-moon')) {
         body.style.backgroundColor = 'black'
+        mBody.style.backgroundColor = 'black'
         header.style.backgroundColor = 'black'
         offcanvas.style.backgroundColor = 'black'
         offcanvas.style.borderLeftColor = '#d688ff'
         navbarToggler.style.backgroundColor = '#d688ff'
         offcanvas.style.borderLeftStyle = "solid"; 
         offcanvas.style.borderLeftWidth = "0.5px";
-        topRow.style.borderBottom = "2px solid #d688ff";
+        topRow.classList.add("shadowAdded");
         faIcons.forEach((fa)=>{
             fa.style.color = '#beabc1'
         })
@@ -47,20 +47,21 @@ function switchModes1(e){
         pTexts.forEach((all)=>{
             all.style.color = '#beabc1'
         })
-        // listItem.forEach((list)=>{
-        //     list.style.backgroundColor = 'black'
-        // })
+        itemTexts.forEach((list)=>{
+            list.style.color = '#beabc1'
+        })
         modes1.classList.remove('fa-moon')
         modes1.classList.add('fa-sun')
     }else{
         body.style.backgroundColor = '#fff'
         header.style.backgroundColor = '#fff'
+        mBody.style.backgroundColor = ''
         offcanvas.style.backgroundColor = '#fff'
         navbarToggler.style.backgroundColor = '#fff'
         offcanvas.style.borderLeftColor = 'none'
         offcanvas.style.borderLeftStyle = "none"; 
         offcanvas.style.borderLeftWidth = "none";
-        topRow.style.borderBottom = "none";
+        topRow.classList.remove("shadowAdded");
 
         faIcons.forEach((fa)=>{
             fa.style.color = '#d688ff'
@@ -79,9 +80,9 @@ function switchModes1(e){
         spanName.forEach((all)=>{
             all.style.color = '#383838'
         })
-        // listItem.forEach((list)=>{
-        //     list.style.backgroundColor = '#fff'
-        // })
+        itemTexts.forEach((list)=>{
+            list.style.color = ''
+        })
 
         modes1.classList.add('fa-moon')
         modes1.classList.remove('fa-sun')  
@@ -93,13 +94,14 @@ modes2.addEventListener('click', switchModes2)
 function switchModes2(e){
     if (e.target.classList.contains('fa-moon')) {
         body.style.backgroundColor = 'black'
+        mBody.style.backgroundColor = 'black'
         header.style.backgroundColor = 'black'
         offcanvas.style.backgroundColor = 'black'
         offcanvas.style.borderLeftColor = '#d688ff'
         navbarToggler.style.backgroundColor = '#d688ff'
         offcanvas.style.borderLeftStyle = "solid"; 
         offcanvas.style.borderLeftWidth = "0.5px";
-        topRow.style.borderBottom = "2px solid #d688ff";
+        topRow.classList.add("shadowAdded");
         faIcons.forEach((fa)=>{
             fa.style.color = '#beabc1'
         })
@@ -120,20 +122,21 @@ function switchModes2(e){
         pTexts.forEach((all)=>{
             all.style.color = '#beabc1'
         })
-        // listItem.forEach((list)=>{
-        //     list.style.backgroundColor = 'black'
-        // })
+        itemTexts.forEach((list)=>{
+            list.style.color = '#beabc1'
+        })
         modes2.classList.remove('fa-moon')
         modes2.classList.add('fa-sun')
     }else{
         body.style.backgroundColor = '#fff'
+        mBody.style.backgroundColor = ''
         header.style.backgroundColor = '#fff'
         offcanvas.style.backgroundColor = '#fff'
         navbarToggler.style.backgroundColor = '#fff'
         offcanvas.style.borderLeftColor = 'none'
         offcanvas.style.borderLeftStyle = "none"; 
         offcanvas.style.borderLeftWidth = "none";
-        topRow.style.borderBottom = "none";
+        topRow.classList.remove("shadowAdded");
 
         faIcons.forEach((fa)=>{
             fa.style.color = '#d688ff'
@@ -142,19 +145,19 @@ function switchModes2(e){
             fag.style.color = '#d688ff'
         })
         allElements.forEach((all)=>{
-            all.style.color = '#383838'
+            all.style.color = ''
         })
         search.forEach((all)=>{
-            all.style.backgroundColor = '#fff'
-            all.style.border = '2px solid #d688ff'
+            all.style.backgroundColor = ''
+            all.style.border = ''
             all.classList.remove('dark-mode');
         })
         spanName.forEach((all)=>{
-            all.style.color = '#383838'
+            all.style.color = ''
         })
-        // listItem.forEach((list)=>{
-        //     list.style.backgroundColor = '#fff'
-        // })
+        itemTexts.forEach((list)=>{
+            list.style.color = ''
+        })
 
         modes2.classList.add('fa-moon')
         modes2.classList.remove('fa-sun')  
@@ -199,14 +202,13 @@ function hideFirstColumn(e){
 }
 
 
-// HIDE SIDE-MENU ON CLICK OF THE MENU BUTTON ON LARGE SCREENS
+// HIDE SIDE-MENU/REVEAL SMALL SIDE-MENU ON CLICK OF THE MENU BUTTON ON LARGE SCREENS
 const menuLgScrn = document.querySelector('#menuLgScrn')
-
 
 menuLgScrn.addEventListener('click', hideForLgScrn)
 function hideForLgScrn(e){
     if (e.target.parentElement.classList.contains('open')) {
-        e.target.parentElement.classList.remove('open')
+        e.target.parentElement.classList.replace('open', 'close')
         sideMenu.classList.add('d-none')
         sideMenuSmall.classList.add('d-xxl-block')
         sideMenuSmall.classList.add('d-xl-block')
@@ -215,7 +217,7 @@ function hideForLgScrn(e){
         mainBody.parentElement.classList.remove('col-md-9')
         mainBody.parentElement.classList.add('col-md-11')
     }else{
-        e.target.parentElement.classList.add('open')
+        e.target.parentElement.classList.replace('close', 'open')
         sideMenu.classList.remove('d-none')
         sideMenuSmall.classList.remove('d-xxl-block')
         sideMenuSmall.classList.remove('d-xl-block')
@@ -243,6 +245,7 @@ function dimHeaderTextColor(){
         chats.style.color = 'white'
     }
 }
+
 chats.addEventListener('click', showChats)
 function showChats(){
     offcanvasChat.classList.remove('d-none')
@@ -250,6 +253,7 @@ function showChats(){
     todoList.style.color = '#d5d3d3'
     chats.style.color = 'white'
 }
+
 todoList.addEventListener('click', showTodo)
 function showTodo(){
     offcanvasChat.classList.add('d-none')
@@ -259,57 +263,86 @@ function showTodo(){
 }
 
 // TODO LIST
-const listGroup = document.querySelector('.list-group')
 const submitBtn = document.querySelector('#addTask')
 const inputDiv = document.querySelector('#inputDiv')
 const input = document.querySelector('#todoInput')
 const itemList = document.querySelectorAll('.itemText')
 const checkboxes = document.querySelectorAll('.checkbox')
 const clearTaskButtons = document.querySelectorAll('.clearTask')
-const list = document.querySelector('.list')
+const list = document.querySelector('.todoList')
 
-submitBtn.addEventListener('click', addTask)
-function addTask(e){
-    if (input.value === '') {
-        showAlert('Please add a task', 'danger');
-    }else{
-        // create list
-        const p = document.createElement('p')
-        p.className = 'list-group-item'
-        p.textContent = input.value
-        listGroup.append(p)
-        const newListItem = document.createElement('li')
-        newListItem.className = 'list-group-item border'
+submitBtn.addEventListener('click', addTask);
+function addTask() {
+    // create list
+    const parentDiv = document.createElement('div')
+    parentDiv.classList = 'd-flex my-3 pb-2 border-bottom justify-content-between'
+    list.appendChild(parentDiv)
 
-        const litDiv = document.createElement('div')
-        litDiv.className = 'd-flex justify-content-between'
+    const div1 = document.createElement('div')
+    div1.classList = 'd-flex gap-3'
+    div1.innerHTML = '<input type="checkbox" name="checkboxes" class="checkbox">'
+    const span = document.createElement('span')
+    span.className = 'itemText'
+    span.textContent = input.value
+    div1.appendChild(span)
+    parentDiv.appendChild(div1)
 
-        const litDiv1 = document.createElement('div')
-        litDiv1.classList = 'd-flex gap-3'
-        litDiv1.innerHTML = '<input type="checkbox" name="checkboxes" class="checkbox">'
-        const litDiv1Span = document.createElement('span')
-        litDiv1Span.className = 'itemText'
-        litDiv1Span.textContent = input.value
-        litDiv1.appendChild(litDiv1Span)
-        litDiv.appendChild(litDiv1)
+    const div2 = document.createElement('div')
+    div2.innerHTML = '<i class="fa-regular fa-circle-xmark clearTask"></i>'
+    parentDiv.appendChild(div2)
 
-
-        const litDiv2 = document.createElement('div')
-        litDiv2.className = ' '
-        litDiv2.innerHTML = '<i class="fa-regular fa-circle-xmark clearTask"></i>'
-        litDiv.appendChild(litDiv2)        
-
-        newListItem.append(litDiv)
-
-        listGroup.appendChild(newListItem)
-
-        showAlert('Task added', 'purple');
-
-        input.value = ''
-
-    }
-    e.preventDefault()
+    input.value = ''
 }
+
+document.querySelector('.todoList').addEventListener('click', deleteTask);
+function deleteTask(event) {
+    const target = event.target;
+    
+    // Check if the clicked element has the class 'clearTask'
+    if (target.classList.contains('clearTask')) {
+        // Delete the parent task element
+        const task = target.closest('.d-flex');
+        task.remove();
+    }
+}
+
+
+// submitBtn.addEventListener('click', addTask)
+// function addTask(e){
+//     if (input.value === '') {
+//         showAlert('Please add a task', 'danger');
+//     }else{
+
+//         addTaskFunction()
+
+
+//         showAlert('Task added', 'purple');
+
+//         input.value = ''
+
+//     }
+//     e.preventDefault()
+// }
+
+// function addTaskFunction(){
+//     // create list
+//     const parentDiv = document.createElement('div')
+//     parentDiv.classList = 'd-flex my-3 pb-2 border-bottom justify-content-between'
+//     list.appendChild(parentDiv)
+
+//     const div1 = document.createElement('div')
+//     div1.classList = 'd-flex gap-3'
+//     div1.innerHTML = '<input type="checkbox" name="checkboxes" class="checkbox">'
+//     const span = document.createElement('span')
+//     span.className = 'itemText'
+//     span.textContent = input.value
+//     div1.appendChild(span)
+//     parentDiv.appendChild(div1)
+
+//     const div2 = document.createElement('div')
+//     div2.innerHTML = '<i class="fa-regular fa-circle-xmark clearTask"></i>'
+//     parentDiv.appendChild(div2)
+// }
 
 clearTaskButtons.forEach(button=>{
     button.addEventListener('click', removeTask)
@@ -327,40 +360,20 @@ list.addEventListener('click', function(e) {
     }
 });
 
-
 function toggleItemText(checkbox) {
-    var itemText = checkbox.nextElementSibling; // Get the next sibling, which is the span with class "itemText"
-    var clearTask = checkbox.parentElement.nextElementSibling.querySelector('.clearTask'); // Get the clearTask icon
-
-
+    var itemText = checkbox.nextElementSibling; 
+    var clearTask = checkbox.parentElement.nextElementSibling.querySelector('.clearTask'); 
 
     if (checkbox.checked) {
         itemText.classList.add("completed");
-        clearTask.classList.add('complete') // Change to the desired color
-        console.log(clearTask.classList);
+        clearTask.classList.add('complete');
     } else {
         itemText.classList.remove("completed");
         clearTask.classList.remove("complete");
-        clearTask.style.color = ''; // Reset to default color
+        clearTask.style.color = ''; 
     }
 }
 
-// checkboxes.forEach(function(checkbox) {
-//     checkbox.addEventListener('change', changeCheckboxColor) 
-//     function changeCheckboxColor() {
-//         // const span = checkbox.parentElement.firstElementChild.querySelector('.itemText');
-//         // const span = checkbox.parentElement.firstElementChild.querySelector('.itemText');
-//         // span.classList.toggle('checked', checkbox.checked);
-
-//         const span = checkbox.parentElement.nextElementSibling.querySelector('.itemText');
-//         span.classList.toggle('checked', checkbox.checked);
-
-   
-        
-//         const icon = checkbox.parentElement.nextElementSibling.querySelector('.clearTask');
-//         icon.classList.toggle('checked-color', checkbox.checked);
-//     };
-// });
 
 function showAlert(message, className){
     const alertDiv = document.createElement('div')
@@ -372,16 +385,3 @@ function showAlert(message, className){
 }
 
 
-// const navToggler = document.querySelector('#navbar-toggle')
-
-// navToggler.addEventListener('click', removeMenuBtn)
-// function removeMenuBtn(e){
-//     if (menuIcon.classList.contains('d-block')) {
-//         menuIcon.classList.remove('d-block')
-//         menuIcon.classList.add('d-none')
-//     }else{
-//         menuIcon.classList.remove('d-none')
-//         menuIcon.classList.add('d-block')
-//     }
-//     e.preventDefault
-// }

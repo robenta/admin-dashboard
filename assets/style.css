@@ -151,6 +151,11 @@ i{
     display: inline-block;
     transition: text-decoration 0.3s;
 }
+.shadowAdded{
+    box-shadow: 1px 4px 23px -5px rgba(214,136,255,0.75);
+    -webkit-box-shadow: 1px 4px 23px -5px rgba(214,136,255,0.75);
+    -moz-box-shadow: 1px 4px 23px -5px rgba(214,136,255,0.75);
+}
 .itemText {
     display: inline-block;
     transition: text-decoration 0.3s;
@@ -159,7 +164,7 @@ i{
     color: var(--purple); 
 }
 .completed {
-    text-decoration: line-through;
+    text-decoration: 2px var(--purple) line-through;
 }
 .complete {
     color: var(--purple) !important;
