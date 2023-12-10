@@ -3,8 +3,8 @@
 :root{
     --font-family: 'Ubuntu', sans-serif;
     --grey: grey;
-    --purple: #ba75ff;
-    --light-purple: #d688ff;
+    --purple: #800080;
+    --light-purple: #eabfff;
     --body-color: #f2edf3;
     --white: #fff;
     --green: #1bcfb4;
@@ -25,30 +25,17 @@ html{
 header{
     background: var(--white);
 }
-.purple{
-    color: hsla(280, 100%, 77%, 1);
-
-    color: linear-gradient(45deg, hsla(280, 100%, 77%, 1) 32%, hsla(266, 100%, 68%, 1) 100%);
-    
-    color: -moz-linear-gradient(45deg, hsla(280, 100%, 77%, 1) 32%, hsla(266, 100%, 68%, 1) 100%);
-    
-    color: -webkit-linear-gradient(45deg, hsla(280, 100%, 77%, 1) 32%, hsla(266, 100%, 68%, 1) 100%);
-    
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#D88AFF", endColorstr="#A55EFF", GradientType=1 );
+.logo-text{
+    color: var(--purple);
     font-size: 25px;
     font-weight: 900;
 }
 #first-column i{
-    font-size: 22px !important;
-    color: var(--light-purple) !important;
+    font-size: 22px;
+    color: var(--purple);
 }
 #main-body-col{
     background: var(--body-color);
-}
-.search{
-    border: 2px solid var(--light-purple);
-    padding: 7px;
-    /* background-color: var(--grey-purple); */
 }
 .dark-mode::placeholder{
     color: var(--purple);
@@ -62,33 +49,41 @@ header{
     font-size: 14px;
     letter-spacing: 1px;
 }
-.navbar-toggler{
+input {
+    border: 1px solid var(--purple) !important;
+}
+input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    border: 1px solid var(--purple) !important;
+}
+
+.navbar-toggler {
     border: none !important;
-    font-size: 18px !important;
     padding: 2px !important;
     box-shadow: none !important;
 }
+.fa-bars {
+    font-size: 25px !important;
+    accent-color: var(--purple);
+}
 i{
-    color: var(--light-purple);
+    color: var(--purple);
     font-size: 20px;
 }
-/* .name span{
-    color: var(--grey);
-    font-weight: 300;
-} */
+
 .nameDiv img{
     border: none;
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    border: 3px solid var(--light-purple);
+    border: 2px solid var(--purple);
 }
 #top-row .nameDiv i{
     color: var(--purple);
     font-size: 12px;
-}
-.light-mode{
-    color: var(--white) !important;
 }
 #side-menu #bookmark-column img, #offcanvasRight .chatlist img{
     border: none;
@@ -102,7 +97,7 @@ i{
     font-weight: 500;
 }
 #side-menu #double-icons h6{
-    font-weight: 300;
+    /* font-weight: 500; */
     font-size: 14px;
 }
 
@@ -145,7 +140,7 @@ i{
     border: none;
 }
 #offcanvasRight #todo-list input[type="checkbox"]:checked {
-    accent-color: var(--purple);
+    accent-color: var(--light-purple);
 }
 .chatText {
     display: inline-block;
@@ -164,11 +159,11 @@ i{
     color: var(--purple); 
 }
 .completed {
-    text-decoration: 2px var(--purple) line-through;
+    text-decoration: 2px var(--light-purple) line-through;
 }
-.complete {
-    color: var(--purple) !important;
-}
+/* .complete {
+    color: var(--light-purple) !important;
+} */
 #offcanvasRight #todo-list i{
     color: var(--grey-purple);
 }

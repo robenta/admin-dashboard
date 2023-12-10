@@ -1,6 +1,8 @@
 // SWITCH FROM LIGHT TO DARK MODE AND VICE-VERSA
 const header = document.querySelector('header')
 const body = document.querySelector('body')
+const logoText = document.querySelector('.logo-text')
+const logoIcon = document.querySelector('#logo-icon')
 const mBody = document.querySelector('#main-body-col')
 const faIcons = document.querySelectorAll('.fa-solid')
 const faReg = document.querySelectorAll('.fa-regular')
@@ -8,6 +10,7 @@ const modes1 = document.querySelector('#modes1')
 const modes2 = document.querySelector('#modes2')
 const offcanvas = document.querySelector('#offcanvasRight')
 const spanName = document.querySelectorAll('.name')
+const headerImage = document.querySelectorAll('.headerImage')
 const ul = document.querySelector('#offcanvasRight')
 const navbarToggler = document.querySelector('.navbar-toggler')
 const search = document.querySelectorAll('.search')
@@ -20,6 +23,8 @@ function switchModes1(e){
     if (e.target.classList.contains('fa-moon')) {
         body.style.backgroundColor = 'black'
         mBody.style.backgroundColor = 'black'
+        logoText.style.color = '#beabc1'
+        logoIcon.style.color = '#beabc1'
         header.style.backgroundColor = 'black'
         offcanvas.style.backgroundColor = 'black'
         offcanvas.style.borderLeftColor = '#d688ff'
@@ -49,100 +54,30 @@ function switchModes1(e){
         })
         itemTexts.forEach((list)=>{
             list.style.color = '#beabc1'
+        })
+        headerImage.forEach((all)=>{
+            all.style.border = '2px solid #beabc1'
         })
         modes1.classList.remove('fa-moon')
         modes1.classList.add('fa-sun')
     }else{
-        body.style.backgroundColor = '#fff'
-        header.style.backgroundColor = '#fff'
+        body.style.backgroundColor = ''
+        header.style.backgroundColor = ''
+        logoText.style.color = ''
+        logoIcon.style.color = ''
         mBody.style.backgroundColor = ''
-        offcanvas.style.backgroundColor = '#fff'
-        navbarToggler.style.backgroundColor = '#fff'
-        offcanvas.style.borderLeftColor = 'none'
-        offcanvas.style.borderLeftStyle = "none"; 
-        offcanvas.style.borderLeftWidth = "none";
+        offcanvas.style.backgroundColor = ''
+        navbarToggler.style.backgroundColor = ''
+        offcanvas.style.borderLeftColor = ''
+        offcanvas.style.borderLeftStyle = ""; 
+        offcanvas.style.borderLeftWidth = "";
         topRow.classList.remove("shadowAdded");
 
         faIcons.forEach((fa)=>{
-            fa.style.color = '#d688ff'
+            fa.style.color = ''
         })
         faReg.forEach((fag)=>{
-            fag.style.color = '#d688ff'
-        })
-        allElements.forEach((all)=>{
-            all.style.color = '#383838'
-        })
-        search.forEach((all)=>{
-            all.style.backgroundColor = '#fff'
-            all.style.border = '2px solid #d688ff'
-            all.classList.remove('dark-mode');
-        })
-        spanName.forEach((all)=>{
-            all.style.color = '#383838'
-        })
-        itemTexts.forEach((list)=>{
-            list.style.color = ''
-        })
-
-        modes1.classList.add('fa-moon')
-        modes1.classList.remove('fa-sun')  
-    }
-
-}
-
-modes2.addEventListener('click', switchModes2)
-function switchModes2(e){
-    if (e.target.classList.contains('fa-moon')) {
-        body.style.backgroundColor = 'black'
-        mBody.style.backgroundColor = 'black'
-        header.style.backgroundColor = 'black'
-        offcanvas.style.backgroundColor = 'black'
-        offcanvas.style.borderLeftColor = '#d688ff'
-        navbarToggler.style.backgroundColor = '#d688ff'
-        offcanvas.style.borderLeftStyle = "solid"; 
-        offcanvas.style.borderLeftWidth = "0.5px";
-        topRow.classList.add("shadowAdded");
-        faIcons.forEach((fa)=>{
-            fa.style.color = '#beabc1'
-        })
-        faReg.forEach((fag)=>{
-            fag.style.color = '#beabc1'
-        })
-        allElements.forEach((all)=>{
-            all.style.color = '#beabc1'
-        })
-        search.forEach((all)=>{
-            all.style.backgroundColor = '#f5f5f5'
-            all.style.border = '2px solid #d688ff'
-            all.classList.add('dark-mode');
-        })
-        spanName.forEach((all)=>{
-            all.style.color = '#beabc1'
-        })
-        pTexts.forEach((all)=>{
-            all.style.color = '#beabc1'
-        })
-        itemTexts.forEach((list)=>{
-            list.style.color = '#beabc1'
-        })
-        modes2.classList.remove('fa-moon')
-        modes2.classList.add('fa-sun')
-    }else{
-        body.style.backgroundColor = '#fff'
-        mBody.style.backgroundColor = ''
-        header.style.backgroundColor = '#fff'
-        offcanvas.style.backgroundColor = '#fff'
-        navbarToggler.style.backgroundColor = '#fff'
-        offcanvas.style.borderLeftColor = 'none'
-        offcanvas.style.borderLeftStyle = "none"; 
-        offcanvas.style.borderLeftWidth = "none";
-        topRow.classList.remove("shadowAdded");
-
-        faIcons.forEach((fa)=>{
-            fa.style.color = '#d688ff'
-        })
-        faReg.forEach((fag)=>{
-            fag.style.color = '#d688ff'
+            fag.style.color = ''
         })
         allElements.forEach((all)=>{
             all.style.color = ''
@@ -157,6 +92,94 @@ function switchModes2(e){
         })
         itemTexts.forEach((list)=>{
             list.style.color = ''
+        })
+        headerImage.forEach((all)=>{
+            all.style.border = ''
+        })
+
+        modes1.classList.add('fa-moon')
+        modes1.classList.remove('fa-sun')  
+    }
+
+}
+
+modes2.addEventListener('click', switchModes2)
+function switchModes2(e){
+    if (e.target.classList.contains('fa-moon')) {
+        body.style.backgroundColor = 'black'
+        mBody.style.backgroundColor = 'black'
+        logoText.style.color = '#d688ff'
+        logoIcon.style.color = '#d688ff'
+        header.style.backgroundColor = 'black'
+        offcanvas.style.backgroundColor = 'black'
+        offcanvas.style.borderLeftColor = '#d688ff'
+        navbarToggler.style.backgroundColor = '#d688ff'
+        offcanvas.style.borderLeftStyle = "solid"; 
+        offcanvas.style.borderLeftWidth = "0.5px";
+        topRow.classList.add("shadowAdded");
+        faIcons.forEach((fa)=>{
+            fa.style.color = '#beabc1'
+        })
+        faReg.forEach((fag)=>{
+            fag.style.color = '#beabc1'
+        })
+        allElements.forEach((all)=>{
+            all.style.color = '#beabc1'
+        })
+        search.forEach((all)=>{
+            all.style.backgroundColor = '#f5f5f5'
+            all.style.border = '2px solid #d688ff'
+            all.classList.add('dark-mode');
+        })
+        spanName.forEach((all)=>{
+            all.style.color = '#beabc1'
+        })
+        pTexts.forEach((all)=>{
+            all.style.color = '#beabc1'
+        })
+        itemTexts.forEach((list)=>{
+            list.style.color = '#beabc1'
+        })
+        headerImage.forEach((all)=>{
+            all.style.border = '2px solid #beabc1'
+        })
+        modes2.classList.remove('fa-moon')
+        modes2.classList.add('fa-sun')
+    }else{
+        body.style.backgroundColor = ''
+        mBody.style.backgroundColor = ''
+        logoText.style.color = ''
+        logoIcon.style.color = ''
+        header.style.backgroundColor = ''
+        offcanvas.style.backgroundColor = ''
+        navbarToggler.style.backgroundColor = ''
+        offcanvas.style.borderLeftColor = ''
+        offcanvas.style.borderLeftStyle = ""; 
+        offcanvas.style.borderLeftWidth = "";
+        topRow.classList.remove("shadowAdded");
+
+        faIcons.forEach((fa)=>{
+            fa.style.color = ''
+        })
+        faReg.forEach((fag)=>{
+            fag.style.color = ''
+        })
+        allElements.forEach((all)=>{
+            all.style.color = ''
+        })
+        search.forEach((all)=>{
+            all.style.backgroundColor = ''
+            all.style.border = ''
+            all.classList.remove('dark-mode');
+        })
+        spanName.forEach((all)=>{
+            all.style.color = ''
+        })
+        itemTexts.forEach((list)=>{
+            list.style.color = ''
+        })
+        headerImage.forEach((all)=>{
+            all.style.border = ''
         })
 
         modes2.classList.add('fa-moon')
@@ -292,6 +315,7 @@ function addTask() {
     parentDiv.appendChild(div2)
 
     input.value = ''
+    console.log(itemTexts);
 }
 
 document.querySelector('.todoList').addEventListener('click', deleteTask);
@@ -371,6 +395,23 @@ function toggleItemText(checkbox) {
         itemText.classList.remove("completed");
         clearTask.classList.remove("complete");
         clearTask.style.color = ''; 
+    }
+}
+
+list.addEventListener('click', function(e) {
+    if (modes1.classList.contains('fa-moon') && e.target && e.target.classList.contains('checkbox')) {
+        toggleItemText(e.target);
+    }
+});
+
+function toggleItemText(checkbox) {
+    var itemText = checkbox.nextElementSibling; 
+    var clearTask = checkbox.parentElement.nextElementSibling.querySelector('.clearTask'); 
+
+    if (modes1.classList.contains('fa-sun') && checkbox.checked) {
+        itemText.style.color = 'red'
+    } else {
+        itemText.style.color = 'yellow'
     }
 }
 
