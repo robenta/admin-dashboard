@@ -30,10 +30,6 @@ header{
     font-size: 25px;
     font-weight: 900;
 }
-#first-column i{
-    font-size: 22px;
-    color: var(--purple);
-}
 #main-body-col{
     background: var(--body-color);
 }
@@ -67,7 +63,6 @@ input:focus {
 }
 .fa-bars {
     font-size: 25px !important;
-    accent-color: var(--purple);
 }
 i{
     color: var(--purple);
