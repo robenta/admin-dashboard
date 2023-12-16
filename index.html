@@ -20,7 +20,7 @@
 
 <body>
 
-    <header class="sticky-top">
+    <header class="sticky-top"> 
         <nav class="navbar navbar-expand-lg" id="top-row">
             <div class="container-fluid">
                 <div class="navbar-brand purple-column mx-2 w-25" href="#" id="first-column">
@@ -30,7 +30,7 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa-solid fa-bars open" id="menu-icon"></i>
+                    <i class="fa-solid fa-bars open pe-1" id="menu-icon"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <div class="d-flex align-items-center px-2 justify-content-between gap-5 w-100">
@@ -51,7 +51,7 @@
                                 data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
                                 id="offcanvasToggle">
                             </i>
-                            <i class="fa-solid fa-moon modes" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                            <i class="fa-solid fa-moon modes1" data-bs-toggle="tooltip" data-bs-placement="bottom"
                                 title="Dark mode">
                             </i>
                         </div>
@@ -85,7 +85,7 @@
                                 </div>
                                 <div class="col-md-2 col-2">
                                     <div class="text-end">
-                                        <i class="fa-solid fa-moon modes" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                        <i class="fa-solid fa-moon modes2" data-bs-toggle="tooltip" data-bs-placement="bottom"
                                         title="Dark mode">
                                         </i>
                                     </div>
@@ -252,6 +252,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-1 d-none" id="side-menu-small">
                     <div class="d-grid text-start px-2 pb-4 sideMenuSmall">
                         <div class="py-3">
@@ -289,23 +290,352 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-9" id="main-body-col">
                     <div class="mx-2 py-3 d-md-block d-none d-lg-block d-xl-block d-xxl-block" id="main-body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Reiciendis, rerum harum dolor ut amet ipsam sunt ullam
-                        delectus, laborum sed itaque, dolores nobis libero.
-                        Dolores, quae? Omnis laudantium culpa suscipit error
-                        earum vitae incidunt amet unde aliquam. Quo inventore
-                        asperiores facere, illo aliquam doloremque iste dicta
-                        consequuntur, nihil magni dignissimos sequi eveniet
-                        ipsa perferendis atque molestiae debitis quidem sint.
-                        Corporis necessitatibus iste maxime ut molestiae
-                        placeat delectus libero corrupti eum? Officia
-                        voluptatibus blanditiis amet porro,
-                        eveniet animi ipsam reprehenderit voluptas, maiores
-                        sapiente sint eius tempore nobis ut optio? Ad modi
-                        tempora quisquam quasi recusandae quae iure nulla
-                        molestias dolores adipisci.
+                        <div class="container-fluid py-2">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-evenly gap-2">
+                                    <i class="fa-solid fa-house faHouse"></i>  
+                                    <h5>Dashboard</h5>                              
+                                </div>
+                                <div class="d-flex justify-content-evenly gap-2">
+                                    <h6 class="fw-light">Overview</h6>
+                                    <i class="fa-solid fa-circle-exclamation"></i>
+                                </div>
+                            </div>
+
+                            <div class="row mt-4" id="mainColOne">
+                                <div class="col-md-4 m-0">
+                                    <div class="card border-0 card1 mb-3">
+                                        <div class="p-3 text-white">
+                                            <div class="d-flex justify-content-between text-white">
+                                                <h6 class="pb-3">Weekly Sales</h6>
+                                                <i class="fa-solid fa-chart-line"></i>
+                                            </div>
+                                            <h4>$15,0000</h4>
+                                            <p class="pt-5 text-white">Increased by 60%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card border-0 card2 mb-3">
+                                        <div class="p-3 text-white">
+                                            <div class="d-flex justify-content-between text-white">
+                                                <h6 class="pb-3">Weekly Orders</h6>
+                                                <i class="fa-solid fa-bookmark"></i>                                            
+                                            </div>
+                                            <h4>$15,0000</h4>
+                                            <p class="pt-5 text-white">Decreased by 60%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card border-0 card3 mb-3">
+                                        <div class="p-3 text-white">
+                                            <div class="d-flex justify-content-between text-white">
+                                                <h6 class="pb-3">Visitors Online</h6>
+                                                <i class="fa-solid fa-gem"></i>
+                                            </div>
+                                            <h4>$15,0000</h4>
+                                            <p class="pt-5 text-white">Increased by 5%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-4 justify-content-between" id="mainColTwo">
+                                <div class="col-md-7">
+                                    <div class="rounded-1 bg-white p-3 mb-3 mb-lg-0 mb-xl-0 mb-xxl-0">
+                                        <div class="row justify-content-between">
+                                            <div class="col-md-6">
+                                                <h5>Visit and sales statistics</h5>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <div class="d-flex gap-2 float-none float-md-end float-lg-end float-xl-end float-xxl-end">
+                                                    <div class="d-flex align-items-center justify-content-between gap-1 circleOne">
+                                                        <i class="fa-solid fa-circle"></i>
+                                                        <span>CHN</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center justify-content-between gap-1 circleTwo">
+                                                        <i class="fa-solid fa-circle"></i>
+                                                        <span>USA</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center justify-content-between gap-1 circleThree">
+                                                        <i class="fa-solid fa-circle"></i>
+                                                        <span>UK</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repell
+                                            endus vero molliti
+                                            a unde doloremque pariatur minus quos ut nobis nemo expedita
+                                             possimus nihil itaque est aperiam amet voluptatibus ad dicta, eaque placeat.
+                                              Ipsum, amet. Recusandae aut animi hic ipsam eligendi iste architecto, magnam, iure nemo tenetur vitae
+                                             expedita, dicta voluptatem quasi pariatur delectus ratione
+                                            . Animi, incidunt sunt quidem quasi voluptate dolor.
+                                             Rerum incidunt mollitia tenetur qui optio, accusantium expedita sunt et?
+                                             Rerum incidunt mollitia tenetur qui optio, accusantium expedita sunt et?
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="rounded-1 bg-white p-3">
+                                        <h5 class="pb-3">Traffic Sources</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                                            Explicabo autem quis nam consequatur atque sint minus rerum sit, v
+                                            ero culpa, omnis quasi eos nisi! Voluptatum, rem corrupti sequi
+                                             impedit eum pariatur, aspernatur dolor atque error
+                                             cumque perferendis. Asperiores libero reiciendis aperiam, 
+                                             architecto dolor quia doloremque enim aliquam laborum? Qui, deleniti.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-4" id="mainColThree">
+                                <div class="col-md-12">
+                                    <div class="bg-white p-4 rounded-1">
+                                        <h5>Recent Tickets</h5>
+                                        <div class="myTable overflow-x-scroll rounded-1  bg-white">
+                                            <table class="table">
+                                                <thead>
+                                                  <tr>
+                                                    <th scope="col">Assignee</th>
+                                                    <th scope="col">Subject</th>
+                                                    <th scope="col">Status</th>
+                                                    <th scope="col">Last Update</th>
+                                                    <th scope="col">Tracking ID</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <th scope="row">
+                                                        <div class="d-flex align-items-center gap-1">
+                                                            <div class="overflow-hidden">
+                                                                <img src="/assets/img/face.jpg" class="img-thumbnail" alt="">
+                                                            </div>
+                                                            <p class="chatText pt-2">Thomas Douglas</p> 
+                                                        </div>
+                                                    </th>
+                                                    <td><p class="pt-2">Funding is received</p></td>
+                                                    <td><p class="pColor1 text-white fw-bold p-1 mt-2 rounded-1">DONE</p></td>
+                                                    <td><p class="pt-2">Dec 5, 2017</p></td>
+                                                    <td><p class="pt-2">WD-12345</p></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th scope="row">
+                                                        <div class="d-flex align-items-center gap-1">
+                                                            <div class="overflow-hidden">
+                                                                <img src="/assets/img/catherine.jpg" class="img-thumbnail" alt="">
+                                                            </div>
+                                                            <p class="chatText pt-2">Catherine</p> 
+                                                        </div>
+                                                    </th>
+                                                    <td><p class="pt-2">High loading time</p></td>
+                                                    <td><p class="pColor2 text-white fw-bold p-1 mt-2 rounded-1">PROGRESS</p></td>
+                                                    <td><p class="pt-2">Dec 12, 2017</p></td>
+                                                    <td><p class="pt-2">WD-12346</p></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th scope="row">
+                                                        <div class="d-flex align-items-center gap-1">
+                                                            <div class="overflow-hidden">
+                                                                <img src="/assets/img/danielrussell.jpg" class="img-thumbnail" alt="">
+                                                            </div>
+                                                            <p class="chatText pt-2">Daniel Russell</p> 
+                                                        </div>
+                                                    </th>
+                                                    <td><p class="pt-2">Website down for one week</p></td>
+                                                    <td><p class="pColor3 text-white fw-bold p-1 mt-2 rounded-1">ON-HOLD</p></td>
+                                                    <td><p class="pt-2">Dec 16, 2017</p></td>
+                                                    <td><p class="pt-2">WD-12347</p></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th scope="row">
+                                                        <div class="d-flex align-items-center gap-1">
+                                                            <div class="overflow-hidden">
+                                                                <img src="/assets/img/madelinekennedy.jpg" class="img-thumbnail" alt="">
+                                                            </div>
+                                                            <p class="chatText pt-2">Madeline Kennedy</p> 
+                                                        </div>
+                                                    </th>
+                                                    <td><p class="pt-2">Loosing control on server</p></td>
+                                                    <td><p class="pColor4 text-white fw-bold p-1 mt-2 rounded-1">REJECTED</p></td>
+                                                    <td><p class="pt-2">Dec 17, 2017</p></td>
+                                                    <td><p class="pt-2">WD-12348</p></td>
+                                                  </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-4" id="mainColFour">
+                                <div class="col-md-12 col-lg-5">
+                                    <div class="bg-white p-4 rounded-1">
+                                        Lorem ipsum dolor sit amet consectetur adipisicin
+                                        g elit. Iusto, nisi. Cumque rem omnis, aliqu
+                                        am blanditiis delectus ipsa quod qui animi iste aliquid quidem 
+                                        ex repellendus dolore. Voluptatum, repellat por
+                                        ro. Qui esse culpa veniam amet reprehe
+                                        nderit id itaque nihil cum distinctio. Lorem ipsum dolor sit amet 
+                                        consectetur, adipisicing 
+                                        elit. Atque unde aliquid eos, debitis voluptatibus voluptate error se
+                                        qui dolore architecto magnam rerum, mollitia, 
+                                        culpa voluptas! Ut, 
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-lg-7">
+                                    <div class="bg-white p-4 rounded-1">
+                                        <h5>Recent Updates</h5>
+                                        <div class="d-flex gap-3 recU">
+                                            <div class="d-flex align-items-center gap-1">
+                                                <i class="fa-solid fa-circle-user"></i>
+                                                <small class="text-secondary">Jack Menqu</small>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-1">
+                                                <i class="fa-solid fa-clock"></i>
+                                                <small class="text-secondary">October 3rd, 2018</small>
+                                            </div>
+                                        </div>
+                                        <div class="row py-1 px-0 mt-2">
+                                            <div class="col-6 pe-1">
+                                                <img src="/assets/img/formain1.jpg" class="img-fluid rounded-1" alt="">
+                                            </div>
+                                            <div class="col-6 ps-1">
+                                                <img src="/assets/img/formain2.jpg" class="img-fluid rounded-1" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="row py-1 px-0">
+                                            <div class="col-6 pe-1">
+                                                <img src="/assets/img/formain3.jpg" class="img-fluid rounded-1" alt="">
+                                            </div>
+                                            <div class="col-6 ps-1">
+                                                <img src="/assets/img/formain4.jpg" class="img-fluid rounded-1" alt="">
+                                            </div>
+                                        </div>
+
+                                        <div class="row mt-3">
+                                            <div class="col-md-2">
+                                                <img src="/assets/img/headshot.png" class="img-thumbnail" alt="">
+                                            </div>
+                                            <div class="col-md-7">
+                                                <div class="">
+                                                    <h6>School Website - Authentication Module.</h6>
+
+                                                    <p class="mt-2">
+                                                        School Website - Authentication Module.
+                                                        It is a long established fact that a reader
+                                                         will be distracted by the readable content of a page.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <i class="fa-regular fa-heart"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-4" id="mainColFive">
+                                <div class="col-md-12 col-lg-7">
+                                    <div class="bg-white p-4 rounded-1">
+                                        <h5>Project Status</h5>
+                                        <div class="myTable2 overflow-x-scroll rounded-1  bg-white">
+                                            <table class="table">
+                                                <thead>
+                                                  <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Name</th>
+                                                    <th scope="col">Due Date</th>
+                                                    <th scope="col">Progress</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <th scope="row">1</th>
+                                                    <td><p>Herman Beck</p></td>
+                                                    <td><p>May 15, 2015</p></td>
+                                                    <td><p>lorem</p></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th scope="row">2</th>
+                                                    <td><p>Messy Adam</p></td>
+                                                    <td><p>April 12, 2015</p></td>
+                                                    <td><p>Lorem</p></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th scope="row">3</th>
+                                                    <td><p>John Richards</p></td>
+                                                    <td><p>April 12, 2015</p></td>
+                                                    <td><p>Lorem</p></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th scope="row">4</th>
+                                                    <td><p>Peter Meggik</p></td>
+                                                    <td><p>May 15, 2015</p> </td>
+                                                    <td><p>Lorem</p></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th scope="row">5</th>
+                                                    <td><p>Edward</p></td>
+                                                    <td><p>May 03, 2015</p></td>
+                                                    <td><p>Lorem</p></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th scope="row">6</th>
+                                                    <td><p>Ronald</p></td>
+                                                    <td><p>Jun 05, 2015</p></td>
+                                                    <td><p>Lorem </p></td>
+                                                  </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-lg-5">
+                                    <div class="bg-white p-4 rounded-1"></div>
+                                </div>
+                            </div>
+
+
+                            <div class="wrapper">
+                                <h1>My skills</h1>
+                                <div class="skills-wrapper">
+                                    <div class="bar">
+                                        <div class="info">
+                                            <span>html</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <span class="html"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="bar">
+                                        <div class="info">
+                                            <span>css</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <span class="css"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="bar">
+                                        <div class="info">
+                                            <span>js</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <span class="js"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

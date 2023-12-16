@@ -3,7 +3,7 @@
 :root{
     --font-family: 'Ubuntu', sans-serif;
     --grey: grey;
-    --purple: #800080;
+    --purple: #a32d29;
     --light-purple: #eabfff;
     --body-color: #f2edf3;
     --white: #fff;
@@ -80,7 +80,7 @@ i{
     color: var(--purple);
     font-size: 12px;
 }
-#side-menu #bookmark-column img, #offcanvasRight .chatlist img{
+#side-menu #bookmark-column img, #offcanvasRight .chatlist img, .table img{
     border: none;
     border-radius: 50%;
     width: 50px;
@@ -98,7 +98,7 @@ i{
 
 
 /* off-canvas */
-#offcanvasRight #offcanvashead{
+#offcanvasRight #offcanvashead, #offcanvasRight .btn{
     background: hsla(280, 100%, 77%, 1);
 
     background: linear-gradient(45deg, hsla(280, 100%, 77%, 1) 32%, hsla(266, 100%, 68%, 1) 100%);
@@ -121,21 +121,11 @@ i{
     color: var(--white);
     font-size: 20px;
 }
-#offcanvasRight .btn{
-    background: hsla(280, 100%, 77%, 1);
-
-    background: linear-gradient(45deg, hsla(280, 100%, 77%, 1) 32%, hsla(266, 100%, 68%, 1) 100%);
-    
-    background: -moz-linear-gradient(45deg, hsla(280, 100%, 77%, 1) 32%, hsla(266, 100%, 68%, 1) 100%);
-    
-    background: -webkit-linear-gradient(45deg, hsla(280, 100%, 77%, 1) 32%, hsla(266, 100%, 68%, 1) 100%);
-    
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#D88AFF", endColorstr="#A55EFF", GradientType=1 );
-    
+#offcanvasRight .btn{    
     border: none;
 }
 #offcanvasRight #todo-list input[type="checkbox"]:checked {
-    accent-color: var(--light-purple);
+    accent-color: var(--purple);
 }
 .chatText {
     display: inline-block;
@@ -150,15 +140,12 @@ i{
     display: inline-block;
     transition: text-decoration 0.3s;
 }
-.clearTask {
-    color: var(--purple); 
-}
 .completed {
-    text-decoration: 2px var(--light-purple) line-through;
+    text-decoration: 2px var(--purple) line-through;
 }
-/* .complete {
-    color: var(--light-purple) !important;
-} */
+.complete {
+    color: var(--purple) !important;
+}
 #offcanvasRight #todo-list i{
     color: var(--grey-purple);
 }
@@ -206,4 +193,256 @@ i{
 #offcanvasRight .chatlist span{
     color: var(--grey);
     font-size: 14px;
+}
+*{
+    /* border: 2px solid red; */
+}
+
+
+/* MAIN CONTENT */
+.faHouse{
+    padding: 7px;
+    border-radius: 3px;
+    background-color: var(--purple);
+    color: var(--white);
+    font-size: 14px;
+}
+.card i{
+    color: white;
+}
+.card2{
+    background: hsla(2, 80%, 75%, 1);
+
+    background: linear-gradient(45deg, hsla(2, 80%, 75%, 1) 0%, hsla(2, 80%, 57%, 1) 45%, hsla(2, 100%, 91%, 1) 100%);
+
+    background: -moz-linear-gradient(45deg, hsla(2, 80%, 75%, 1) 0%, hsla(2, 80%, 57%, 1) 45%, hsla(2, 100%, 91%, 1) 100%);
+
+    background: -webkit-linear-gradient(45deg, hsla(2, 80%, 75%, 1) 0%, hsla(2, 80%, 57%, 1) 45%, hsla(2, 100%, 91%, 1) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F2908C", endColorstr="#E9423B", GradientType=1 );
+}
+.card1{
+    background: hsla(1, 100%, 81%, 1);
+
+    background: linear-gradient(45deg, hsla(1, 100%, 81%, 1) 0%, hsla(2, 60%, 40%, 1) 45%, hsla(1, 100%, 81%, 1) 100%);
+    
+    background: -moz-linear-gradient(45deg, hsla(1, 100%, 81%, 1) 0%, hsla(2, 60%, 40%, 1) 45%, hsla(1, 100%, 81%, 1) 100%);
+    
+    background: -webkit-linear-gradient(45deg, hsla(1, 100%, 81%, 1) 0%, hsla(2, 60%, 40%, 1) 45%, hsla(1, 100%, 81%, 1) 100%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFA2A0", endColorstr="#A32D29", GradientType=1 );
+}
+.card3{
+    background: hsla(3, 100%, 91%, 1);
+
+    background: linear-gradient(45deg, hsla(3, 100%, 91%, 1) 0%, hsla(1, 100%, 81%, 1) 47%, hsla(3, 100%, 91%, 1) 100%);
+
+    background: -moz-linear-gradient(45deg, hsla(3, 100%, 91%, 1) 0%, hsla(1, 100%, 81%, 1) 47%, hsla(3, 100%, 91%, 1) 100%);
+
+    background: -webkit-linear-gradient(45deg, hsla(3, 100%, 91%, 1) 0%, hsla(1, 100%, 81%, 1) 47%, hsla(3, 100%, 91%, 1) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFD3D1", endColorstr="#FFA2A0", GradientType=1 );
+}
+
+/* .card1, .pColor1{
+    background: hsla(22, 100%, 79%, 1);
+
+    background: linear-gradient(45deg, hsla(22, 100%, 79%, 1) 22%, hsla(1, 98%, 83%, 1) 38%, hsla(22, 100%, 79%, 1) 92%);
+
+    background: -moz-linear-gradient(45deg, hsla(22, 100%, 79%, 1) 22%, hsla(1, 98%, 83%, 1) 38%, hsla(22, 100%, 79%, 1) 92%);
+
+    background: -webkit-linear-gradient(45deg, hsla(22, 100%, 79%, 1) 22%, hsla(1, 98%, 83%, 1) 38%, hsla(22, 100%, 79%, 1) 92%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFBC96", endColorstr="#FEADAB", GradientType=1 );
+} */
+/* .card2, .pColor3{
+    color: red;
+    background: hsla(197, 71%, 73%, 1);
+
+    background: linear-gradient(45deg, hsla(197, 71%, 73%, 1) 29%, hsla(197, 71%, 55%, 1) 45%, hsla(197, 71%, 73%, 1) 67%);
+    
+    background: -moz-linear-gradient(45deg, hsla(197, 71%, 73%, 1) 29%, hsla(197, 71%, 55%, 1) 45%, hsla(197, 71%, 73%, 1) 67%);
+    
+    background: -webkit-linear-gradient(45deg, hsla(197, 71%, 73%, 1) 29%, hsla(197, 71%, 55%, 1) 45%, hsla(197, 71%, 73%, 1) 67%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#87CEEB", endColorstr="#3BB0DE", GradientType=1 );
+}
+.card3, .pColor4{
+    background: hsla(175, 49%, 75%, 1);
+
+    background: linear-gradient(45deg, hsla(175, 49%, 75%, 1) 43%, hsla(171, 62%, 55%, 1) 54%, hsla(171, 79%, 65%, 1) 100%);
+
+    background: -moz-linear-gradient(45deg, hsla(175, 49%, 75%, 1) 43%, hsla(171, 62%, 55%, 1) 54%, hsla(171, 79%, 65%, 1) 100%);
+
+    background: -webkit-linear-gradient(45deg, hsla(175, 49%, 75%, 1) 43%, hsla(171, 62%, 55%, 1) 54%, hsla(171, 79%, 65%, 1) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#A2DFDA", endColorstr="#45D3BD", GradientType=1 );
+} */
+
+
+.circleOne i, .circleTwo i, .circleThree i{
+    font-size: 10px;
+}
+.circleOne i{
+    color: hsla(22, 100%, 79%, 1);
+
+    color: linear-gradient(45deg, hsla(22, 100%, 79%, 1) 22%, hsla(1, 98%, 83%, 1) 38%, hsla(22, 100%, 79%, 1) 92%);
+
+    color: -moz-linear-gradient(45deg, hsla(22, 100%, 79%, 1) 22%, hsla(1, 98%, 83%, 1) 38%, hsla(22, 100%, 79%, 1) 92%);
+
+    color: -webkit-linear-gradient(45deg, hsla(22, 100%, 79%, 1) 22%, hsla(1, 98%, 83%, 1) 38%, hsla(22, 100%, 79%, 1) 92%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFBC96", endColorstr="#FEADAB", GradientType=1 );
+}
+.circleTwo i{
+    color: hsla(197, 71%, 73%, 1);
+
+    color: linear-gradient(45deg, hsla(197, 71%, 73%, 1) 29%, hsla(197, 71%, 55%, 1) 45%, hsla(197, 71%, 73%, 1) 67%);
+    
+    color: -moz-linear-gradient(45deg, hsla(197, 71%, 73%, 1) 29%, hsla(197, 71%, 55%, 1) 45%, hsla(197, 71%, 73%, 1) 67%);
+    
+    color: -webkit-linear-gradient(45deg, hsla(197, 71%, 73%, 1) 29%, hsla(197, 71%, 55%, 1) 45%, hsla(197, 71%, 73%, 1) 67%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#87CEEB", endColorstr="#3BB0DE", GradientType=1 );
+}
+.circleThree i{
+    color: hsla(175, 49%, 75%, 1);
+
+    color: linear-gradient(45deg, hsla(175, 49%, 75%, 1) 43%, hsla(171, 62%, 55%, 1) 54%, hsla(171, 79%, 65%, 1) 100%);
+
+    color: -moz-linear-gradient(45deg, hsla(175, 49%, 75%, 1) 43%, hsla(171, 62%, 55%, 1) 54%, hsla(171, 79%, 65%, 1) 100%);
+
+    color: -webkit-linear-gradient(45deg, hsla(175, 49%, 75%, 1) 43%, hsla(171, 62%, 55%, 1) 54%, hsla(171, 79%, 65%, 1) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#A2DFDA", endColorstr="#45D3BD", GradientType=1 );
+}
+
+.pColor1{
+    background: hsla(22, 100%, 79%, 1);
+
+    background: linear-gradient(45deg, hsla(22, 100%, 79%, 1) 22%, hsla(1, 98%, 83%, 1) 38%, hsla(22, 100%, 79%, 1) 92%);
+
+    background: -moz-linear-gradient(45deg, hsla(22, 100%, 79%, 1) 22%, hsla(1, 98%, 83%, 1) 38%, hsla(22, 100%, 79%, 1) 92%);
+
+    background: -webkit-linear-gradient(45deg, hsla(22, 100%, 79%, 1) 22%, hsla(1, 98%, 83%, 1) 38%, hsla(22, 100%, 79%, 1) 92%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFBC96", endColorstr="#FEADAB", GradientType=1 );
+}
+.pColor2{
+    background: hsla(48, 100%, 50%, 1);
+
+    background: linear-gradient(45deg, hsla(48, 100%, 50%, 1) 34%, hsla(40, 100%, 50%, 1) 45%, hsla(48, 100%, 50%, 1) 57%);
+    
+    background: -moz-linear-gradient(45deg, hsla(48, 100%, 50%, 1) 34%, hsla(40, 100%, 50%, 1) 45%, hsla(48, 100%, 50%, 1) 57%);
+    
+    background: -webkit-linear-gradient(45deg, hsla(48, 100%, 50%, 1) 34%, hsla(40, 100%, 50%, 1) 45%, hsla(48, 100%, 50%, 1) 57%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFCC00", endColorstr="#FFAA00", GradientType=1 );
+}
+.pColor4{
+    background: hsla(175, 49%, 75%, 1);
+    
+    background: linear-gradient(45deg, hsla(175, 49%, 75%, 1) 43%, hsla(171, 62%, 55%, 1) 54%, hsla(171, 79%, 65%, 1) 100%);
+    
+    background: -moz-linear-gradient(45deg, hsla(175, 49%, 75%, 1) 43%, hsla(171, 62%, 55%, 1) 54%, hsla(171, 79%, 65%, 1) 100%);
+    
+    background: -webkit-linear-gradient(45deg, hsla(175, 49%, 75%, 1) 43%, hsla(171, 62%, 55%, 1) 54%, hsla(171, 79%, 65%, 1) 100%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#A2DFDA", endColorstr="#45D3BD", GradientType=1 );
+}
+.pColor3{
+    background: hsla(197, 71%, 73%, 1);
+
+    background: linear-gradient(45deg, hsla(197, 71%, 73%, 1) 29%, hsla(197, 71%, 55%, 1) 45%, hsla(197, 71%, 73%, 1) 67%);
+    
+    background: -moz-linear-gradient(45deg, hsla(197, 71%, 73%, 1) 29%, hsla(197, 71%, 55%, 1) 45%, hsla(197, 71%, 73%, 1) 67%);
+    
+    background: -webkit-linear-gradient(45deg, hsla(197, 71%, 73%, 1) 29%, hsla(197, 71%, 55%, 1) 45%, hsla(197, 71%, 73%, 1) 67%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#87CEEB", endColorstr="#3BB0DE", GradientType=1 );
+}
+
+#mainColTwo span{
+    font-size: 12px;
+}
+.table .pColor1, .pColor2, .pColor3, .pColor4{
+    text-align: center;
+    font-size: 12px;
+    width: 100px !important;
+}
+.table img{
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 40px;
+}
+.table p{
+    width: 185px;
+}
+.myTable2 .table p{
+    width: 100px;
+}
+.table .tableColor{
+    width: 100px;
+}
+.recU i{
+    font-size: 12px;
+}
+
+
+
+
+
+.skills-wrapper{
+    padding: 0 20px;
+}
+
+.bar{
+    margin: 20px 0;
+}
+
+.info{
+    margin-bottom: 10px;
+}
+
+.skills-wrapper .bar .info span{
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.progress-bar{
+    width: 100%;
+    height: 15px;
+    background: pink;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden; 
+}
+
+.skills-wrapper .bar .progress-bar span{
+    position: absolute;
+    height: 100%;
+    border-radius: 10px;
+    width: 70%;
+    background: green;
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes animate{
+    100%{
+        transform: scale(1);
+    }
+}
+
+.skills-wrapper .bar .progress-bar span .html{
+    width: 70%;
+    
+}
+.skills-wrapper .bar .progress-bar span .css{
+    width: 30%;
+
+}
+.skills-wrapper .bar .progress-bar span .js{
+    width: 80%;
+
 }

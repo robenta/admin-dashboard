@@ -6,9 +6,8 @@ const logoIcon = document.querySelector('#logo-icon')
 const mBody = document.querySelector('#main-body-col')
 const faIcons = document.querySelectorAll('.fa-solid')
 const faReg = document.querySelectorAll('.fa-regular')
-const modes = document.querySelectorAll('.modes')
-// const modes = document.querySelector('#modes')
-// const modes2 = document.querySelector('#modes2')
+const modes1 = document.querySelector('.modes1')
+const modes2 = document.querySelector('.modes2')
 const offcanvas = document.querySelector('#offcanvasRight')
 const spanName = document.querySelectorAll('.name')
 const headerImage = document.querySelectorAll('.headerImage')
@@ -19,184 +18,191 @@ const allElements = document.querySelectorAll('div')
 const pTexts = document.querySelectorAll('.pTexts')
 const itemTexts = document.querySelectorAll('.itemText')
 
-modes.forEach(function(mode){
-    mode.addEventListener('click', switchModes)
-    function switchModes(e){
-        if (e.target.classList.contains('fa-moon')) {
-            body.style.backgroundColor = 'black'
-            mBody.style.backgroundColor = 'black'
-            logoText.style.color = '#beabc1'
-            logoIcon.style.color = '#beabc1'
-            header.style.backgroundColor = 'black'
-            offcanvas.style.backgroundColor = 'black'
-            offcanvas.style.borderLeftColor = '#d688ff'
-            navbarToggler.style.color = '#d688ff'
-            offcanvas.style.borderLeftStyle = "solid"; 
-            offcanvas.style.borderLeftWidth = "0.5px";
-            topRow.classList.add("shadowAdded");
-            faIcons.forEach((fa)=>{
-                fa.style.color = '#beabc1'
-            })
-            faReg.forEach((fag)=>{
-                fag.style.color = '#beabc1'
-            })
-            allElements.forEach((all)=>{
-                all.style.color = '#beabc1'
-            })
-            search.forEach((all)=>{
-                all.style.backgroundColor = '#f5f5f5'
-                all.style.border = '2px solid #d688ff'
-                all.classList.add('dark-mode');
-            })
-            spanName.forEach((all)=>{
-                all.style.color = '#beabc1'
-            })
-            pTexts.forEach((all)=>{
-                all.style.color = '#beabc1'
-            })
-            itemTexts.forEach((list)=>{
-                list.style.color = '#beabc1'
-            })
-            headerImage.forEach((all)=>{
-                all.style.border = '2px solid #beabc1'
-            })
-            mode.classList.remove('fa-moon')
-            mode.classList.add('fa-sun')
-        }else{
-            body.style.backgroundColor = ''
-            header.style.backgroundColor = ''
-            logoText.style.color = ''
-            logoIcon.style.color = ''
-            mBody.style.backgroundColor = ''
-            offcanvas.style.backgroundColor = ''
-            navbarToggler.style.color = ''
-            offcanvas.style.borderLeftColor = ''
-            offcanvas.style.borderLeftStyle = ""; 
-            offcanvas.style.borderLeftWidth = "";
-            topRow.classList.remove("shadowAdded");
-    
-            faIcons.forEach((fa)=>{
-                fa.style.color = ''
-            })
-            faReg.forEach((fag)=>{
-                fag.style.color = ''
-            })
-            allElements.forEach((all)=>{
-                all.style.color = ''
-            })
-            search.forEach((all)=>{
-                all.style.backgroundColor = ''
-                all.style.border = ''
-                all.classList.remove('dark-mode');
-            })
-            pTexts.forEach((all)=>{
-                all.style.color = ''
-            })
-            spanName.forEach((all)=>{
-                all.style.color = ''
-            })
-            itemTexts.forEach((list)=>{
-                list.style.color = ''
-            })
-            headerImage.forEach((all)=>{
-                all.style.border = ''
-            })
-    
-            mode.classList.add('fa-moon')
-            mode.classList.remove('fa-sun')  
-        }
-    
+modes1.addEventListener('click', switchModes)
+function switchModes(e){
+    if (e.target.classList.contains('fa-moon')) {
+        body.style.backgroundColor = 'black'
+        mBody.style.backgroundColor = 'black'
+        logoText.style.color = '#beabc1'
+        logoIcon.style.color = '#beabc1'
+        header.style.backgroundColor = 'black'
+        offcanvas.style.backgroundColor = 'black'
+        offcanvas.style.borderLeftColor = '#d688ff'
+        navbarToggler.style.color = '#d688ff'
+        offcanvas.style.borderLeftStyle = "solid"; 
+        offcanvas.style.borderLeftWidth = "0.5px";
+        topRow.classList.add("shadowAdded");
+        faIcons.forEach((fa)=>{
+            fa.style.color = '#beabc1'
+        })
+        faReg.forEach((fag)=>{
+            fag.style.color = '#beabc1'
+        })
+        allElements.forEach((all)=>{
+            all.style.color = '#beabc1'
+        })
+        search.forEach((all)=>{
+            all.style.backgroundColor = '#f5f5f5'
+            all.style.border = '2px solid #d688ff'
+            all.classList.add('dark-mode');
+        })
+        spanName.forEach((all)=>{
+            all.style.color = '#beabc1'
+        })
+        pTexts.forEach((all)=>{
+            all.style.color = '#beabc1'
+        })
+        itemTexts.forEach((list)=>{
+            list.style.color = '#beabc1'
+        })
+        headerImage.forEach((all)=>{
+            all.style.border = '2px solid #beabc1'
+        })
+        modes1.classList.remove('fa-moon')
+        modes1.classList.add('fa-sun')
+        modes2.classList.remove('fa-moon')
+        modes2.classList.add('fa-sun')
+        
+    }else{
+        body.style.backgroundColor = ''
+        header.style.backgroundColor = ''
+        logoText.style.color = ''
+        logoIcon.style.color = ''
+        mBody.style.backgroundColor = ''
+        offcanvas.style.backgroundColor = ''
+        navbarToggler.style.color = ''
+        offcanvas.style.borderLeftColor = ''
+        offcanvas.style.borderLeftStyle = ""; 
+        offcanvas.style.borderLeftWidth = "";
+        topRow.classList.remove("shadowAdded");
+
+        faIcons.forEach((fa)=>{
+            fa.style.color = ''
+        })
+        faReg.forEach((fag)=>{
+            fag.style.color = ''
+        })
+        allElements.forEach((all)=>{
+            all.style.color = ''
+        })
+        search.forEach((all)=>{
+            all.style.backgroundColor = ''
+            all.style.border = ''
+            all.classList.remove('dark-mode');
+        })
+        pTexts.forEach((all)=>{
+            all.style.color = ''
+        })
+        spanName.forEach((all)=>{
+            all.style.color = ''
+        })
+        itemTexts.forEach((list)=>{
+            list.style.color = ''
+        })
+        headerImage.forEach((all)=>{
+            all.style.border = ''
+        })
+
+        modes1.classList.add('fa-moon')
+        modes1.classList.remove('fa-sun')  
+        modes2.classList.add('fa-moon')
+        modes2.classList.remove('fa-sun')  
     }
-})
 
-// console.log(mode);
-// modes2.addEventListener('click', switchModes2)
-// function switchModes2(e){
-//     if (e.target.classList.contains('fa-moon')) {
-//         body.style.backgroundColor = 'black'
-//         mBody.style.backgroundColor = 'black'
-//         logoText.style.color = '#beabc1'
-//         logoIcon.style.color = '#beabc1'
-//         header.style.backgroundColor = 'black'
-//         offcanvas.style.backgroundColor = 'black'
-//         offcanvas.style.borderLeftColor = '#d688ff'
-//         navbarToggler.style.color = '#d688ff'
-//         offcanvas.style.borderLeftStyle = "solid"; 
-//         offcanvas.style.borderLeftWidth = "0.5px";
-//         topRow.classList.add("shadowAdded");
-//         faIcons.forEach((fa)=>{
-//             fa.style.color = '#beabc1'
-//         })
-//         faReg.forEach((fag)=>{
-//             fag.style.color = '#beabc1'
-//         })
-//         allElements.forEach((all)=>{
-//             all.style.color = '#beabc1'
-//         })
-//         search.forEach((all)=>{
-//             all.style.backgroundColor = '#f5f5f5'
-//             all.style.border = '2px solid #d688ff'
-//             all.classList.add('dark-mode');
-//         })
-//         spanName.forEach((all)=>{
-//             all.style.color = '#beabc1'
-//         })
-//         pTexts.forEach((all)=>{
-//             all.style.color = '#beabc1'
-//         })
-//         itemTexts.forEach((list)=>{
-//             list.style.color = '#beabc1'
-//         })
-//         headerImage.forEach((all)=>{
-//             all.style.border = '2px solid #beabc1'
-//         })
-//         modes2.classList.remove('fa-moon')
-//         modes2.classList.add('fa-sun')
-//     }else{
-//         body.style.backgroundColor = ''
-//         mBody.style.backgroundColor = ''
-//         logoText.style.color = ''
-//         logoIcon.style.color = ''
-//         header.style.backgroundColor = ''
-//         offcanvas.style.backgroundColor = ''
-//         navbarToggler.style.color = ''
-//         offcanvas.style.borderLeftColor = ''
-//         offcanvas.style.borderLeftStyle = ""; 
-//         offcanvas.style.borderLeftWidth = "";
-//         topRow.classList.remove("shadowAdded");
+}
 
-//         faIcons.forEach((fa)=>{
-//             fa.style.color = ''
-//         })
-//         faReg.forEach((fag)=>{
-//             fag.style.color = ''
-//         })
-//         allElements.forEach((all)=>{
-//             all.style.color = ''
-//         })
-//         search.forEach((all)=>{
-//             all.style.backgroundColor = ''
-//             all.style.border = ''
-//             all.classList.remove('dark-mode');
-//         })
-//         pTexts.forEach((all)=>{
-//             all.style.color = ''
-//         })
-//         spanName.forEach((all)=>{
-//             all.style.color = ''
-//         })
-//         itemTexts.forEach((list)=>{
-//             list.style.color = ''
-//         })
-//         headerImage.forEach((all)=>{
-//             all.style.border = ''
-//         })
 
-//         modes2.classList.add('fa-moon')
-//         modes2.classList.remove('fa-sun')  
-//     }
+modes2.addEventListener('click', switchModes2)
+function switchModes2(e){
+    if (e.target.classList.contains('fa-moon')) {
+        body.style.backgroundColor = 'black'
+        mBody.style.backgroundColor = 'black'
+        logoText.style.color = '#beabc1'
+        logoIcon.style.color = '#beabc1'
+        header.style.backgroundColor = 'black'
+        offcanvas.style.backgroundColor = 'black'
+        offcanvas.style.borderLeftColor = '#d688ff'
+        navbarToggler.style.color = '#d688ff'
+        offcanvas.style.borderLeftStyle = "solid"; 
+        offcanvas.style.borderLeftWidth = "0.5px";
+        topRow.classList.add("shadowAdded");
+        faIcons.forEach((fa)=>{
+            fa.style.color = '#beabc1'
+        })
+        faReg.forEach((fag)=>{
+            fag.style.color = '#beabc1'
+        })
+        allElements.forEach((all)=>{
+            all.style.color = '#beabc1'
+        })
+        search.forEach((all)=>{
+            all.style.backgroundColor = '#f5f5f5'
+            all.style.border = '2px solid #d688ff'
+            all.classList.add('dark-mode');
+        })
+        spanName.forEach((all)=>{
+            all.style.color = '#beabc1'
+        })
+        pTexts.forEach((all)=>{
+            all.style.color = '#beabc1'
+        })
+        itemTexts.forEach((list)=>{
+            list.style.color = '#beabc1'
+        })
+        headerImage.forEach((all)=>{
+            all.style.border = '2px solid #beabc1'
+        })
+        modes2.classList.remove('fa-moon')
+        modes2.classList.add('fa-sun')
+        modes1.classList.remove('fa-moon')
+        modes1.classList.add('fa-sun')
+    }else{
+        body.style.backgroundColor = ''
+        mBody.style.backgroundColor = ''
+        logoText.style.color = ''
+        logoIcon.style.color = ''
+        header.style.backgroundColor = ''
+        offcanvas.style.backgroundColor = ''
+        navbarToggler.style.color = ''
+        offcanvas.style.borderLeftColor = ''
+        offcanvas.style.borderLeftStyle = ""; 
+        offcanvas.style.borderLeftWidth = "";
+        topRow.classList.remove("shadowAdded");
 
-// }
+        faIcons.forEach((fa)=>{
+            fa.style.color = ''
+        })
+        faReg.forEach((fag)=>{
+            fag.style.color = ''
+        })
+        allElements.forEach((all)=>{
+            all.style.color = ''
+        })
+        search.forEach((all)=>{
+            all.style.backgroundColor = ''
+            all.style.border = ''
+            all.classList.remove('dark-mode');
+        })
+        pTexts.forEach((all)=>{
+            all.style.color = ''
+        })
+        spanName.forEach((all)=>{
+            all.style.color = ''
+        })
+        itemTexts.forEach((list)=>{
+            list.style.color = ''
+        })
+        headerImage.forEach((all)=>{
+            all.style.border = ''
+        })
+
+        modes2.classList.add('fa-moon')
+        modes2.classList.remove('fa-sun')  
+        modes1.classList.add('fa-moon')
+        modes1.classList.remove('fa-sun')  
+    }
+
+}
 
 
 // HIDE SIDE-MENU ON CLICK OF THE MENU BUTTON
@@ -345,39 +351,25 @@ function deleteTask(e) {
     }
 }
 
-
-// clearTaskButtons.forEach(button=>{
-//     button.addEventListener('click', removeTask)
-// })
-// function removeTask(e){
-//     if (e.target.classList.id = 'clearTask') {
-//         e.target.parentElement.parentElement.remove()
-//     }
-// }
-
-
-// list.addEventListener('click', function(e) {
-//     if (e.target && e.target.classList.contains('checkbox')) {
-//         toggleItemText(e.target);
-//     }
-// });
-
+// STYLING FOR CHECKBOX ON CLICK
+list.addEventListener('click', function(e) {
+    if (e.target.classList.contains('checkbox')) {
+        toggleItemText(e.target);
+    }
+});
 function toggleItemText(checkbox) {
-    // var itemText = checkbox.nextElementSibling; 
-    // var clearTask = checkbox.parentElement.nextElementSibling.querySelector('.clearTask'); 
+    var itemText = checkbox.nextElementSibling; 
+    var clearTask = checkbox.parentElement.nextElementSibling.querySelector('.clearTask'); 
     if (checkbox.checked) {
         itemText.classList.add("completed");
         clearTask.classList.add('complete');
     } else {
         itemText.classList.remove("completed");
         clearTask.classList.remove("complete");
-        clearTask.style.color = ''; 
     }
 }
 
-
-
-
+// ALERT STYLING
 function showAlert(message, className){
     const alertDiv = document.createElement('div')
     alertDiv.className = `alert alert-${className}`
