@@ -41,7 +41,7 @@
                             <img src="/assets/img/headshot.png" class="img-fluid headerImage" alt="">
                             <span class="name">Robenta Ahimie </span>
                             <form class="px-5 d-md-none d-none d-lg-block d-xl-block d-xxl-block" role="search">
-                                <input type="search" name="checkboxes" placeholder="Search..." class="form-control search">
+                                <input type="search" name="checkboxes" placeholder="Search..." class="form-control rounded-0 search">
                             </form>
                         </div>
                         <div class="d-flex justify-content-between gap-5 align-items-center">
@@ -64,7 +64,6 @@
         </nav>
     </header>
 
-    <!-- off-canvas -->
     <div class="container-fluid p-0">
         <div class="container-fluid">
             <div class="row" id="main-row">
@@ -255,44 +254,44 @@
 
                 <div class="col-md-1 d-none" id="side-menu-small">
                     <div class="d-grid text-start px-2 pb-4 sideMenuSmall">
-                        <div class="py-3">
+                        <div class="py-4">
                             <i class="fa-solid fa-house"></i>
                         </div>
-                        <div class="py-3">
+                        <div class="py-4">
                             <i class="fa-solid fa-layer-group"></i>
                         </div>
-                        <div class="py-3">
+                        <div class="py-4">
                             <i class="fa-solid fa-crosshairs"></i>
                         </div>
-                        <div class="py-3">
+                        <div class="py-4">
                             <i class="fa-solid fa-list"></i>
                         </div>
-                        <div class="py-3">
+                        <div class="py-4">
                             <i class="fa-solid fa-table-cells"></i>
                         </div>
-                        <div class="py-3">
+                        <div class="py-4">
                             <i class="fa-solid fa-id-card-clip"></i>
                         </div>
-                        <div class="py-3">
+                        <div class="py-4">
                             <i class="fa-solid fa-chart-column"></i>
                         </div>
-                        <div class="py-3">
+                        <div class="py-4">
                             <i class="fa-solid fa-lock"></i>
                         </div>
-                        <div class="py-3">
+                        <div class="py-4">
                             <i class="fa-solid fa-shield-halved"></i>
                         </div>
-                        <div class="py-3">
+                        <div class="py-4">
                             <i class="fa-solid fa-briefcase-medical"></i>
                         </div>
-                        <div class="py-3">
+                        <div class="py-4">
                             <i class="fa-solid fa-rectangle-list"></i>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-9" id="main-body-col">
-                    <div class="mx-2 py-3 d-md-block d-none d-lg-block d-xl-block d-xxl-block" id="main-body">
+                    <div class="py-3 d-md-block d-none d-lg-block d-xl-block d-xxl-block " id="main-body">
                         <div class="container-fluid py-2">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="d-flex justify-content-evenly gap-2">
@@ -347,22 +346,22 @@
                             <div class="row mt-4 justify-content-between" id="mainColTwo">
                                 <div class="col-md-7">
                                     <div class="rounded-1 bg-white p-3 mb-3 mb-lg-0 mb-xl-0 mb-xxl-0">
-                                        <div class="row justify-content-between">
+                                        <div class="row justify-content-between pt-3">
                                             <div class="col-md-6">
-                                                <h5>Visit and sales statistics</h5>
+                                                <h5 class="darkTexts">Visit and sales statistics</h5>
                                             </div>
                                             <div class="col-md-5">
                                                 <div class="d-flex gap-2 float-none float-md-end float-lg-end float-xl-end float-xxl-end">
                                                     <div class="d-flex align-items-center justify-content-between gap-1 circleOne">
-                                                        <i class="fa-solid fa-circle"></i>
+                                                        <i class="fa-solid fa-circle tripleIcon"></i>
                                                         <span>CHN</span>
                                                     </div>
                                                     <div class="d-flex align-items-center justify-content-between gap-1 circleTwo">
-                                                        <i class="fa-solid fa-circle"></i>
+                                                        <i class="fa-solid fa-circle tripleIcon"></i>
                                                         <span>USA</span>
                                                     </div>
                                                     <div class="d-flex align-items-center justify-content-between gap-1 circleThree">
-                                                        <i class="fa-solid fa-circle"></i>
+                                                        <i class="fa-solid fa-circle tripleIcon"></i>
                                                         <span>UK</span>
                                                     </div>
                                                 </div>
@@ -382,8 +381,8 @@
                                     </div>
                                 </div>
                                 <div class="col-md-5">
-                                    <div class="rounded-1 bg-white p-3">
-                                        <h5 class="pb-3">Traffic Sources</h5>
+                                    <div class="rounded-1 bg-white p-3 pt-4">
+                                        <h5 class="pb-3 darkTexts">Traffic Sources</h5>
                                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
                                             Explicabo autem quis nam consequatur atque sint minus rerum sit, v
                                             ero culpa, omnis quasi eos nisi! Voluptatum, rem corrupti sequi
@@ -395,110 +394,172 @@
                                 </div>
                             </div>
 
-                            <div class="row mt-4" id="mainColThree">
-                                <div class="col-md-12">
-                                    <div class="bg-white p-4 rounded-1">
-                                        <h5>Recent Tickets</h5>
-                                        <div class="myTable overflow-x-scroll rounded-1  bg-white">
-                                            <table class="table">
-                                                <thead>
-                                                  <tr>
-                                                    <th scope="col">Assignee</th>
-                                                    <th scope="col">Subject</th>
-                                                    <th scope="col">Status</th>
-                                                    <th scope="col">Last Update</th>
-                                                    <th scope="col">Tracking ID</th>
-                                                  </tr>
-                                                </thead>
-                                                <tbody>
-                                                  <tr>
-                                                    <th scope="row">
-                                                        <div class="d-flex align-items-center gap-1">
-                                                            <div class="overflow-hidden">
-                                                                <img src="/assets/img/face.jpg" class="img-thumbnail" alt="">
-                                                            </div>
-                                                            <p class="chatText pt-2">Thomas Douglas</p> 
+                            <div class="container-fluid mt-4 bg-white rounded-1" id="mainColThree">
+                                <div class="pt-4">
+                                    <h5 class="darkTexts">Recent Tickets</h5>
+                                    <div class="myTable overflow-x-scroll rounded-1">
+                                        <table class="table">
+                                            <thead>
+                                                <tr class="table-row">
+                                                <th scope="col">Assignee</th>
+                                                <th scope="col">Subject</th>
+                                                <th scope="col">Status</th>
+                                                <th scope="col">Last Update</th>
+                                                <th scope="col">Tracking ID</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="table-row">
+                                                <th scope="row">
+                                                    <div class="d-flex align-items-center gap-1">
+                                                        <div class="overflow-hidden">
+                                                            <img src="/assets/img/face.jpg" class="img-fluid" alt="">
                                                         </div>
-                                                    </th>
-                                                    <td><p class="pt-2">Funding is received</p></td>
-                                                    <td><p class="pColor1 text-white fw-bold p-1 mt-2 rounded-1">DONE</p></td>
-                                                    <td><p class="pt-2">Dec 5, 2017</p></td>
-                                                    <td><p class="pt-2">WD-12345</p></td>
-                                                  </tr>
-                                                  <tr>
-                                                    <th scope="row">
-                                                        <div class="d-flex align-items-center gap-1">
-                                                            <div class="overflow-hidden">
-                                                                <img src="/assets/img/catherine.jpg" class="img-thumbnail" alt="">
-                                                            </div>
-                                                            <p class="chatText pt-2">Catherine</p> 
+                                                        <p class="chatText pt-2">Thomas Douglas</p> 
+                                                    </div>
+                                                </th>
+                                                <td><p class="pt-2">Funding is received</p></td>
+                                                <td><p class="pColor1 text-white fw-bold p-1 mt-2 rounded-1">DONE</p></td>
+                                                <td><p class="pt-2">Dec 5, 2017</p></td>
+                                                <td><p class="pt-2">WD-12345</p></td>
+                                                </tr>
+                                                <tr class="table-row">
+                                                <th scope="row">
+                                                    <div class="d-flex align-items-center gap-1">
+                                                        <div class="overflow-hidden">
+                                                            <img src="/assets/img/catherine.jpg" class="img-fluid" alt="">
                                                         </div>
-                                                    </th>
-                                                    <td><p class="pt-2">High loading time</p></td>
-                                                    <td><p class="pColor2 text-white fw-bold p-1 mt-2 rounded-1">PROGRESS</p></td>
-                                                    <td><p class="pt-2">Dec 12, 2017</p></td>
-                                                    <td><p class="pt-2">WD-12346</p></td>
-                                                  </tr>
-                                                  <tr>
-                                                    <th scope="row">
-                                                        <div class="d-flex align-items-center gap-1">
-                                                            <div class="overflow-hidden">
-                                                                <img src="/assets/img/danielrussell.jpg" class="img-thumbnail" alt="">
-                                                            </div>
-                                                            <p class="chatText pt-2">Daniel Russell</p> 
+                                                        <p class="chatText pt-2">Catherine</p> 
+                                                    </div>
+                                                </th>
+                                                <td><p class="pt-2">High loading time</p></td>
+                                                <td><p class="pColor2 text-white fw-bold p-1 mt-2 rounded-1">PROGRESS</p></td>
+                                                <td><p class="pt-2">Dec 12, 2017</p></td>
+                                                <td><p class="pt-2">WD-12346</p></td>
+                                                </tr>
+                                                <tr class="table-row">
+                                                <th scope="row">
+                                                    <div class="d-flex align-items-center gap-1">
+                                                        <div class="overflow-hidden">
+                                                            <img src="/assets/img/danielrussell.jpg" class="img-fluid" alt="">
                                                         </div>
-                                                    </th>
-                                                    <td><p class="pt-2">Website down for one week</p></td>
-                                                    <td><p class="pColor3 text-white fw-bold p-1 mt-2 rounded-1">ON-HOLD</p></td>
-                                                    <td><p class="pt-2">Dec 16, 2017</p></td>
-                                                    <td><p class="pt-2">WD-12347</p></td>
-                                                  </tr>
-                                                  <tr>
-                                                    <th scope="row">
-                                                        <div class="d-flex align-items-center gap-1">
-                                                            <div class="overflow-hidden">
-                                                                <img src="/assets/img/madelinekennedy.jpg" class="img-thumbnail" alt="">
-                                                            </div>
-                                                            <p class="chatText pt-2">Madeline Kennedy</p> 
+                                                        <p class="chatText pt-2">Daniel Russell</p> 
+                                                    </div>
+                                                </th>
+                                                <td><p class="pt-2">Website down for one week</p></td>
+                                                <td><p class="pColor3 text-white fw-bold p-1 mt-2 rounded-1">ON-HOLD</p></td>
+                                                <td><p class="pt-2">Dec 16, 2017</p></td>
+                                                <td><p class="pt-2">WD-12347</p></td>
+                                                </tr>
+                                                <tr class="table-row">
+                                                <th scope="row">
+                                                    <div class="d-flex align-items-center gap-1">
+                                                        <div class="overflow-hidden">
+                                                            <img src="/assets/img/madelinekennedy.jpg" class="img-fluid" alt="">
                                                         </div>
-                                                    </th>
-                                                    <td><p class="pt-2">Loosing control on server</p></td>
-                                                    <td><p class="pColor4 text-white fw-bold p-1 mt-2 rounded-1">REJECTED</p></td>
-                                                    <td><p class="pt-2">Dec 17, 2017</p></td>
-                                                    <td><p class="pt-2">WD-12348</p></td>
-                                                  </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                                        <p class="chatText pt-2">Madeline Kennedy</p> 
+                                                    </div>
+                                                </th>
+                                                <td><p class="pt-2">Loosing control on server</p></td>
+                                                <td><p class="pColor4 text-white fw-bold p-1 mt-2 rounded-1">REJECTED</p></td>
+                                                <td><p class="pt-2">Dec 17, 2017</p></td>
+                                                <td><p class="pt-2">WD-12348</p></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="row mt-4" id="mainColFour">
-                                <div class="col-md-12 col-lg-5">
-                                    <div class="bg-white p-4 rounded-1">
-                                        Lorem ipsum dolor sit amet consectetur adipisicin
-                                        g elit. Iusto, nisi. Cumque rem omnis, aliqu
-                                        am blanditiis delectus ipsa quod qui animi iste aliquid quidem 
-                                        ex repellendus dolore. Voluptatum, repellat por
-                                        ro. Qui esse culpa veniam amet reprehe
-                                        nderit id itaque nihil cum distinctio. Lorem ipsum dolor sit amet 
-                                        consectetur, adipisicing 
-                                        elit. Atque unde aliquid eos, debitis voluptatibus voluptate error se
-                                        qui dolore architecto magnam rerum, mollitia, 
-                                        culpa voluptas! Ut, 
+                                <div class="col-lg-6 col-xl-6 col-xxl-5 col-12 d-none d-lg-block d-xl-block d-xxl-block" id="largeScreen">
+                                    <div class="bg-white rounded-1 pt-5 pb-5 mb-4 mb-lg-0 mb-xl-0 mb-xxl-0">
+                                        <div class="calendar">
+                                            <div class="header pb-3">
+                                                <button id="prevBtn">
+                                                    <i class="fa-solid fa-chevron-left"></i>
+                                                </button>
+                                                <div class="monthYear" id="monthYear"></div>
+                                                <button id="nextBtn">
+                                                    <i class="fa-solid fa-chevron-right"></i>
+                                                </button>
+                                            </div>
+                                            <div class="days">
+                                                <div class="day">Mon</div>
+                                                <div class="day">Tue</div>
+                                                <div class="day">Wed</div>
+                                                <div class="day">Thur</div>
+                                                <div class="day">Fri</div>
+                                                <div class="day">Sat</div>
+                                                <div class="day">Sun</div>
+                                            </div>
+                                            <div class="dates" id="dates"></div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-12 col-lg-7">
-                                    <div class="bg-white p-4 rounded-1">
-                                        <h5>Recent Updates</h5>
-                                        <div class="d-flex gap-3 recU">
+
+                                <div class="col-12 d-none d-sm-block d-md-block d-lg-none d-lg-none d-xl-none d-xxl-none" id="smallScreen">
+                                    <div class="bg-white rounded-1 pt-5 pb-5 mb-4 mb-lg-0 mb-xl-0 mb-xxl-0">
+                                        <div class="calendar">
+                                            <div class="header pb-3">
+                                                <button id="prevBtn2">
+                                                    <i class="fa-solid fa-chevron-left"></i>
+                                                </button>
+                                                <div class="monthYear" id="monthYear2"></div>
+                                                <button id="nextBtn2">
+                                                    <i class="fa-solid fa-chevron-right"></i>
+                                                </button>
+                                            </div>
+                                            <div class="days">
+                                                <div class="day">Mon</div>
+                                                <div class="day">Tue</div>
+                                                <div class="day">Wed</div>
+                                                <div class="day">Thur</div>
+                                                <div class="day">Fri</div>
+                                                <div class="day">Sat</div>
+                                                <div class="day">Sun</div>
+                                            </div>
+                                            <div class="dates" id="dates2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 d-block d-md-none d-sm-none d-lg-none d-xl-none d-xxl-none" id="extraSmallScreen">
+                                    <div class="bg-white rounded-1 pt-3 pb-5 mb-4 mb-lg-0 mb-xl-0 mb-xxl-0">
+                                        <div class="calendar">
+                                            <div class="header pb-3">
+                                                <button id="prevBtn3">
+                                                    <i class="fa-solid fa-chevron-left"></i>
+                                                </button>
+                                                <div class="monthYear" id="monthYear3"></div>
+                                                <button id="nextBtn3">
+                                                    <i class="fa-solid fa-chevron-right"></i>
+                                                </button>
+                                            </div>
+                                            <div class="days">
+                                                <div class="day">Mon</div>
+                                                <div class="day">Tue</div>
+                                                <div class="day">Wed</div>
+                                                <div class="day">Thur</div>
+                                                <div class="day">Fri</div>
+                                                <div class="day">Sat</div>
+                                                <div class="day">Sun</div>
+                                            </div>
+                                            <div class="dates" id="dates3"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 col-lg-6 col-xl-6 col-xxl-7 col-12 mb-4 mb-lg-0 mb-lg-0 mb-xl-0 mb-xxl-0">
+                                    <div class="bg-white p-3 pt-4 rounded-1">
+                                        <h5 class="darkTexts">Recent Updates</h5>
+                                        <div class="d-flex gap-3 gap-md-5 gap-lg-5 gap-xl-5 gap-xxl-5">
                                             <div class="d-flex align-items-center gap-1">
-                                                <i class="fa-solid fa-circle-user"></i>
+                                                <i class="fa-solid fa-circle-user bodyIcon"></i>
                                                 <small class="text-secondary">Jack Menqu</small>
                                             </div>
                                             <div class="d-flex align-items-center gap-1">
-                                                <i class="fa-solid fa-clock"></i>
+                                                <i class="fa-solid fa-clock bodyIcon"></i>
                                                 <small class="text-secondary">October 3rd, 2018</small>
                                             </div>
                                         </div>
@@ -519,23 +580,23 @@
                                             </div>
                                         </div>
 
-                                        <div class="row mt-3">
-                                            <div class="col-md-2">
-                                                <img src="/assets/img/headshot.png" class="img-thumbnail" alt="">
+                                        <div class="d-flex justify-content-between gap-2 mt-4">
+                                            <div class="schWeb">
+                                                <img src="/assets/img/headshot.png" class="img-fluid" alt="">
                                             </div>
-                                            <div class="col-md-7">
+                                            <div class="w-75">
                                                 <div class="">
-                                                    <h6>School Website - Authentication Module.</h6>
+                                                    <h6 class="darkTexts">School Website - Authentication Module.</h6>
 
                                                     <p class="mt-2">
                                                         School Website - Authentication Module.
                                                         It is a long established fact that a reader
-                                                         will be distracted by the readable content of a page.
+                                                        will be distracted by the readable content of a page.
                                                     </p>
                                                 </div>
                                             </div>
-                                            <div class="col-md-3">
-                                                <i class="fa-regular fa-heart"></i>
+                                            <div class="float-end">
+                                                <i class="fa-regular fa-heart bodyIcon"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -543,104 +604,175 @@
                             </div>
 
                             <div class="row mt-4" id="mainColFive">
-                                <div class="col-md-12 col-lg-7">
-                                    <div class="bg-white p-4 rounded-1">
-                                        <h5>Project Status</h5>
-                                        <div class="myTable2 overflow-x-scroll rounded-1  bg-white">
+                                <div class="col-md-7 mb-4 mb-md-0 mb-lg-0 mb-lg-0 mb-xl-0 mb-xxl-0">
+                                    <div class="p-3 pt-4 rounded-1 bg-white">
+                                        <h5 class="darkTexts">Project Status</h5>
+                                        <div class="myTable2 overflow-x-scroll">
                                             <table class="table">
                                                 <thead>
-                                                  <tr>
+                                                    <tr class="table-row">
                                                     <th scope="col">#</th>
                                                     <th scope="col">Name</th>
                                                     <th scope="col">Due Date</th>
                                                     <th scope="col">Progress</th>
-                                                  </tr>
+                                                    </tr>
                                                 </thead>
                                                 <tbody>
-                                                  <tr>
+                                                    <tr class="table-row">
                                                     <th scope="row">1</th>
                                                     <td><p>Herman Beck</p></td>
                                                     <td><p>May 15, 2015</p></td>
-                                                    <td><p>lorem</p></td>
-                                                  </tr>
-                                                  <tr>
+                                                    <td>
+                                                        <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                            <div class="progress-bar bg-success" style="width: 25%" id="progress1"></div>
+                                                        </div>
+                                                    </td>
+                                                    </tr>
+                                                    <tr class="table-row">
                                                     <th scope="row">2</th>
                                                     <td><p>Messy Adam</p></td>
                                                     <td><p>April 12, 2015</p></td>
-                                                    <td><p>Lorem</p></td>
-                                                  </tr>
-                                                  <tr>
+                                                    <td>
+                                                        <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                                                            <div class="progress-bar bg-info" style="width: 50%" id="progress2"></div>
+                                                        </div>
+                                                    </td>
+                                                    </tr>
+                                                    <tr class="table-row">
                                                     <th scope="row">3</th>
                                                     <td><p>John Richards</p></td>
                                                     <td><p>April 12, 2015</p></td>
-                                                    <td><p>Lorem</p></td>
-                                                  </tr>
-                                                  <tr>
+                                                    <td>
+                                                        <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                                            <div class="progress-bar bg-warning" style="width: 95%" id="progress3"></div>
+                                                        </div>
+                                                    </td>
+                                                    </tr>
+                                                    <tr class="table-row">
                                                     <th scope="row">4</th>
                                                     <td><p>Peter Meggik</p></td>
                                                     <td><p>May 15, 2015</p> </td>
-                                                    <td><p>Lorem</p></td>
-                                                  </tr>
-                                                  <tr>
+                                                    <td>
+                                                        <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                            <div class="progress-bar bg-danger" style="width: 85%" id="progress4"></div>
+                                                        </div>
+                                                    </td>
+                                                    </tr>
+                                                    <tr class="table-row">
                                                     <th scope="row">5</th>
                                                     <td><p>Edward</p></td>
                                                     <td><p>May 03, 2015</p></td>
-                                                    <td><p>Lorem</p></td>
-                                                  </tr>
-                                                  <tr>
+                                                    <td>
+                                                        <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                            <div class="progress-bar bg-primary" style="width: 23%" id="progress5"></div>
+                                                        </div>
+                                                    </td>
+                                                    </tr>
+                                                    <tr class="table-row">
                                                     <th scope="row">6</th>
                                                     <td><p>Ronald</p></td>
                                                     <td><p>Jun 05, 2015</p></td>
-                                                    <td><p>Lorem </p></td>
-                                                  </tr>
+                                                    <td>
+                                                        <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                            <div class="progress-bar" style="width: 60%" id="progress6"></div>
+                                                        </div>
+                                                    </td>
+                                                    </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-12 col-lg-5">
-                                    <div class="bg-white p-4 rounded-1"></div>
-                                </div>
-                            </div>
-
-
-                            <div class="wrapper">
-                                <h1>My skills</h1>
-                                <div class="skills-wrapper">
-                                    <div class="bar">
-                                        <div class="info">
-                                            <span>html</span>
+                                <div class="col-md-5">
+                                    <div class="px-3 py-4 bg-white rounded-1" id="todo-list2">
+                                        <div class="d-flex gap-2 mt-4" id="inputDiv2">
+                                            <input type="text" class="form-control rounded-0 search" placeholder="What do you need to do?" id="todoInput">
+                                            <button type="submit" class="btn btn-primary" id="addTask2">Add</button>
                                         </div>
-                                        <div class="progress-bar">
-                                            <span class="html"></span>
+                        
+                                        <div class="todoList2 my-3 pt-2">
+                                            <div class="d-flex my-3 pb-4 border-bottom justify-content-between">
+                                                <div class="d-flex gap-3">
+                                                    <input type="checkbox" name="checkboxes" class="checkbox2">
+                                                    <span class="itemText2">Pick up kids from school</span>
+                                                </div>
+                                                <div class="">
+                                                    <i class="fa-regular fa-circle-xmark clearTask2"></i>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex my-3 pb-4 border-bottom justify-content-between">
+                                                <div class="d-flex gap-3">
+                                                    <input type="checkbox" name="checkboxes" class="checkbox2">
+                                                    <span class="itemText2">Call employee</span>
+                                                </div>
+                                                <div class="">
+                                                    <i class="fa-regular fa-circle-xmark clearTask2"></i>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex my-3 pb-4 border-bottom justify-content-between">
+                                                <div class="d-flex gap-3">
+                                                    <input type="checkbox" name="checkboxes" class="checkbox2">
+                                                    <span class="itemText2">Print statements</span>
+                                                </div>
+                                                <div class="">
+                                                    <i class="fa-regular fa-circle-xmark clearTask2"></i>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex my-3 pb-4 border-bottom justify-content-between">
+                                                <div class="d-flex gap-3">
+                                                    <input type="checkbox" name="checkboxes" class="checkbox2">
+                                                    <span class="itemText2">Reply emails</span>
+                                                </div>
+                                                <div class="">
+                                                    <i class="fa-regular fa-circle-xmark clearTask2"></i>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex my-3 pb-4 border-bottom justify-content-between">
+                                                <div class="d-flex gap-3">
+                                                    <input type="checkbox" name="checkboxes" class="checkbox2">
+                                                    <span class="itemText2">Eat lunch</span>
+                                                </div>
+                                                <div class="">
+                                                    <i class="fa-regular fa-circle-xmark clearTask2"></i>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex my-3 pb-4 border-bottom justify-content-between">
+                                                <div class="d-flex gap-3">
+                                                    <input type="checkbox" name="checkboxes" class="checkbox2">
+                                                    <span class="itemText2">Write proposals</span>
+                                                </div>
+                                                <div class="">
+                                                    <i class="fa-regular fa-circle-xmark clearTask2"></i>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-
-                                    <div class="bar">
-                                        <div class="info">
-                                            <span>css</span>
-                                        </div>
-                                        <div class="progress-bar">
-                                            <span class="css"></span>
-                                        </div>
-                                    </div>
-
-                                    <div class="bar">
-                                        <div class="info">
-                                            <span>js</span>
-                                        </div>
-                                        <div class="progress-bar">
-                                            <span class="js"></span>
-                                        </div>
+                        
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="container-fluid d-md-none d-sm-block d-block d-lg-none d-xl-none d-xxl-none">
+                            <hr>
+                            <div class="text-center p-4">
+                                Design by <a href="">Robenta</a>
+                            </div>
+                        </div>
                     </div>
+                    
+                    <div class="container-fluid d-md-block d-sm-none d-none d-lg-block d-xl-block d-xxl-block">
+                        <hr>
+                        <div class="text-center p-4">
+                            Design by <a href="">Robenta</a>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
 
+
+        <!-- offcanvas -->
         <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasRight"
             aria-labelledby="offcanvasRightLabel">
             <div class="offcanvas-header" id="offcanvashead">
@@ -754,7 +886,7 @@
                     <div class="d-flex justify-content-between">
                         <div class="d-flex gap-3">
                             <div class="overflow-hidden">
-                                <img src="/assets/img/face.jpg" class="img-thumbnail" alt="">
+                                <img src="/assets/img/face.jpg" class="img-fluid" alt="">
                             </div>
                             <div class="text-start">
                                 <h6 class="chatText">Thomas Douglas</h6> <br>
@@ -771,7 +903,7 @@
                     <div class="d-flex justify-content-between">
                         <div class="d-flex gap-3">
                             <div class="overflow-hidden">
-                                <img src="/assets/img/catherine.jpg" class="img-thumbnail" alt="">
+                                <img src="/assets/img/catherine.jpg" class="img-fluid" alt="">
                             </div>
                             <div class="text-start">
                                 <h6 class="chatText">Catherine</h6> <br>
@@ -788,7 +920,7 @@
                     <div class="d-flex justify-content-between">
                         <div class="d-flex gap-3">
                             <div class="overflow-hidden">
-                                <img src="/assets/img/danielrussell.jpg" class="img-thumbnail" alt="">
+                                <img src="/assets/img/danielrussell.jpg" class="img-fluid" alt="">
                             </div>
                             <div class="text-start">
                                 <h6 class="chatText">Daniel Russell</h6> <br>
@@ -805,7 +937,7 @@
                     <div class="d-flex justify-content-between">
                         <div class="d-flex gap-3">
                             <div class="overflow-hidden">
-                                <img src="/assets/img/madelinekennedy.jpg" class="img-thumbnail" alt="">
+                                <img src="/assets/img/madelinekennedy.jpg" class="img-fluid" alt="">
                             </div>
                             <div class="text-start">
                                 <h6 class="chatText">Madeline Kennedy</h6> <br>
@@ -822,7 +954,7 @@
                     <div class="d-flex justify-content-between">
                         <div class="d-flex gap-3">
                             <div class="overflow-hidden">
-                                <img src="/assets/img/jamesrichardson.jpg" class="img-thumbnail" alt="">
+                                <img src="/assets/img/jamesrichardson.jpg" class="img-fluid" alt="">
                             </div>
                             <div class="text-start">
                                 <h6 class="chatText">James Richardson</h6> <br>
@@ -838,7 +970,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 
     <!-- font-awesome js -->
