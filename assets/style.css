@@ -357,7 +357,7 @@ i{
 #largeScreen .calendar{
     display: flex;
     width: 360px;
-    height: 400px;
+    height: 450px;
     flex-direction: column;
     padding: 10px;
     justify-content: center;

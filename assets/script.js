@@ -26,6 +26,8 @@ const tripleIcon = document.querySelectorAll('.tripleIcon')
 // const mainBodyH5 = document.querySelectorAll('.mainBodyh5')
 const darkTexts = document.querySelectorAll('.darkTexts')
 const bodyIcon = document.querySelectorAll('.bodyIcon')
+const days = document.querySelectorAll('.day')
+const mthYear = document.querySelectorAll('.monthYear')
 
 
 
@@ -96,6 +98,12 @@ function switchModes(e){
             all.style.color = '#383838';
         })
         bodyIcon.forEach((all)=>{
+            all.style.color = '';
+        })
+        days.forEach((all)=>{
+            all.style.color = '';
+        })
+        mthYear.forEach((all)=>{
             all.style.color = '';
         })
         modes1.classList.remove('fa-moon')
