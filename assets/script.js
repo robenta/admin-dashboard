@@ -1,3 +1,5 @@
+
+
 // SWITCH FROM LIGHT TO DARK MODE AND VICE-VERSA
 const header = document.querySelector('header')
 const body = document.querySelector('body')
@@ -11,19 +13,21 @@ const faReg = document.querySelectorAll('.fa-regular')
 const modes1 = document.querySelector('.modes1')
 const modes2 = document.querySelector('.modes2')
 const offcanvas = document.querySelector('#offcanvasRight')
+const todoList = document.querySelector('.todoList')
 const spanName = document.querySelectorAll('.name')
 const headerImage = document.querySelectorAll('.headerImage')
 const ul = document.querySelector('#offcanvasRight')
 const navbarToggler = document.querySelector('.navbar-toggler')
 const allElements = document.querySelectorAll('div')
 const pTexts = document.querySelectorAll('.pTexts')
+const offcanvasHeader = document.querySelector('#offcanvasHeader')
 const itemTexts = document.querySelectorAll('.itemText')
 const whiteDiv = document.querySelectorAll('.bg-white')
 const tableRows = document.querySelectorAll('.table-row')
+const clearTaskButtons = document.querySelectorAll('.clearTask')
 const clearTaskButtons2 = document.querySelectorAll('.clearTask2')
 const search = document.querySelectorAll('.search')
 const tripleIcon = document.querySelectorAll('.tripleIcon')
-// const mainBodyH5 = document.querySelectorAll('.mainBodyh5')
 const darkTexts = document.querySelectorAll('.darkTexts')
 const bodyIcon = document.querySelectorAll('.bodyIcon')
 const days = document.querySelectorAll('.day')
@@ -31,12 +35,13 @@ const mthYear = document.querySelectorAll('.monthYear')
 
 
 
-
 modes1.addEventListener('click', switchModes)
 function switchModes(e){
     if (e.target.classList.contains('fa-moon')) {
+
         body.style.backgroundColor = 'black'
         mBody.style.backgroundColor = 'black'
+        todoList.style.backgroundColor = '#ffd0ce'
         logoText.style.color = '#ffd0ce'
         logoIcon.style.color = '#ffd0ce'
         header.style.backgroundColor = 'black'
@@ -45,15 +50,10 @@ function switchModes(e){
         offcanvas.style.borderLeftColor = '#ffd0ce'
         offcanvas.style.borderLeftStyle = "solid"; 
         offcanvas.style.borderLeftWidth = "0.5px";
-        // sideMenu.classList.add('border-end')
-        // sideMenu.classList.add('border-dark')
         sideMenu.style.borderRightColor = '#ffd0ce'
         sideMenu.style.borderRightStyle = 'solid'
         sideMenu.style.borderRightWidth = "0.1px";
-        // sideMenuSmall.style.borderRightColor = "#ffd0ce"; 
-        // sideMenuSmall.style.borderRightStyle = "solid"; 
-        // sideMenuSmall.style.borderRightWidth = "0.3px";
-        // topRow.classList.add("shadowAdded");
+
         faIcons.forEach((fa)=>{
             fa.style.color = '#ffd0ce'
         })
@@ -63,19 +63,17 @@ function switchModes(e){
         allElements.forEach((all)=>{
             all.style.color = '#ffd0ce'
         })
-        // search.forEach((all)=>{
-        //     all.style.borderBottomColor = ''
-        //     all.style.borderBottomStyle = 'solid'
-        //     all.style.borderBottomWidth = '3px'
-        // })
         spanName.forEach((all)=>{
             all.style.color = '#ffd0ce'
         })
         pTexts.forEach((all)=>{
             all.style.color = '#ffd0ce'
         })
+        darkTexts.forEach((all)=>{
+            all.style.color = '#383838'
+        })
         itemTexts.forEach((list)=>{
-            list.style.color = '#ffd0ce'
+            list.style.color = '#383838'
         })
         headerImage.forEach((all)=>{
             all.style.border = '2px solid #ffd0ce'
@@ -87,6 +85,9 @@ function switchModes(e){
         })
         tableRows.forEach((all)=>{
             all.classList.add('table-light')
+        })
+        clearTaskButtons.forEach((all)=>{
+            all.style.color = '#e9423b'
         })
         clearTaskButtons2.forEach((all)=>{
             all.style.color = ''
@@ -106,6 +107,9 @@ function switchModes(e){
         mthYear.forEach((all)=>{
             all.style.color = '';
         })
+        todoList.classList.replace('pt-2', 'pt-1')
+        todoList.classList.add('pb-1')
+        todoList.classList.add('px-2')
         modes1.classList.remove('fa-moon')
         modes1.classList.add('fa-sun')
         modes2.classList.remove('fa-moon')
@@ -114,18 +118,15 @@ function switchModes(e){
     }else{
         body.style.backgroundColor = ''
         header.style.backgroundColor = ''
+        todoList.style.backgroundColor = ''
         logoText.style.color = ''
         logoIcon.style.color = ''
         mBody.style.backgroundColor = ''
         offcanvas.style.backgroundColor = ''
         navbarToggler.style.color = ''
-        // offcanvas.style.borderLeftColor = ''
-        // offcanvas.style.borderLeftStyle = ""; 
-        // offcanvas.style.borderLeftWidth = "";
         sideMenu.style.borderRightColor = ''
         sideMenu.style.borderRightStyle = ''
         sideMenu.style.borderRightWidth = "";
-        // topRow.classList.remove("shadowAdded");
 
         faIcons.forEach((fa)=>{
             fa.style.color = ''
@@ -159,7 +160,9 @@ function switchModes(e){
         tableRows.forEach((all)=>{
             all.classList.remove('table-light')
         })
-
+        todoList.classList.replace('pt-1', 'pt-2')
+        todoList.classList.remove('pb-1')
+        todoList.classList.remove('px-2')
         modes1.classList.add('fa-moon')
         modes1.classList.remove('fa-sun')  
         modes2.classList.add('fa-moon')
@@ -167,6 +170,8 @@ function switchModes(e){
     }
 
 }
+
+
 
 
 modes2.addEventListener('click', switchModes2)
@@ -342,7 +347,7 @@ function hideForLgScrn(e){
 
 // TO CHOOSE BETWEEN TO-DO AND CHATS IN OFFCANVAS
 const chats = document.querySelector('.chats')
-const todoList = document.querySelector('.todo')
+const todo = document.querySelector('.todo')
 const offcanvasChat = document.querySelector('#chats')
 const offcanvasTodo = document.querySelector('#todo-list')
 const offcanvasToggle = document.querySelector('#offcanvasToggle')
@@ -360,16 +365,16 @@ chats.addEventListener('click', showChats)
 function showChats(){
     offcanvasChat.classList.remove('d-none')
     offcanvasTodo.classList.add('d-none')
-    todoList.style.color = '#d5d3d3'
+    todo.style.color = '#d5d3d3'
     chats.style.color = 'white'
 }
 
-todoList.addEventListener('click', showTodo)
+todo.addEventListener('click', showTodo)
 function showTodo(){
     offcanvasChat.classList.add('d-none')
     offcanvasTodo.classList.remove('d-none')
     chats.style.color = '#d5d3d3'
-    todoList.style.color = 'white'
+    todo.style.color = 'white'
 }
 
 // OFF-CANVAS TODO LIST
@@ -378,7 +383,7 @@ const inputDiv = document.querySelector('#inputDiv')
 const input = document.querySelector('#todoInput')
 const itemList = document.querySelectorAll('.itemText')
 const checkboxes = document.querySelectorAll('.checkbox')
-const clearTaskButtons = document.querySelectorAll('.clearTask')
+// const clearTaskButtons = document.querySelectorAll('.clearTask') //declared above
 const list = document.querySelector('.todoList')
 
 // ADD TASK
@@ -404,7 +409,7 @@ function addTask(e) {
         const div2 = document.createElement('div')
         div2.innerHTML = '<i class="fa-regular fa-circle-xmark clearTask"></i>'
         parentDiv.appendChild(div2)
-    
+
         input.value = ''   
             
     }
@@ -452,25 +457,25 @@ function showAlert(message, className){
 }
 
 
+
 // MAIN-BODY TODO LIST
 const submitBtn2 = document.querySelector('#addTask2')
 const inputDiv2 = document.querySelector('#inputDiv2')
-const input2 = document.querySelector('#todoInput')
+const input2 = document.querySelector('#todoInput2')
 const itemList2 = document.querySelectorAll('.itemText2')
 const checkboxes2 = document.querySelectorAll('.checkbox2')
-// const clearTaskButtons2 = document.querySelectorAll('.clearTask2')
 const list2 = document.querySelector('.todoList2')
 const todoList2 = document.querySelector('#todo-list2')
 
 // ADD TASK
 submitBtn2.addEventListener('click', addTask2);
 function addTask2(e) {
-    if (input.value === '') {
+    if (input2.value === '') {
         showAlert2('Please add a task', 'danger');
     }else{
         // create list
         const parentDiv = document.createElement('div')
-        parentDiv.classList = 'd-flex my-3 pb-2 border-bottom justify-content-between'
+        parentDiv.classList = 'd-flex my-3 pb-4 border-bottom justify-content-between'
         list2.appendChild(parentDiv)
     
         const div1 = document.createElement('div')
@@ -478,7 +483,7 @@ function addTask2(e) {
         div1.innerHTML = '<input type="checkbox" name="checkboxes" class="checkbox2">'
         const span = document.createElement('span')
         span.className = 'itemText'
-        span.textContent = input.value
+        span.textContent = input2.value
         div1.appendChild(span)
         parentDiv.appendChild(div1)
     
@@ -486,11 +491,14 @@ function addTask2(e) {
         div2.innerHTML = '<i class="fa-regular fa-circle-xmark clearTask2"></i>'
         parentDiv.appendChild(div2)
     
-        input.value = ''   
+        input2.value = ''  
+
+        // updateStyles();
             
     }
     e.preventDefault()
 }
+
 
 // DELETE TASK
 document.querySelector('.todoList2').addEventListener('click', deleteTask2);
@@ -716,3 +724,126 @@ nextBtn3.addEventListener('click', () => {
     currentDate3.setMonth(currentDate3.getMonth() + 1)
     updateCalendar3()
 })
+
+
+// CHARTS---------------------------
+// BARCHART
+const ctx1 = document.getElementById('barchart');
+
+new Chart(ctx1, {
+  type: 'bar',
+  data: {
+    labels: ['China', 'Usa', 'Uk', 'France'],
+    datasets: [{
+      label: 'Number of Sales',
+      data: [8, 19, 10, 5,],
+      borderWidth: 1,
+      backgroundColor: [
+        '#a32d29',
+        '#e93f3a',
+        '#ffa2a0',
+        '#ffd1cf',
+      ],
+      borderColor: [
+        '#a32d29',
+        '#e93f3a',
+        '#ffa2a0',
+        '#ffd1cf',
+      ],
+      borderWidth: 1    
+    }
+    ]
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
+
+// DOUGHNUT CHART
+const ctx2  = document.getElementById('piechart');
+
+new Chart(ctx2, {
+  type: 'doughnut',
+  data: {
+    labels: ['Searches', 'Clicks', 'Bookmarks', 'To-do'],
+    datasets: [{
+      data: [40, 30, 19, 11],
+      borderWidth: 2,
+      backgroundColor: [
+        '#a32d29',
+        '#ffa2a0',
+        '#e93f3a',
+        '#ffd1cf',
+      ],
+      borderColor: [
+        '#a32d29',
+        '#ffa2a0',
+        '#e93f3a',
+        '#ffd1cf',
+      ],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
+
+// LINE CHART
+
+new Chart(document.getElementById("line-chart"), {
+    type : 'line',
+    data : {
+        labels : [ 1500, 1600, 1700, 1750, 1800, 1850,
+            1900, 1950, 1999, 2050 
+        ],
+        datasets : [
+        {
+            data : [  2809, 3947, 4402, 3700, 5267,
+                2191, 3133, 3221, 4783, 5478 
+            ],
+            label : "China",
+            borderColor : "#a32d29",
+            fill : false
+        },
+        {
+            data : [ 1282, 2635, 2411, 2502, 1350,
+                3947, 2809, 4402, 3700, 3287 
+            ],
+            label : "Usa",
+            borderColor : "#e93f3a ",
+            fill : false
+        },
+        {
+            data : [ 1282, 1350, 2411, 2502, 2635,
+                8970, 3947, 4402, 3700, 5267 
+            ],
+            label : "France",
+            borderColor : "#ffa2a0",
+            fill : false
+        },
+        {
+            data : [ 186, 205, 1321, 1516, 2107,
+                2809, 1839, 3820, 3700, 7639 
+            ],
+            label : "Uk",
+            borderColor : "#ffd1cf",
+            fill : false
+        },
+    ]
+    },
+    options : {
+        title : {
+            display : true,
+            text : 'Chart JS Multiple Lines Example'
+        }
+    }
+});

@@ -3,12 +3,14 @@
 :root{
     --font-family: 'Ubuntu', sans-serif;
     --grey: grey;
+    --light-grey: #ddd;
     --brown1: #a32d29;
     --brown2: #e9423b;
     --brown3: #ff8280;
     --brown4: #ffd1cf;
     --body-color: #f2edf3;
     --white: #fff;
+    --red: red;
     --grey-purple: #beabc1;
     --grey-black: #383838;
     --black: black;
@@ -35,15 +37,28 @@ header{
     font-size: 25px;
     font-weight: 900;
 }
+
+.dropdown-menu {
+    position: absolute;
+    background-color: var(--white);
+    max-width: 405px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a:hover {
+    background-color: var(--light-grey);
+}
+.dropdown-content .chats{
+    font-weight: 400;
+}
+
+
 #main-body-col{
     background: var(--body-color);
 }
+
+
 input {
-    /* outline: none !important;
-    box-shadow: none !important;
-    -moz-box-shadow: none !important;
-    -webkit-box-shadow: none !important; */
-    /* border-bottom: 1px solid var(--brown1) !important; */
     border-top: none !important;
     border-left: none !important;
     border-right: none !important;
@@ -89,7 +104,7 @@ i{
     color: var(--brown1);
     font-size: 12px;
 }
-#side-menu #bookmark-column img, #offcanvasRight .chatlist img, .table img{
+#side-menu #bookmark-column img, #offcanvasRight .chatlist img, .table img, .dropdown-content img, .dropdown-item img{
     border: none;
     border-radius: 50%;
     width: 50px;
@@ -128,7 +143,7 @@ i{
 }
 #offcanvasRight .xmark i{
     color: var(--white);
-    font-size: 20px;
+    font-size: 22px;
 }
 #todo-list .btn, #todo-list2 .btn{    
     border: none;
@@ -151,7 +166,7 @@ i{
     color: var(--brown1) !important;
 }
 #offcanvasRight #todo-list i, #todo-list2 i{
-    color: var(--brown4);
+    color: var(--brown3);
 }
 #offcanvasRight #todo-list .circle-i i{
     color: var(--brown1);
@@ -235,8 +250,9 @@ i{
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFD1CF", endColorstr="#FF8280", GradientType=1 );
 }
 
-.circleOne i, .circleTwo i, .circleThree i{
-    font-size: 10px;
+.circleOne i, .circleTwo i, .circleThree i, .circleFour i{
+    font-size: 16px;
+    padding-top: 3px;
 }
 .circleOne i{
     color: var(--brown1);
@@ -246,6 +262,9 @@ i{
 }
 .circleThree i{
     color: var(--brown3);
+}
+.circleFour i{
+    color: var(--brown4);
 }
 
 

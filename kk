@@ -79,3 +79,73 @@
         // divForNewIcon.className = 'd-grid justify-content-center'
 
         // newIcon.innerHTML = '<i class="fa-solid fa-layer-group" style="color: #ba75ff;"></i>'
+
+
+
+
+
+
+
+
+                        <i class="nav-item dropdown fa-regular fa-envelope d-md-block d-lg-block d-xl-block d-xxl-block" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <ul class="dropdown-menu">
+                                <div class="p-3 dropdown-item">
+                                    <h5>Messages</h5>
+                                </div>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <div class="d-flex justify-content-between">
+                                            <div class="d-flex gap-3 px-2">
+                                                <div class="overflow-hidden">
+                                                    <img src="/assets/img/jamesrichardson.jpg" class="img-fluid" alt="">
+                                                </div>
+                                                <div class="text-start">
+                                                    <p class="chats fs-5">James updated his profile picture</p>
+                                                    <small class="fw-lighter text-secondary">8 mins ago</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <div class="d-flex justify-content-between">
+                                            <div class="d-flex gap-3 px-2">
+                                                <div class="overflow-hidden">
+                                                    <img src="/assets/img/jamesrichardson.jpg" class="img-fluid" alt="">
+                                                </div>
+                                                <div class="text-start">
+                                                    <p class="chats fs-5">Thomas sent you a message</p>
+                                                    <small class="fw-lighter text-secondary">Just now</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <div class="d-flex justify-content-between">
+                                            <div class="d-flex gap-3 px-3">
+                                                <div class="overflow-hidden">
+                                                    <img src="/assets/img/catherine.jpg" class="img-fluid" alt="">
+                                                </div>
+                                                <div class="text-start">
+                                                    <p class="chats fs-5">Catherine sent you a message</p>
+                                                    <small class="fw-lighter text-secondary">5 mins ago</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <div class="py-1 dropdown-item">
+                                            <h5 class="text-center">4 new messages</h5>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </i>
