@@ -5,6 +5,7 @@ const header = document.querySelector('header')
 const body = document.querySelector('body')
 const logoText = document.querySelector('.logo-text')
 const logoIcon = document.querySelector('#logo-icon')
+const cardHr = document.querySelectorAll('.cardHr')
 const mBody = document.querySelector('#main-body-col')
 const sideMenu = document.querySelector('#side-menu')
 const sideMenuSmall = document.querySelector('#side-menu-small')
@@ -31,7 +32,7 @@ const tripleIcon = document.querySelectorAll('.tripleIcon')
 const darkTexts = document.querySelectorAll('.darkTexts')
 const bodyIcon = document.querySelectorAll('.bodyIcon')
 const days = document.querySelectorAll('.day')
-const mthYear = document.querySelectorAll('.monthYear')
+const circles = document.querySelectorAll('.circles')
 
 
 
@@ -54,6 +55,9 @@ function switchModes(e){
         sideMenu.style.borderRightStyle = 'solid'
         sideMenu.style.borderRightWidth = "0.1px";
 
+        // cardHr.forEach((all)=>{
+        //     all.classList.add('text-black')
+        // })
         faIcons.forEach((fa)=>{
             fa.style.color = '#ffd0ce'
         })
@@ -65,6 +69,9 @@ function switchModes(e){
         })
         spanName.forEach((all)=>{
             all.style.color = '#ffd0ce'
+        })
+        circles.forEach((all)=>{
+            all.style.color = ''
         })
         pTexts.forEach((all)=>{
             all.style.color = '#ffd0ce'
@@ -102,9 +109,6 @@ function switchModes(e){
             all.style.color = '';
         })
         days.forEach((all)=>{
-            all.style.color = '';
-        })
-        mthYear.forEach((all)=>{
             all.style.color = '';
         })
         todoList.classList.replace('pt-2', 'pt-1')
@@ -475,7 +479,7 @@ function addTask2(e) {
     }else{
         // create list
         const parentDiv = document.createElement('div')
-        parentDiv.classList = 'd-flex my-3 pb-4 border-bottom justify-content-between'
+        parentDiv.classList = 'd-flex my-3 pb-4 border-bottom justify-content-between align-items-center'
         list2.appendChild(parentDiv)
     
         const div1 = document.createElement('div')

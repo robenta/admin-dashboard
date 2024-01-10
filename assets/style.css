@@ -10,7 +10,6 @@
     --brown4: #ffd1cf;
     --body-color: #f2edf3;
     --white: #fff;
-    --red: red;
     --grey-purple: #beabc1;
     --grey-black: #383838;
     --black: black;
@@ -21,9 +20,8 @@
     font-family: var(--font-family);
     color: var(--grey-black);
 }
-a{
-    text-decoration: none !important;
-    color: inherit !important;
+p, #offcanvasRight #todo-list span {
+    font-size: 18px !important;
 }
 
 html{
@@ -32,10 +30,14 @@ html{
 header{
     background: var(--white);
 }
-.logo-text{
+#first-column i{
+    font-size: 25px !important;
+}
+#first-column a{
     color: var(--brown1);
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 900;
+    text-decoration: none;
 }
 
 .dropdown-menu {
@@ -76,7 +78,7 @@ input:focus {
 ::placeholder{
     color: var(--grey-black);
     font-weight: 100 !important;
-    font-size: 14px;
+    font-size: 17px;
     letter-spacing: 1px;
 }
 
@@ -116,10 +118,11 @@ i{
     font-weight: 500;
 }
 #side-menu #double-icons h6{
-    /* font-weight: 500; */
     font-size: 14px;
 }
-
+.stats p{
+    font-size: 15px !important;
+}
 
 /* off-canvas */
 #offcanvasRight #offcanvashead, #offcanvasRight .btn, #todo-list2 .btn{
@@ -145,8 +148,9 @@ i{
     color: var(--white);
     font-size: 22px;
 }
-#todo-list .btn, #todo-list2 .btn{    
+#todo-list .btn, span, #todo-list2 .btn, span{    
     border: none;
+    font-size: 18px;
 }
 #todo-list2, #offcanvasRight #todo-list input[type="checkbox"]:checked {
     accent-color: var(--brown1);
@@ -206,52 +210,12 @@ i{
 
 
 /* MAIN CONTENT */
-.faHouse{
-    padding: 7px;
-    border-radius: 3px;
-    background-color: var(--brown1);
-    color: var(--white);
-    font-size: 14px;
-}
-.card i{
-    color: white;
-}
-.card1{
-    background: hsla(1, 100%, 81%, 1);
-
-    background: linear-gradient(45deg, hsla(1, 100%, 81%, 1) 0%, hsla(2, 60%, 40%, 1) 45%, hsla(1, 100%, 81%, 1) 100%);
-    
-    background: -moz-linear-gradient(45deg, hsla(1, 100%, 81%, 1) 0%, hsla(2, 60%, 40%, 1) 45%, hsla(1, 100%, 81%, 1) 100%);
-    
-    background: -webkit-linear-gradient(45deg, hsla(1, 100%, 81%, 1) 0%, hsla(2, 60%, 40%, 1) 45%, hsla(1, 100%, 81%, 1) 100%);
-    
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFA2A0", endColorstr="#A32D29", GradientType=1 );
-}
-.card2{
-    background: hsla(2, 80%, 75%, 1);
-
-    background: linear-gradient(45deg, hsla(2, 80%, 75%, 1) 0%, hsla(2, 80%, 57%, 1) 45%, hsla(2, 100%, 91%, 1) 100%);
-
-    background: -moz-linear-gradient(45deg, hsla(2, 80%, 75%, 1) 0%, hsla(2, 80%, 57%, 1) 45%, hsla(2, 100%, 91%, 1) 100%);
-
-    background: -webkit-linear-gradient(45deg, hsla(2, 80%, 75%, 1) 0%, hsla(2, 80%, 57%, 1) 45%, hsla(2, 100%, 91%, 1) 100%);
-
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F2908C", endColorstr="#E9423B", GradientType=1 );
-}
-.card3{
-    background: hsla(2, 100%, 91%, 1);
-
-    background: linear-gradient(45deg, hsla(2, 100%, 91%, 1) 0%, hsla(1, 100%, 75%, 1) 47%, hsla(2, 100%, 91%, 1) 100%);
-    
-    background: -moz-linear-gradient(45deg, hsla(2, 100%, 91%, 1) 0%, hsla(1, 100%, 75%, 1) 47%, hsla(2, 100%, 91%, 1) 100%);
-    
-    background: -webkit-linear-gradient(45deg, hsla(2, 100%, 91%, 1) 0%, hsla(1, 100%, 75%, 1) 47%, hsla(2, 100%, 91%, 1) 100%);
-    
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFD1CF", endColorstr="#FF8280", GradientType=1 );
+#mainColOne .card i{
+    font-size: 45px !important;
 }
 
 .circleOne i, .circleTwo i, .circleThree i, .circleFour i{
-    font-size: 16px;
+    font-size: 14px;
     padding-top: 3px;
 }
 .circleOne i{
@@ -267,26 +231,24 @@ i{
     color: var(--brown4);
 }
 
-
-#mainColTwo span{
-    font-size: 12px;
+.hiddentext{
+    visibility: hidden;
 }
-.table .pColor1, .pColor2, .pColor3, .pColor4{
-    text-align: center;
-    font-size: 12px;
-    width: 100px !important;
+.table .pcolors{
+    width: 100px;
+    font-size: 13px !important;
 }
 .table img{
     border: none;
     border-radius: 50%;
     width: 45px;
-    height: 40px;
+    height: 45px;
 }
 .table p{
-    width: 185px;
+    width: 250px;
 }
 .myTable2 .table p{
-    width: 100px;
+    width: 120px;
 }
 .table .tableColor{
     width: 100px;
@@ -295,74 +257,8 @@ i{
 .myTable2 .table th, .myTable2 .table td{
     padding-top: 20px;
 }
-.myTable2 .table .progress #progress1, .pColor1{
-    background: hsla(171, 67%, 91%, 1);
 
-    background: linear-gradient(45deg, hsla(171, 67%, 91%, 1) 0%, hsla(171, 63%, 56%, 1) 28%, hsla(171, 63%, 56%, 1) 68%, hsla(171, 67%, 91%, 1) 100%);
-
-    background: -moz-linear-gradient(45deg, hsla(171, 67%, 91%, 1) 0%, hsla(171, 63%, 56%, 1) 28%, hsla(171, 63%, 56%, 1) 68%, hsla(171, 67%, 91%, 1) 100%);
-
-    background: -webkit-linear-gradient(45deg, hsla(171, 67%, 91%, 1) 0%, hsla(171, 63%, 56%, 1) 28%, hsla(171, 63%, 56%, 1) 68%, hsla(171, 67%, 91%, 1) 100%);
-
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#D7F7F2", endColorstr="#47D5C0", GradientType=1 );
-}
-.myTable2 .table .progress #progress2, .pColor2{
-    background: hsla(191, 67%, 91%, 1);
-
-    background: linear-gradient(45deg, hsla(191, 67%, 91%, 1) 0%, hsla(190, 90%, 50%, 1) 28%, hsla(190, 90%, 50%, 1) 68%, hsla(191, 67%, 91%, 1) 100%);
-
-    background: -moz-linear-gradient(45deg, hsla(191, 67%, 91%, 1) 0%, hsla(190, 90%, 50%, 1) 28%, hsla(190, 90%, 50%, 1) 68%, hsla(191, 67%, 91%, 1) 100%);
-
-    background: -webkit-linear-gradient(45deg, hsla(191, 67%, 91%, 1) 0%, hsla(190, 90%, 50%, 1) 28%, hsla(190, 90%, 50%, 1) 68%, hsla(191, 67%, 91%, 1) 100%);
-
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#D7F1F7", endColorstr="#0DCAF0", GradientType=1 );
-}
-.myTable2 .table .progress #progress3, .pColor3{
-    background: hsla(46, 79%, 87%, 1);
-
-    background: linear-gradient(45deg, hsla(46, 79%, 87%, 1) 0%, hsla(45, 100%, 52%, 1) 28%, hsla(45, 100%, 52%, 1) 68%, hsla(46, 79%, 87%, 1) 100%);
-
-    background: -moz-linear-gradient(45deg, hsla(46, 79%, 87%, 1) 0%, hsla(45, 100%, 52%, 1) 28%, hsla(45, 100%, 52%, 1) 68%, hsla(46, 79%, 87%, 1) 100%);
-
-    background: -webkit-linear-gradient(45deg, hsla(46, 79%, 87%, 1) 0%, hsla(45, 100%, 52%, 1) 28%, hsla(45, 100%, 52%, 1) 68%, hsla(46, 79%, 87%, 1) 100%);
-
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F8EBC2", endColorstr="#FFC108", GradientType=1 );
-}
-.myTable2 .table .progress #progress4, .pColor4{
-    background: hsla(353, 77%, 91%, 1);
-
-    background: linear-gradient(45deg, hsla(353, 77%, 91%, 1) 0%, hsla(354, 70%, 54%, 1) 28%, hsla(354, 70%, 54%, 1) 68%, hsla(353, 77%, 91%, 1) 100%);
-    
-    background: -moz-linear-gradient(45deg, hsla(353, 77%, 91%, 1) 0%, hsla(354, 70%, 54%, 1) 28%, hsla(354, 70%, 54%, 1) 68%, hsla(353, 77%, 91%, 1) 100%);
-    
-    background: -webkit-linear-gradient(45deg, hsla(353, 77%, 91%, 1) 0%, hsla(354, 70%, 54%, 1) 28%, hsla(354, 70%, 54%, 1) 68%, hsla(353, 77%, 91%, 1) 100%);
-    
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FAD8DC", endColorstr="#DC3545", GradientType=1 );
-}
-.myTable2 .table .progress #progress5{
-    background: hsla(216, 80%, 90%, 1);
-
-    background: linear-gradient(45deg, hsla(216, 80%, 90%, 1) 0%, hsla(216, 98%, 52%, 1) 28%, hsla(216, 98%, 52%, 1) 68%, hsla(216, 80%, 90%, 1) 100%);
-    
-    background: -moz-linear-gradient(45deg, hsla(216, 80%, 90%, 1) 0%, hsla(216, 98%, 52%, 1) 28%, hsla(216, 98%, 52%, 1) 68%, hsla(216, 80%, 90%, 1) 100%);
-    
-    background: -webkit-linear-gradient(45deg, hsla(216, 80%, 90%, 1) 0%, hsla(216, 98%, 52%, 1) 28%, hsla(216, 98%, 52%, 1) 68%, hsla(216, 80%, 90%, 1) 100%);
-    
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#D2E2FA", endColorstr="#0E6EFD", GradientType=1 );
-}
-.myTable2 .table .progress #progress6{
-    background: hsla(153, 83%, 89%, 1);
-
-    background: linear-gradient(45deg, hsla(153, 83%, 89%, 1) 0%, hsla(152, 69%, 31%, 1) 28%, hsla(152, 69%, 31%, 1) 68%, hsla(153, 83%, 89%, 1) 100%);
-    
-    background: -moz-linear-gradient(45deg, hsla(153, 83%, 89%, 1) 0%, hsla(152, 69%, 31%, 1) 28%, hsla(152, 69%, 31%, 1) 68%, hsla(153, 83%, 89%, 1) 100%);
-    
-    background: -webkit-linear-gradient(45deg, hsla(153, 83%, 89%, 1) 0%, hsla(152, 69%, 31%, 1) 28%, hsla(152, 69%, 31%, 1) 68%, hsla(153, 83%, 89%, 1) 100%);
-    
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#CAFAE4", endColorstr="#198754", GradientType=1 );
-}
-
-#mainColFour .schWeb img{
+#mainColFour .updatesImage img{
     border: none;
     border-radius: 50%;
     width: 55px;
@@ -370,7 +266,7 @@ i{
 }
 
 #mainColFour i{
-    font-size: 15px;
+    font-size: 16px;
 }
 
 #largeScreen .calendar{
@@ -386,7 +282,7 @@ i{
 #smallScreen .calendar{
     display: flex;
     width: 500px;
-    height: 450px;
+    height: 430px;
     flex-direction: column;
     padding: 10px;
     justify-content: center;
@@ -394,7 +290,41 @@ i{
 }
 
 #extraSmallScreen .calendar{
-    height: 400px;
+    display: flex;
+    width: fit-content;
+    height: 250px;
+    flex-direction: column;
+    padding: 3px;
+    justify-content: center;
+    margin: auto;
+    font-size: 12px;
+}
+#extraSmallScreen .days{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+#extraSmallScreen .day{
+    text-align: center;
+    padding: 2px;
+    color: var(--brown1);
+}
+#extraSmallScreen .dates{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+}
+#extraSmallScreen .date{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+    margin: auto;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    transform: 0.2s;
 }
 .calendar i{
     color: var(--white);
@@ -409,6 +339,7 @@ i{
 
 .monthYear{
     text-align: center;
+    color: var(--brown1) !important;
 }
 .header button{
     display: flex;
