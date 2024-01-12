@@ -555,6 +555,7 @@ function hideFirstColumn(e){
         mainBody.parentElement.classList.remove('col-md-12')
         mainBody.parentElement.classList.add('col-md-9')
     }
+    e.preventDefault()
 }
 
 
@@ -584,6 +585,7 @@ function hideForLgScrn(e){
         mainBody.parentElement.classList.remove('col-md-11')
         mainBody.parentElement.classList.add('col-md-9')
     }
+    e.preventDefault()
 }
 
 
