@@ -25,36 +25,25 @@ html{
     scroll-behavior: smooth;
 }
 
-p, #offcanvasRight #todo-list span {
-    font-size: 18px !important;
+p, #todo-list span, .todoList2 span,  #mainColOne p span, .table .table-row {
+    font-size: 15px !important;
 }
 
 header{
     background: var(--white);
 }
-#logo-column i{
-    font-size: 25px !important;
+i{
+    color: var(--brown1);
+    font-size: 15px;
+}
+#logo-column i, .navbar i{
+    font-size: 15px !important;
 }
 #logo-column a{
     color: var(--brown1);
-    font-size: 27px;
+    font-size: 22px;
     font-weight: 900;
     text-decoration: none;
-}
-
-
-.dropdown-menu {
-    position: absolute;
-    background-color: var(--white);
-    max-width: 405px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-.dropdown-content a:hover {
-    background-color: var(--light-grey);
-}
-.dropdown-content .chats{
-    font-weight: 400;
 }
 
 
@@ -81,8 +70,8 @@ input:focus {
 ::placeholder{
     color: var(--grey-black);
     font-weight: 100 !important;
-    font-size: 17px;
-    letter-spacing: 1px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
 }
 
 .navbar-toggler {
@@ -90,37 +79,22 @@ input:focus {
     padding: 2px !important;
     box-shadow: none !important;
 }
-.navbar i {
-    font-size: 25px !important;
-}
 .navbar-nav .dropdown p{
     font-size: 15px !important;
 }
-i{
-    color: var(--brown1);
-    font-size: 20px;
+.nameDiv span{
+    font-size: 13px !important;
 }
-
 .nameDiv img{
-    border: none;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    border: 2px solid var(--brown1);
+    width: 30px;
+    height: 30px;
 }
 #side-menu #bookmark-column img, #offcanvasRight .chatlist img, .table img, .dropdown-content img, .dropdown-item img{
     border: none;
     border-radius: 50%;
     width: 50px;
     height: 50px;
-}
-
-#side-menu #bookmark-column .small-text{
-    font-size: 14px;
-    font-weight: 500;
-}
-.stats p{
-    font-size: 15px !important;
 }
 
 /* off-canvas */
@@ -135,6 +109,10 @@ i{
     
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFA2A0", endColorstr="#A32D29", GradientType=1 );
 }
+#todo-list .btn, #todo-list2 .btn{    
+    border: none;
+    font-size: 12px;
+}
 #offcanvasRight #offcanvasRightLabel h6{
     color: var(--white);
     font-weight: 400;
@@ -146,10 +124,6 @@ i{
 #offcanvasRight .xmark i{
     color: var(--white);
     font-size: 22px;
-}
-#todo-list .btn, span, #todo-list2 .btn, span{    
-    border: none;
-    font-size: 18px;
 }
 #todo-list2, #offcanvasRight #todo-list input[type="checkbox"]:checked {
     accent-color: var(--brown1);
@@ -210,9 +184,11 @@ i{
 
 /* MAIN CONTENT */
 #mainColOne .card i{
-    font-size: 28px !important;
+    font-size: 22px !important;
 }
-
+.stats p{
+    font-size: 13px !important;
+}
 .circleOne i, .circleTwo i, .circleThree i, .circleFour i{
     font-size: 14px;
     padding-top: 3px;
@@ -240,8 +216,8 @@ i{
 .table img{
     border: none;
     border-radius: 50%;
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
 }
 .table p{
     width: 250px;
@@ -254,13 +230,16 @@ i{
 }
 
 .myTable2 .table th, .myTable2 .table td{
-    padding-top: 20px;
+    padding-top: 18px;
+}
+.progress{
+    margin-top: 5px;
 }
 
 #mainColFour .updatesImage img{
     border: none;
     border-radius: 50%;
-    width: 55px;
+    width: 50px;
     height: 50px;
 }
 

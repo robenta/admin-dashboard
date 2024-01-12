@@ -96,7 +96,7 @@ function switchModes(e){
             list.style.color = '#383838'
         })
         headerImage.forEach((all)=>{
-            all.style.border = '2px solid #ffd0ce'
+            all.style.border = '1px solid #ffd0ce'
         })
         whiteDiv.forEach((all)=>{
             all.classList.remove('bg-white')
@@ -259,7 +259,7 @@ function switchModes2(e){
             list.style.color = '#383838'
         })
         headerImage.forEach((all)=>{
-            all.style.border = '2px solid #ffd0ce'
+            all.style.border = '1px solid #ffd0ce'
         })
         whiteDiv.forEach((all)=>{
             all.classList.remove('bg-white')
@@ -422,7 +422,7 @@ function switchModes3(e){
             list.style.color = '#383838'
         })
         headerImage.forEach((all)=>{
-            all.style.border = '2px solid #ffd0ce'
+            all.style.border = '1px solid #ffd0ce'
         })
         whiteDiv.forEach((all)=>{
             all.classList.remove('bg-white')
@@ -526,10 +526,10 @@ function switchModes3(e){
 
 
 // HIDE SIDE-MENU ON CLICK OF THE MENU BUTTON ON SMALL SCREENS
-const topRow = document.querySelector('#top-row')
 const menuIcon = document.querySelector('#menu-icon')
 const mainRow = document.querySelector('#main-row')
 const mainBody = document.querySelector('#main-body')
+const logoColumn = document.querySelector('#logo-column')
 
 
 menuIcon.addEventListener('click', hideFirstColumn)
@@ -570,6 +570,7 @@ function hideForLgScrn(e){
         sideMenuSmall.classList.add('d-xl-block')
         sideMenuSmall.classList.add('d-md-block')
         sideMenuSmall.classList.add('d-lg-block')
+        logoColumn.classList.replace('w-25', 'ps-2')
         mainBody.parentElement.classList.remove('col-md-9')
         mainBody.parentElement.classList.add('col-md-11')
     }else{
@@ -579,6 +580,7 @@ function hideForLgScrn(e){
         sideMenuSmall.classList.remove('d-xl-block')
         sideMenuSmall.classList.remove('d-md-block')
         sideMenuSmall.classList.remove('d-lg-block')
+        logoColumn.classList.replace('ps-2', 'w-25')
         mainBody.parentElement.classList.remove('col-md-11')
         mainBody.parentElement.classList.add('col-md-9')
     }
@@ -635,11 +637,11 @@ function addTask(e) {
     }else{
         // create list
         const parentDiv = document.createElement('div')
-        parentDiv.classList = 'd-flex my-3 pb-2 border-bottom justify-content-between'
+        parentDiv.classList = 'd-flex my-3 pb-2 border-bottom justify-content-between align-items-center'
         list.appendChild(parentDiv)
     
         const div1 = document.createElement('div')
-        div1.classList = 'd-flex gap-3'
+        div1.classList = 'd-flex gap-3 align-items-center'
         div1.innerHTML = '<input type="checkbox" name="checkboxes" class="checkbox">'
         const span = document.createElement('span')
         span.className = 'itemText'
@@ -720,7 +722,7 @@ function addTask2(e) {
         list2.appendChild(parentDiv)
     
         const div1 = document.createElement('div')
-        div1.classList = 'd-flex gap-3'
+        div1.classList = 'd-flex gap-3 align-items-center'
         div1.innerHTML = '<input type="checkbox" name="checkboxes" class="checkbox2">'
         const span = document.createElement('span')
         span.className = 'itemText'
