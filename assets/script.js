@@ -1,5 +1,3 @@
-
-
 // SWITCH FROM LIGHT TO DARK MODE AND VICE-VERSA
 const header = document.querySelector('header')
 const body = document.querySelector('body')
@@ -13,6 +11,7 @@ const faIcons = document.querySelectorAll('.fa-solid')
 const faReg = document.querySelectorAll('.fa-regular')
 const modes1 = document.querySelector('.modes1')
 const modes2 = document.querySelector('.modes2')
+const modes3 = document.querySelector('.modes3')
 const offcanvas = document.querySelector('#offcanvasRight')
 const todoList = document.querySelector('.todoList')
 const spanName = document.querySelectorAll('.name')
@@ -33,13 +32,26 @@ const darkTexts = document.querySelectorAll('.darkTexts')
 const bodyIcon = document.querySelectorAll('.bodyIcon')
 const days = document.querySelectorAll('.day')
 const circles = document.querySelectorAll('.circles')
-
-
+const nameDiv = document.querySelector('.nameDiv')
 
 modes1.addEventListener('click', switchModes)
 function switchModes(e){
-    if (e.target.classList.contains('fa-moon')) {
+    if (e.target.classList.contains('fa-sun')) {
+        todoList.classList.replace('pt-2', 'pt-1')
+        todoList.classList.add('pb-1')
+        todoList.classList.add('px-2')
+        modes1.classList.replace('fa-sun', 'fa-moon')
+        modes2.classList.replace('fa-sun', 'fa-moon')
+        modes3.classList.replace('fa-sun', 'fa-moon')
 
+        nameDiv.classList.remove('border-end')
+        nameDiv.classList.remove('border-start')
+        nameDiv.style.borderLeftColor = '#ffd0ce'
+        nameDiv.style.borderLeftStyle = 'solid'
+        nameDiv.style.borderLeftWidth = "0.1px";
+        nameDiv.style.borderRightColor = '#ffd0ce'
+        nameDiv.style.borderRightStyle = 'solid'
+        nameDiv.style.borderRightWidth = "0.1px";
         body.style.backgroundColor = 'black'
         mBody.style.backgroundColor = 'black'
         todoList.style.backgroundColor = '#ffd0ce'
@@ -55,9 +67,6 @@ function switchModes(e){
         sideMenu.style.borderRightStyle = 'solid'
         sideMenu.style.borderRightWidth = "0.1px";
 
-        // cardHr.forEach((all)=>{
-        //     all.classList.add('text-black')
-        // })
         faIcons.forEach((fa)=>{
             fa.style.color = '#ffd0ce'
         })
@@ -76,6 +85,10 @@ function switchModes(e){
         pTexts.forEach((all)=>{
             all.style.color = '#ffd0ce'
         })
+        search.forEach((all)=>{
+            all.style.backgroundColor = ''
+            all.style.border = ''
+        })
         darkTexts.forEach((all)=>{
             all.style.color = '#383838'
         })
@@ -88,13 +101,12 @@ function switchModes(e){
         whiteDiv.forEach((all)=>{
             all.classList.remove('bg-white')
             all.classList.add('bg-light')
-            
         })
         tableRows.forEach((all)=>{
             all.classList.add('table-light')
         })
         clearTaskButtons.forEach((all)=>{
-            all.style.color = '#e9423b'
+            all.style.color = ''
         })
         clearTaskButtons2.forEach((all)=>{
             all.style.color = ''
@@ -111,15 +123,23 @@ function switchModes(e){
         days.forEach((all)=>{
             all.style.color = '';
         })
-        todoList.classList.replace('pt-2', 'pt-1')
-        todoList.classList.add('pb-1')
-        todoList.classList.add('px-2')
-        modes1.classList.remove('fa-moon')
-        modes1.classList.add('fa-sun')
-        modes2.classList.remove('fa-moon')
-        modes2.classList.add('fa-sun')
         
     }else{
+        todoList.classList.replace('pt-1', 'pt-2')
+        todoList.classList.remove('pb-1')
+        todoList.classList.remove('px-2')
+        modes1.classList.replace('fa-moon', 'fa-sun')
+        modes2.classList.replace('fa-moon', 'fa-sun')
+        modes3.classList.replace('fa-moon', 'fa-sun')
+
+        nameDiv.classList.add('border-end')
+        nameDiv.classList.add('border-start')
+        nameDiv.style.borderLeftColor = ''
+        nameDiv.style.borderLeftStyle = ''
+        nameDiv.style.borderLeftWidth = "";
+        nameDiv.style.borderRightColor = ''
+        nameDiv.style.borderRightStyle = ''
+        nameDiv.style.borderRightWidth = "";
         body.style.backgroundColor = ''
         header.style.backgroundColor = ''
         todoList.style.backgroundColor = ''
@@ -127,10 +147,13 @@ function switchModes(e){
         logoIcon.style.color = ''
         mBody.style.backgroundColor = ''
         offcanvas.style.backgroundColor = ''
+        offcanvas.style.borderLeftColor = ''
+        offcanvas.style.borderLeftStyle = ''; 
         navbarToggler.style.color = ''
         sideMenu.style.borderRightColor = ''
         sideMenu.style.borderRightStyle = ''
-        sideMenu.style.borderRightWidth = "";
+        sideMenu.style.borderRightWidth = '';
+
 
         faIcons.forEach((fa)=>{
             fa.style.color = ''
@@ -151,6 +174,12 @@ function switchModes(e){
         spanName.forEach((all)=>{
             all.style.color = ''
         })
+        circles.forEach((all)=>{
+            all.style.color = ''
+        })
+        darkTexts.forEach((all)=>{
+            all.style.color = ''
+        })
         itemTexts.forEach((list)=>{
             list.style.color = ''
         })
@@ -163,38 +192,44 @@ function switchModes(e){
         })
         tableRows.forEach((all)=>{
             all.classList.remove('table-light')
-        })
-        todoList.classList.replace('pt-1', 'pt-2')
-        todoList.classList.remove('pb-1')
-        todoList.classList.remove('px-2')
-        modes1.classList.add('fa-moon')
-        modes1.classList.remove('fa-sun')  
-        modes2.classList.add('fa-moon')
-        modes2.classList.remove('fa-sun')  
+        })  
     }
 
 }
 
-
-
-
 modes2.addEventListener('click', switchModes2)
 function switchModes2(e){
-    if (e.target.classList.contains('fa-moon')) {
+    if (e.target.classList.contains('fa-sun')) {
+        todoList.classList.replace('pt-2', 'pt-1')
+        todoList.classList.add('pb-1')
+        todoList.classList.add('px-2')
+        modes1.classList.replace('fa-sun', 'fa-moon')
+        modes2.classList.replace('fa-sun', 'fa-moon')
+        modes3.classList.replace('fa-sun', 'fa-moon')
+
+        nameDiv.classList.remove('border-end')
+        nameDiv.classList.remove('border-start')
+        nameDiv.style.borderLeftColor = '#ffd0ce'
+        nameDiv.style.borderLeftStyle = 'solid'
+        nameDiv.style.borderLeftWidth = "0.1px";
+        nameDiv.style.borderRightColor = '#ffd0ce'
+        nameDiv.style.borderRightStyle = 'solid'
+        nameDiv.style.borderRightWidth = "0.1px";
         body.style.backgroundColor = 'black'
         mBody.style.backgroundColor = 'black'
+        todoList.style.backgroundColor = '#ffd0ce'
         logoText.style.color = '#ffd0ce'
         logoIcon.style.color = '#ffd0ce'
         header.style.backgroundColor = 'black'
         offcanvas.style.backgroundColor = 'black'
-        offcanvas.style.borderLeftColor = '#d688ff'
-        navbarToggler.style.color = '#d688ff'
+        navbarToggler.style.color = '#ffd0ce'
+        offcanvas.style.borderLeftColor = '#ffd0ce'
         offcanvas.style.borderLeftStyle = "solid"; 
         offcanvas.style.borderLeftWidth = "0.5px";
         sideMenu.style.borderRightColor = '#ffd0ce'
         sideMenu.style.borderRightStyle = 'solid'
-        sideMenu.style.borderRightWidth = "0.3px";
-        topRow.classList.add("shadowAdded");
+        sideMenu.style.borderRightWidth = "0.1px";
+
         faIcons.forEach((fa)=>{
             fa.style.color = '#ffd0ce'
         })
@@ -204,20 +239,24 @@ function switchModes2(e){
         allElements.forEach((all)=>{
             all.style.color = '#ffd0ce'
         })
-        search.forEach((all)=>{
-            all.style.backgroundColor = '#f5f5f5'
-            all.style.borderColor = ' #d688ff'
-            all.style.borderStyle = ' solid'
-            all.style.borderWidth = ' 1px'
-        })
         spanName.forEach((all)=>{
             all.style.color = '#ffd0ce'
+        })
+        circles.forEach((all)=>{
+            all.style.color = ''
         })
         pTexts.forEach((all)=>{
             all.style.color = '#ffd0ce'
         })
+        search.forEach((all)=>{
+            all.style.backgroundColor = ''
+            all.style.border = ''
+        })
+        darkTexts.forEach((all)=>{
+            all.style.color = '#383838'
+        })
         itemTexts.forEach((list)=>{
-            list.style.color = '#ffd0ce'
+            list.style.color = '#383838'
         })
         headerImage.forEach((all)=>{
             all.style.border = '2px solid #ffd0ce'
@@ -229,22 +268,55 @@ function switchModes2(e){
         tableRows.forEach((all)=>{
             all.classList.add('table-light')
         })
-        modes2.classList.remove('fa-moon')
-        modes2.classList.add('fa-sun')
-        modes1.classList.remove('fa-moon')
-        modes1.classList.add('fa-sun')
+        clearTaskButtons.forEach((all)=>{
+            all.style.color = ''
+        })
+        clearTaskButtons2.forEach((all)=>{
+            all.style.color = ''
+        })
+        tripleIcon.forEach((all)=>{
+            all.style.color = '';
+        })
+        darkTexts.forEach((all)=>{
+            all.style.color = '#383838';
+        })
+        bodyIcon.forEach((all)=>{
+            all.style.color = '';
+        })
+        days.forEach((all)=>{
+            all.style.color = '';
+        })
+        
     }else{
+        todoList.classList.replace('pt-1', 'pt-2')
+        todoList.classList.remove('pb-1')
+        todoList.classList.remove('px-2')
+        modes1.classList.replace('fa-moon', 'fa-sun')
+        modes2.classList.replace('fa-moon', 'fa-sun')
+        modes3.classList.replace('fa-moon', 'fa-sun')
+
+        nameDiv.classList.add('border-end')
+        nameDiv.classList.add('border-start')
+        nameDiv.style.borderLeftColor = ''
+        nameDiv.style.borderLeftStyle = ''
+        nameDiv.style.borderLeftWidth = "";
+        nameDiv.style.borderRightColor = ''
+        nameDiv.style.borderRightStyle = ''
+        nameDiv.style.borderRightWidth = "";
         body.style.backgroundColor = ''
-        mBody.style.backgroundColor = ''
+        header.style.backgroundColor = ''
+        todoList.style.backgroundColor = ''
         logoText.style.color = ''
         logoIcon.style.color = ''
-        header.style.backgroundColor = ''
+        mBody.style.backgroundColor = ''
         offcanvas.style.backgroundColor = ''
-        navbarToggler.style.color = ''
         offcanvas.style.borderLeftColor = ''
-        offcanvas.style.borderLeftStyle = ""; 
-        offcanvas.style.borderLeftWidth = "";
-        topRow.classList.remove("shadowAdded");
+        offcanvas.style.borderLeftStyle = ''; 
+        navbarToggler.style.color = ''
+        sideMenu.style.borderRightColor = ''
+        sideMenu.style.borderRightStyle = ''
+        sideMenu.style.borderRightWidth = '';
+
 
         faIcons.forEach((fa)=>{
             fa.style.color = ''
@@ -265,6 +337,12 @@ function switchModes2(e){
         spanName.forEach((all)=>{
             all.style.color = ''
         })
+        circles.forEach((all)=>{
+            all.style.color = ''
+        })
+        darkTexts.forEach((all)=>{
+            all.style.color = ''
+        })
         itemTexts.forEach((list)=>{
             list.style.color = ''
         })
@@ -277,28 +355,187 @@ function switchModes2(e){
         })
         tableRows.forEach((all)=>{
             all.classList.remove('table-light')
-        })
+        })  
+    }
 
-        modes2.classList.add('fa-moon')
-        modes2.classList.remove('fa-sun')  
-        modes1.classList.add('fa-moon')
-        modes1.classList.remove('fa-sun')  
+}
+
+modes3.addEventListener('click', switchModes3)
+function switchModes3(e){
+    if (e.target.classList.contains('fa-sun')) {
+        todoList.classList.replace('pt-2', 'pt-1')
+        todoList.classList.add('pb-1')
+        todoList.classList.add('px-2')
+        modes1.classList.replace('fa-sun', 'fa-moon')
+        modes2.classList.replace('fa-sun', 'fa-moon')
+        modes3.classList.replace('fa-sun', 'fa-moon')
+
+        nameDiv.classList.remove('border-end')
+        nameDiv.classList.remove('border-start')
+        nameDiv.style.borderLeftColor = '#ffd0ce'
+        nameDiv.style.borderLeftStyle = 'solid'
+        nameDiv.style.borderLeftWidth = "0.1px";
+        nameDiv.style.borderRightColor = '#ffd0ce'
+        nameDiv.style.borderRightStyle = 'solid'
+        nameDiv.style.borderRightWidth = "0.1px";
+        body.style.backgroundColor = 'black'
+        mBody.style.backgroundColor = 'black'
+        todoList.style.backgroundColor = '#ffd0ce'
+        logoText.style.color = '#ffd0ce'
+        logoIcon.style.color = '#ffd0ce'
+        header.style.backgroundColor = 'black'
+        offcanvas.style.backgroundColor = 'black'
+        navbarToggler.style.color = '#ffd0ce'
+        offcanvas.style.borderLeftColor = '#ffd0ce'
+        offcanvas.style.borderLeftStyle = "solid"; 
+        offcanvas.style.borderLeftWidth = "0.5px";
+        sideMenu.style.borderRightColor = '#ffd0ce'
+        sideMenu.style.borderRightStyle = 'solid'
+        sideMenu.style.borderRightWidth = "0.1px";
+
+        faIcons.forEach((fa)=>{
+            fa.style.color = '#ffd0ce'
+        })
+        faReg.forEach((fag)=>{
+            fag.style.color = '#ffd0ce'
+        })
+        allElements.forEach((all)=>{
+            all.style.color = '#ffd0ce'
+        })
+        spanName.forEach((all)=>{
+            all.style.color = '#ffd0ce'
+        })
+        circles.forEach((all)=>{
+            all.style.color = ''
+        })
+        pTexts.forEach((all)=>{
+            all.style.color = '#ffd0ce'
+        })
+        search.forEach((all)=>{
+            all.style.backgroundColor = ''
+            all.style.border = ''
+        })
+        darkTexts.forEach((all)=>{
+            all.style.color = '#383838'
+        })
+        itemTexts.forEach((list)=>{
+            list.style.color = '#383838'
+        })
+        headerImage.forEach((all)=>{
+            all.style.border = '2px solid #ffd0ce'
+        })
+        whiteDiv.forEach((all)=>{
+            all.classList.remove('bg-white')
+            all.classList.add('bg-light')
+        })
+        tableRows.forEach((all)=>{
+            all.classList.add('table-light')
+        })
+        clearTaskButtons.forEach((all)=>{
+            all.style.color = ''
+        })
+        clearTaskButtons2.forEach((all)=>{
+            all.style.color = ''
+        })
+        tripleIcon.forEach((all)=>{
+            all.style.color = '';
+        })
+        darkTexts.forEach((all)=>{
+            all.style.color = '#383838';
+        })
+        bodyIcon.forEach((all)=>{
+            all.style.color = '';
+        })
+        days.forEach((all)=>{
+            all.style.color = '';
+        })
+        
+    }else{
+        todoList.classList.replace('pt-1', 'pt-2')
+        todoList.classList.remove('pb-1')
+        todoList.classList.remove('px-2')
+        modes1.classList.replace('fa-moon', 'fa-sun')
+        modes2.classList.replace('fa-moon', 'fa-sun')
+        modes3.classList.replace('fa-moon', 'fa-sun')
+
+        nameDiv.classList.add('border-end')
+        nameDiv.classList.add('border-start')
+        nameDiv.style.borderLeftColor = ''
+        nameDiv.style.borderLeftStyle = ''
+        nameDiv.style.borderLeftWidth = "";
+        nameDiv.style.borderRightColor = ''
+        nameDiv.style.borderRightStyle = ''
+        nameDiv.style.borderRightWidth = "";
+        body.style.backgroundColor = ''
+        header.style.backgroundColor = ''
+        todoList.style.backgroundColor = ''
+        logoText.style.color = ''
+        logoIcon.style.color = ''
+        mBody.style.backgroundColor = ''
+        offcanvas.style.backgroundColor = ''
+        offcanvas.style.borderLeftColor = ''
+        offcanvas.style.borderLeftStyle = ''; 
+        navbarToggler.style.color = ''
+        sideMenu.style.borderRightColor = ''
+        sideMenu.style.borderRightStyle = ''
+        sideMenu.style.borderRightWidth = '';
+
+
+        faIcons.forEach((fa)=>{
+            fa.style.color = ''
+        })
+        faReg.forEach((fag)=>{
+            fag.style.color = ''
+        })
+        allElements.forEach((all)=>{
+            all.style.color = ''
+        })
+        search.forEach((all)=>{
+            all.style.backgroundColor = ''
+            all.style.border = ''
+        })
+        pTexts.forEach((all)=>{
+            all.style.color = ''
+        })
+        spanName.forEach((all)=>{
+            all.style.color = ''
+        })
+        circles.forEach((all)=>{
+            all.style.color = ''
+        })
+        darkTexts.forEach((all)=>{
+            all.style.color = ''
+        })
+        itemTexts.forEach((list)=>{
+            list.style.color = ''
+        })
+        headerImage.forEach((all)=>{
+            all.style.border = ''
+        })
+        whiteDiv.forEach((all)=>{
+            all.classList.remove('bg-light')
+            all.classList.add('bg-white')
+        })
+        tableRows.forEach((all)=>{
+            all.classList.remove('table-light')
+        })  
     }
 
 }
 
 
-// HIDE SIDE-MENU ON CLICK OF THE MENU BUTTON
+
+// HIDE SIDE-MENU ON CLICK OF THE MENU BUTTON ON SMALL SCREENS
 const topRow = document.querySelector('#top-row')
 const menuIcon = document.querySelector('#menu-icon')
 const mainRow = document.querySelector('#main-row')
 const mainBody = document.querySelector('#main-body')
 
-menuIcon.addEventListener('click', hideFirstColumn)
 
+menuIcon.addEventListener('click', hideFirstColumn)
 function hideFirstColumn(e){
     if (e.target.classList.contains('open')) {
-        menuIcon.classList.remove('open')
+        menuIcon.classList.replace('open', 'close')
         sideMenu.classList.add('d-none')
         sideMenuSmall.classList.add('d-xxl-block')
         sideMenuSmall.classList.add('d-xl-block')
@@ -308,7 +545,7 @@ function hideFirstColumn(e){
         mainBody.parentElement.classList.add('col-md-12')
         mainBody.classList.remove('d-none')
     }else{
-        menuIcon.classList.add('open')
+        menuIcon.classList.replace('close', 'open')
         sideMenu.classList.remove('d-none')
         sideMenuSmall.classList.remove('d-xxl-block')
         sideMenuSmall.classList.remove('d-xl-block')
@@ -350,7 +587,7 @@ function hideForLgScrn(e){
 
 
 // TO CHOOSE BETWEEN TO-DO AND CHATS IN OFFCANVAS
-const chats = document.querySelector('.chats')
+const offCanvasChat = document.querySelector('.offCanvasChat')
 const todo = document.querySelector('.todo')
 const offcanvasChat = document.querySelector('#chats')
 const offcanvasTodo = document.querySelector('#todo-list')
@@ -359,25 +596,25 @@ const offcanvasToggle = document.querySelector('#offcanvasToggle')
 offcanvasToggle.addEventListener('click', dimHeaderTextColor)
 function dimHeaderTextColor(){
     if (offcanvasChat.classList.contains('d-none')) {
-        chats.style.color = 'grey'
+        offCanvasChat.style.color = '#d5d3d3'
     }else{
-        chats.style.color = 'white'
+        offCanvasChat.style.color = 'white'
     }
 }
 
-chats.addEventListener('click', showChats)
+offCanvasChat.addEventListener('click', showChats)
 function showChats(){
     offcanvasChat.classList.remove('d-none')
     offcanvasTodo.classList.add('d-none')
     todo.style.color = '#d5d3d3'
-    chats.style.color = 'white'
+    offCanvasChat.style.color = 'white'
 }
 
 todo.addEventListener('click', showTodo)
 function showTodo(){
     offcanvasChat.classList.add('d-none')
     offcanvasTodo.classList.remove('d-none')
-    chats.style.color = '#d5d3d3'
+    offCanvasChat.style.color = '#d5d3d3'
     todo.style.color = 'white'
 }
 
@@ -495,10 +732,7 @@ function addTask2(e) {
         div2.innerHTML = '<i class="fa-regular fa-circle-xmark clearTask2"></i>'
         parentDiv.appendChild(div2)
     
-        input2.value = ''  
-
-        // updateStyles();
-            
+        input2.value = ''              
     }
     e.preventDefault()
 }
@@ -730,8 +964,8 @@ nextBtn3.addEventListener('click', () => {
 })
 
 
-// CHARTS---------------------------
-// BARCHART
+// ------------------------CHARTS------------------------
+// BAR-CHART
 const ctx1 = document.getElementById('barchart');
 
 new Chart(ctx1, {
@@ -767,9 +1001,9 @@ new Chart(ctx1, {
   }
 });
 
+
 // DOUGHNUT CHART
 const ctx2  = document.getElementById('piechart');
-
 new Chart(ctx2, {
   type: 'doughnut',
   data: {
@@ -797,12 +1031,15 @@ new Chart(ctx2, {
       y: {
         beginAtZero: true
       }
+    },
+    options: {
+        animation: false
     }
   }
 });
 
-// LINE CHART
 
+// LINE CHART
 new Chart(document.getElementById("line-chart"), {
     type : 'line',
     data : {

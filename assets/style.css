@@ -20,25 +20,28 @@
     font-family: var(--font-family);
     color: var(--grey-black);
 }
-p, #offcanvasRight #todo-list span {
-    font-size: 18px !important;
-}
 
 html{
     scroll-behavior: smooth;
 }
+
+p, #offcanvasRight #todo-list span {
+    font-size: 18px !important;
+}
+
 header{
     background: var(--white);
 }
-#first-column i{
+#logo-column i{
     font-size: 25px !important;
 }
-#first-column a{
+#logo-column a{
     color: var(--brown1);
-    font-size: 30px;
+    font-size: 27px;
     font-weight: 900;
     text-decoration: none;
 }
+
 
 .dropdown-menu {
     position: absolute;
@@ -87,8 +90,11 @@ input:focus {
     padding: 2px !important;
     box-shadow: none !important;
 }
-.fa-bars {
+.navbar i {
     font-size: 25px !important;
+}
+.navbar-nav .dropdown p{
+    font-size: 15px !important;
 }
 i{
     color: var(--brown1);
@@ -102,10 +108,6 @@ i{
     height: 40px;
     border: 2px solid var(--brown1);
 }
-#top-row .nameDiv i{
-    color: var(--brown1);
-    font-size: 12px;
-}
 #side-menu #bookmark-column img, #offcanvasRight .chatlist img, .table img, .dropdown-content img, .dropdown-item img{
     border: none;
     border-radius: 50%;
@@ -116,9 +118,6 @@ i{
 #side-menu #bookmark-column .small-text{
     font-size: 14px;
     font-weight: 500;
-}
-#side-menu #double-icons h6{
-    font-size: 14px;
 }
 .stats p{
     font-size: 15px !important;
@@ -211,7 +210,7 @@ i{
 
 /* MAIN CONTENT */
 #mainColOne .card i{
-    font-size: 45px !important;
+    font-size: 28px !important;
 }
 
 .circleOne i, .circleTwo i, .circleThree i, .circleFour i{
@@ -326,8 +325,11 @@ i{
     height: 10px;
     transform: 0.2s;
 }
+.calendar{
+    border: 2px solid var(--brown1);
+}
 .calendar i{
-    color: var(--white);
+    color: var(--white) !important;
 }
 
 .header{

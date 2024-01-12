@@ -10,7 +10,7 @@
 
     <!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <!-- bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -21,43 +21,136 @@
 <body>
 
     <header class="sticky-top">
-        <nav class="navbar navbar-expand-lg" id="top-row">
+        <nav class="navbar navbar-expand-md p-0 pt-2 pt-md-0 pt-lg-0 pt-xl-0 pt-xxl-0" id="top-row">
             <div class="container-fluid">
-                <div class="navbar-brand purple-column mx-2 w-25" href="#" id="first-column">
+                <div class="navbar-brand purple-column w-25 p-0" href="#" id="logo-column">
                     <i class="fa-solid fa-layer-group" id="logo-icon"></i>
                     <a href="/index.html" class="logo-text">Admin</a>
                 </div>
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa-solid fa-bars open pe-1" id="menu-icon"></i>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <div class="d-flex align-items-center px-2 justify-content-between w-100">
-                        <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block open" id="menuLgScrn">
-                            <i class="fa-solid fa-bars pe-5"></i>
-                        </div>
-                        <div class="d-flex align-items-center gap-1 w-75 nameDiv">
-                            <img src="/assets/img/headshot.png" class="img-fluid headerImage" alt="">
-                            <span class="name">Robenta Ahimie </span>
-                            <form class="px-5 d-md-none d-none d-lg-block d-xl-block d-xxl-block w-50 d-flex" role="search">
-                                <input type="search" name="checkboxes" placeholder="Search..." class="form-control rounded-0 search">
+
+                <div class="collapse navbar-collapse w-75" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-lg-0">
+                        <li class="nav-item d-none d-sm-none d-md-block d-lg-block d-xl-block d-xxl-block">
+                          <a class="nav-link active open" aria-current="page" href="#" id="menuLgScrn">
+                            <i class="fa-solid fa-bars"></i>
+                          </a>
+                        </li>
+                        <li class="nav-item ps-4 d-none d-md-block d-lg-block d-xl-block d-xxl-block">
+                            <form class="d-flex" role="search">
+                                <button class="btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                <input type="search" name="checkboxes" placeholder="Search..." class="form-control rounded-0 search" aria-label="Search">
                             </form>
+                        </li>
+                    </ul>
+                    
+                    <div class="d-flex ms-auto">
+                        <div class="nav-item dropdown d-none d-md-block d-lg-block d-xl-block d-xxl-block">
+                            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-regular fa-envelope"></i>
+                                <ul class="dropdown-menu">
+                                    <div class="p-3 dropdown-item">
+                                        <h5 class="darkTexts">Messages</h5>
+                                    </div>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex gap-3">
+                                                    <div class="text-start">
+                                                        <p class="chats fw-bold">Madeline added a photo</p>
+                                                        <small class="fw-lighter text-secondary">Just now</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex gap-3">
+                                                    <div class="text-start">
+                                                        <p class="chats fw-bold">Thomas sent you a message</p>
+                                                        <small class="fw-lighter text-secondary">Just now</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex gap-3">
+                                                    <div class="text-start">
+                                                        <p class="chats fw-bold">Catherine sent you a message</p>
+                                                        <small class="fw-lighter text-secondary">5 mins ago</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <div class="py-1 dropdown-item">
+                                                <h5 class="darkTexts text-center">4 new messages</h5>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </a>
                         </div>
-                        <div class="d-flex justify-content-between gap-4 w-25 align-items-center">
-                            <i class="fa-regular fa-envelope d-none d-md-block d-lg-block d-xl-block d-xxl-block"></i>
-                            <i class="fa-regular fa-bell d-none d-md-block d-lg-block d-xl-block d-xxl-block"></i>
-                            <i class="fa-solid fa-list-check" type="button" data-bs-toggle="offcanvas"
-                                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
-                                id="offcanvasToggle">
-                            </i>
-                            <i class="fa-solid fa-moon modes1" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                title="Dark mode">
-                            </i>
+                        <div class="nav-item ps-4 d-none d-md-block d-lg-block d-xl-block d-xxl-block">
+                            <a class="nav-link" href="#">
+                                <i class="fa-solid fa-list-check" type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
+                                    id="offcanvasToggle">
+                                </i>
+                            </a>
                         </div>
                     </div>
-                    <form class="d-grid p-2 d-lg-none d-xl-none d-xxl-none" role="search">
-                        <input type="search" name="checkboxes" placeholder="Search..." class="form-control search">
+
+                    <div class="d-flex align-items-center px-3 ms-3 p-3 border-start border-end nameDiv d-none d-md-block d-lg-block d-xl-block d-xxl-block">
+                        <img src="/assets/img/headshot.png" class="img-fluid headerImage" alt="">
+                        <span class="name">Robenta Ahimie </span>
+                    </div>
+                    
+                    <div class="d-flex align-items-center px-3 d-none d-md-block d-lg-block d-xl-block d-xxl-block">
+                        <i class="fa-solid fa-sun modes1" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                        title="Dark mode"></i>
+                    </div>
+                    
+                    <div class="d-block d-md-none d-lg-none d-xl-none d-xxl-none">
+                        <div class="row pt-3 px-2 align-items-center">
+                            <div class="col-8">
+                                <div class="d-flex align-items-center gap-1 nameDiv  pt-2">
+                                    <img src="/assets/img/headshot.png" class="img-fluid headerImage" alt="">
+                                    <span class="name">Robenta Ahimie </span>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="d-flex float-end gap-3 pt-2">
+                                    <i class="fa-solid fa-list-check" type="button" data-bs-toggle="offcanvas"
+                                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
+                                        id="offcanvasToggle">
+                                    </i>
+                                    <i class="fa-solid fa-sun modes3 ps-3" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                      title="Dark mode">
+                                    </i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <form class="d-flex d-block d-md-none d-lg-none d-xl-none d-xxl-none pt-3 p-2" role="search">
+                        <input type="search" name="checkboxes" placeholder="Search..." class="form-control rounded-0 search">
                     </form>
                 </div>
             </div>
@@ -84,7 +177,7 @@
                                 </div>
                                 <div class="col-md-2 col-2">
                                     <div class="text-end">
-                                        <i class="fa-solid fa-moon modes2" data-bs-toggle="tooltip"
+                                        <i class="fa-solid fa-sun modes2" data-bs-toggle="tooltip"
                                             data-bs-placement="bottom" title="Dark mode">
                                         </i>
                                     </div>
@@ -93,12 +186,12 @@
                         </div>
                         <div class="col-md-12">
                             <div class="row align-items-center justify-content-between" id="double-icons">
-                                <div class="col-md-6 col-6">
+                                <div class="col-md-10 col-10">
                                     <div class="">
                                         <h5>Dashboard</h5>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-6">
+                                <div class="col-md-2 col-2">
                                     <div class="text-end">
                                         <i class="fa-solid fa-house"></i>
                                     </div>
@@ -108,13 +201,13 @@
                         <!-- three -->
                         <div class="col-md-12">
                             <div class="row align-items-center justify-content-between" id="double-icons">
-                                <div class="col-md-6 col-6">
+                                <div class="col-md-10 col-10">
                                     <div class="">
                                         <h5>Basic UI Elements</h5>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-6">
-                                    <div class="d-flex float-end gap-2">
+                                <div class="col-md-2 col-2">
+                                    <div class="d-flex float-end gap-1 pb-2">
                                         <i class="fa-solid fa-angle-left"></i>
                                         <i class="fa-solid fa-crosshairs"></i>
                                     </div>
@@ -124,13 +217,13 @@
                         <!-- four -->
                         <div class="col-md-12">
                             <div class="row align-items-center justify-content-between" id="double-icons">
-                                <div class="col-md-6 col-6">
+                                <div class="col-md-10 col-10">
                                     <div class="">
                                         <h5>Form Elements</h5>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-6">
-                                    <div class="d-flex float-end gap-2">
+                                <div class="col-md-2 col-2">
+                                    <div class="d-flex float-end gap-1 pb-2">
                                         <i class="fa-solid fa-angle-left"></i>
                                         <i class="fa-solid fa-list"></i>
                                     </div>
@@ -140,13 +233,13 @@
                         <!-- five -->
                         <div class="col-md-12">
                             <div class="row align-items-center justify-content-between" id="double-icons">
-                                <div class="col-md-6 col-6">
+                                <div class="col-md-10 col-10">
                                     <div class="">
                                         <h5>Tables</h5>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-6">
-                                    <div class="d-flex float-end gap-2">
+                                <div class="col-md-2 col-2">
+                                    <div class="d-flex float-end gap-1 pb-2">
                                         <i class="fa-solid fa-angle-left"></i>
                                         <i class="fa-solid fa-table-cells"></i>
                                     </div>
@@ -156,13 +249,13 @@
                         <!-- six -->
                         <div class="col-md-12">
                             <div class="row align-items-center justify-content-between" id="double-icons">
-                                <div class="col-md-6 col-6">
+                                <div class="col-md-10 col-10">
                                     <div class="">
                                         <h5>Icons</h5>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-6">
-                                    <div class="d-flex float-end gap-2">
+                                <div class="col-md-2 col-2">
+                                    <div class="d-flex float-end gap-1 pb-2">
                                         <i class="fa-solid fa-angle-left"></i>
                                         <i class="fa-solid fa-id-card-clip"></i>
                                     </div>
@@ -172,13 +265,13 @@
                         <!-- seven -->
                         <div class="col-md-12">
                             <div class="row align-items-center justify-content-between" id="double-icons">
-                                <div class="col-md-6 col-6">
+                                <div class="col-md-10 col-10">
                                     <div class="">
                                         <h5>Charts</h5>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-6">
-                                    <div class="d-flex float-end gap-2">
+                                <div class="col-md-2 col-2">
+                                    <div class="d-flex float-end gap-1 pb-2">
                                         <i class="fa-solid fa-angle-left"></i>
                                         <i class="fa-solid fa-chart-column"></i>
                                     </div>
@@ -188,13 +281,13 @@
                         <!-- eight -->
                         <div class="col-md-12">
                             <div class="row align-items-center justify-content-between" id="double-icons">
-                                <div class="col-md-6 col-6">
+                                <div class="col-md-10 col-10">
                                     <div class="">
                                         <h5>User Pages</h5>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-6">
-                                    <div class="d-flex float-end gap-2">
+                                <div class="col-md-2 col-2">
+                                    <div class="d-flex float-end gap-1 pb-2">
                                         <i class="fa-solid fa-angle-left"></i>
                                         <i class="fa-solid fa-lock"></i>
                                     </div>
@@ -204,13 +297,13 @@
                         <!-- nine -->
                         <div class="col-md-12">
                             <div class="row align-items-center justify-content-between" id="double-icons">
-                                <div class="col-md-6 col-6">
+                                <div class="col-md-10 col-10">
                                     <div class="">
                                         <h5>Error Pages</h5>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-6">
-                                    <div class="d-flex float-end gap-2">
+                                <div class="col-md-2 col-2">
+                                    <div class="d-flex float-end gap-1 pb-2">
                                         <i class="fa-solid fa-angle-left"></i>
                                         <i class="fa-solid fa-shield-halved"></i>
                                     </div>
@@ -220,13 +313,13 @@
                         <!-- ten -->
                         <div class="col-md-12">
                             <div class="row align-items-center justify-content-between" id="double-icons">
-                                <div class="col-md-6 col-6">
+                                <div class="col-md-10 col-10">
                                     <div class="">
                                         <h5>Documentation</h5>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-6">
-                                    <div class="d-flex float-end gap-2">
+                                <div class="col-md-2 col-2">
+                                    <div class="d-flex float-end gap-1 pb-2">
                                         <i class="fa-solid fa-angle-left"></i>
                                         <i class="fa-solid fa-briefcase-medical"></i>
                                     </div>
@@ -236,13 +329,13 @@
                         <!-- eleven -->
                         <div class="col-md-12">
                             <div class="row align-items-center justify-content-between" id="double-icons">
-                                <div class="col-md-6 col-6">
+                                <div class="col-md-10 col-10">
                                     <div class="">
                                         <h5>Form Elements</h5>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-6">
-                                    <div class="d-flex float-end gap-2">
+                                <div class="col-md-2 col-2">
+                                    <div class="d-flex float-end gap-1 pb-2">
                                         <i class="fa-solid fa-angle-left"></i>
                                         <i class="fa-solid fa-rectangle-list"></i>
                                     </div>
@@ -309,12 +402,12 @@
                                         <div class="p-3">
                                             <h4 class="darkTexts">Weekly Sales</h4>
                                             <hr class="text-black">
-                                            <h4 class="text-success">$45,0000</h4>
+                                            <h4 class="text-success">$45,000</h4>
                                             <div class="row pt-4">
-                                                <div class="col-6">
-                                                    <p class=" pt-3">Increased by <span class="text-success fw-bold">+9%</span></p>
+                                                <div class="col-9">
+                                                    <p class="">Increased by <span class="text-success fw-bold">+39%</span></p>
                                                 </div>
-                                                <div class="col-6">
+                                                <div class="col-3">
                                                     <div class="text-end">
                                                         <i class="fa-solid fa-chart-line text-success"></i>                                       
                                                     </div>
@@ -328,12 +421,12 @@
                                         <div class="p-3">
                                             <h4 class="darkTexts">Weekly Orders</h4>
                                             <hr class="text-black">
-                                            <h4 class="text-danger">$5,0000</h4>
+                                            <h4 class="text-danger">$5,000</h4>
                                             <div class="row pt-4">
-                                                <div class="col-6">
-                                                    <p class=" pt-3">Decreased by <span class="text-danger fw-bold">-4%</span></p>
+                                                <div class="col-9">
+                                                    <p class="">Decreased by <span class="text-danger fw-bold">-4%</span></p>
                                                 </div>
-                                                <div class="col-6">
+                                                <div class="col-3">
                                                     <div class="text-end">
                                                         <i class="fa-solid fa-chart-area text-danger"></i>
                                                     </div>
@@ -347,14 +440,14 @@
                                         <div class="p-3">
                                             <h4 class="darkTexts">Visitors Online</h4>
                                             <hr class="text-black">
-                                            <h4 class="text-success">8,0000</h4>
+                                            <h4 class="text-primary"> 8,000</h4>
                                             <div class="row pt-4">
-                                                <div class="col-6">
-                                                    <p class=" pt-3">Increased by <span class="text-success fw-bold">+5%</span></p>
+                                                <div class="col-9">
+                                                    <p class="">Steady at <span class="text-primary fw-bold">+5%</span></p>
                                                 </div>
-                                                <div class="col-6">
+                                                <div class="col-3">
                                                     <div class="text-end">
-                                                        <i class="fa-solid fa-chart-bar text-success"></i>                                       
+                                                        <i class="fa-solid fa-eye text-primary"></i>
                                                     </div>
                                                 </div>
                                             </div>
@@ -580,7 +673,7 @@
                                 <div class="col-lg-6 col-xl-6 col-xxl-5 col-12 d-none d-lg-block d-xl-block d-xxl-block"
                                     id="largeScreen">
                                     <div class="bg-white rounded-1 pt-5 pb-5 mb-4 mb-lg-0 mb-xl-0 mb-xxl-0">
-                                        <div class="calendar">
+                                        <div class="calendar rounded-1 border-0">
                                             <div class="header pb-3">
                                                 <button id="prevBtn">
                                                     <i class="fa-solid fa-chevron-left"></i>
@@ -607,12 +700,12 @@
                                 <div class="col-12 d-none d-sm-block d-md-block d-lg-none d-lg-none d-xl-none d-xxl-none"
                                     id="smallScreen">
                                     <div class="bg-white rounded-1 pt-5 pb-5 mb-4 mb-lg-0 mb-xl-0 mb-xxl-0">
-                                        <div class="calendar">
+                                        <div class="calendar bg-black rounded-1">
                                             <div class="header pb-3">
                                                 <button id="prevBtn2">
                                                     <i class="fa-solid fa-chevron-left"></i>
                                                 </button>
-                                                <div class="monthYear" id="monthYear2"></div>
+                                                <h4 class="monthYear" id="monthYear2"></h4>
                                                 <button id="nextBtn2">
                                                     <i class="fa-solid fa-chevron-right"></i>
                                                 </button>
@@ -634,8 +727,8 @@
                                 <div class="col-12 d-block d-md-none d-sm-none d-lg-none d-xl-none d-xxl-none"
                                     id="extraSmallScreen">
                                     <div class="bg-white rounded-1 pt-3 pb-5 mb-4 mb-lg-0 mb-xl-0 mb-xxl-0">
-                                        <div class="calendar">
-                                            <div class="header pb-3">
+                                        <div class="calendar border-0">
+                                            <div class="header gap-5">
                                                 <button id="prevBtn3">
                                                     <i class="fa-solid fa-chevron-left"></i>
                                                 </button>
@@ -660,7 +753,7 @@
 
                                 <div class="col-md-12 col-lg-6 col-xl-6 col-xxl-7 col-12 mb-4 mb-lg-0 mb-lg-0 mb-xl-0 mb-xxl-0">
                                     <div class="bg-white p-3 pt-4 rounded-1">
-                                        <h5 class="darkTexts">Recent Updates</h5>
+                                        <h4 class="darkTexts">Recent Updates</h4>
                                         <div class="d-flex gap-1 gap-md-5 gap-lg-5 gap-xl-5 gap-xxl-5">
                                             <div class="d-flex align-items-center gap-1">
                                                 <i class="fa-solid fa-circle-user bodyIcon"></i>
@@ -916,7 +1009,7 @@
             <div class="offcanvas-header" id="offcanvashead">
                 <div class="d-flex justify-content-center gap-5 w-75" id="offcanvasRightLabel">
                     <h6 class="todo">TO-DO LIST</h6>
-                    <h6 class="chats">CHATS</h6>
+                    <h6 class="offCanvasChat">CHATS</h6>
                 </div>
                 <div class="xmark float-end">
                     <i class="fa-solid fa-xmark" data-bs-dismiss="offcanvas" aria-label="Close"></i>
@@ -932,8 +1025,8 @@
                 </div>
 
                 <div class="todoList my-3 pt-2">
-                    <div class="d-flex my-3 pb-2 border-bottom justify-content-between">
-                        <div class="d-flex gap-3">
+                    <div class="d-flex my-3 pb-2 border-bottom justify-content-between align-items-center">
+                        <div class="d-flex gap-3 align-items-center">
                             <input type="checkbox" name="checkboxes" class="checkbox">
                             <span class="itemText">Pick up kids from school</span>
                         </div>
@@ -941,17 +1034,17 @@
                             <i class="fa-regular fa-circle-xmark clearTask"></i>
                         </div>
                     </div>
-                    <div class="d-flex my-3 pb-2 border-bottom justify-content-between">
-                        <div class="d-flex gap-3">
+                    <div class="d-flex my-3 pb-2 border-bottom justify-content-between align-items-center">
+                        <div class="d-flex gap-3 align-items-center">
                             <input type="checkbox" name="checkboxes" class="checkbox">
-                            <span class="itemText">Pick up kids from school</span>
+                            <span class="itemText">Pick up order from the warehouse</span>
                         </div>
                         <div class="">
                             <i class="fa-regular fa-circle-xmark clearTask"></i>
                         </div>
                     </div>
-                    <div class="d-flex my-3 pb-2 border-bottom justify-content-between">
-                        <div class="d-flex gap-3">
+                    <div class="d-flex my-3 pb-2 border-bottom justify-content-between align-items-center">
+                        <div class="d-flex gap-3 align-items-center">
                             <input type="checkbox" name="checkboxes" class="checkbox">
                             <span class="itemText">Print statements</span>
                         </div>
@@ -959,8 +1052,8 @@
                             <i class="fa-regular fa-circle-xmark clearTask"></i>
                         </div>
                     </div>
-                    <div class="d-flex my-3 pb-2 border-bottom justify-content-between">
-                        <div class="d-flex gap-3">
+                    <div class="d-flex my-3 pb-2 border-bottom justify-content-between align-items-center">
+                        <div class="d-flex gap-3 align-items-center">
                             <input type="checkbox" name="checkboxes" class="checkbox">
                             <span class="itemText">Create invoice</span>
                         </div>
@@ -968,8 +1061,8 @@
                             <i class="fa-regular fa-circle-xmark clearTask"></i>
                         </div>
                     </div>
-                    <div class="d-flex my-3 pb-2 border-bottom justify-content-between">
-                        <div class="d-flex gap-3">
+                    <div class="d-flex my-3 pb-2 border-bottom justify-content-between align-items-center">
+                        <div class="d-flex gap-3 align-items-center">
                             <input type="checkbox" name="checkboxes" class="checkbox">
                             <span class="itemText">Call John</span>
                         </div>
@@ -977,8 +1070,8 @@
                             <i class="fa-regular fa-circle-xmark clearTask"></i>
                         </div>
                     </div>
-                    <div class="d-flex my-3 pb-2 border-bottom justify-content-between">
-                        <div class="d-flex gap-3">
+                    <div class="d-flex my-3 pb-2 border-bottom justify-content-between align-items-center">
+                        <div class="d-flex gap-3 align-items-center">
                             <input type="checkbox" name="checkboxes" class="checkbox">
                             <span class="itemText">Meeting with Alisa</span>
                         </div>
@@ -1117,13 +1210,14 @@
     <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+    </script>
 
     <!-- chart js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 
     <!-- custom js -->
-    <script src="/assets/script.js"></script>
+    <script src="/assets/script.js" defer></script>
 </body>
 
 </html>
