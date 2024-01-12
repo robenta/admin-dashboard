@@ -148,7 +148,7 @@ input:focus {
 #offcanvasRight #todo-list .circle-i i{
     color: var(--brown1);
 }
-#offcanvasRight #todo-list, #todo-list2, #chats, #side-menu-small, #side-menu, #main-body-col{
+#offcanvasRight #todo-list, #todo-list2, #chats, #side-menu-small, #side-menu, #main-body{
     animation: transitionIn 0.75s;
 }
 @keyframes transitionIn{
