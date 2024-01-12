@@ -79,6 +79,10 @@ input:focus {
     padding: 2px !important;
     box-shadow: none !important;
 }
+.navbar .dropdown :focus{
+    outline: none !important;
+    box-shadow: none !important;
+}
 .navbar-nav .dropdown p{
     font-size: 15px !important;
 }
