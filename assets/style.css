@@ -176,9 +176,6 @@ input:focus {
         transform: rotateX(0);
     }
 }
-#offcanvasRight .alert-danger, #todo-list2  .alert-danger{
-    color: var(--red);
-}
 
 #offcanvasRight .alert, #todo-list2 .alert{
     padding: 5px;
