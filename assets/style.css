@@ -141,8 +141,19 @@ input:focus {
     transition: text-decoration 0.3s;
 }
 .completed {
-    text-decoration: 2px var(--brown1) line-through;
+    position: relative;
 }
+.completed::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-bottom: 2px solid var(--brown1);
+}
+/* .completed {
+    text-decoration: 2px var(--brown1) line-through !important;
+} */
 .complete {
     color: var(--brown1) !important;
 }
