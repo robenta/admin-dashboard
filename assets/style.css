@@ -34,10 +34,10 @@ header{
 }
 i{
     color: var(--brown1);
-    font-size: 15px;
+    font-size: 18px;
 }
 #logo-column i, .navbar i{
-    font-size: 15px !important;
+    font-size: 18px !important;
 }
 #logo-column a{
     color: var(--brown1);
