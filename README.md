@@ -1,4 +1,5 @@
 Admin Dashboard – Frontend Project
+
 A fully responsive Admin Dashboard built from scratch using HTML5, CSS3, JavaScript, and Bootstrap 5. Designed for monitoring projects, managing tickets, tracking tasks, and visualizing data with interactive charts. 
 Supports light and dark mode for enhanced user experience.
 
