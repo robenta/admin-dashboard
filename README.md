@@ -22,3 +22,12 @@ Technologies Used
 * JavaScript (Vanilla JS) 
 * Chart.js  
 
+
+HOW TO RUN
+
+* Clone the repository
+* Open in code editor
+* Run via liveserver
+
+Status
+Completed
